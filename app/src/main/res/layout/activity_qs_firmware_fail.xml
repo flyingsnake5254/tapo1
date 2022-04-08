@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/common_white" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center_horizontal" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="64dp" android:text="@string/quicksetup_plug_firmware_fail_later" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" style="@style/common_text_blue_bold_24dp"/>
+            <TextView android:gravity="center_horizontal" android:id="@+id/tv_tip2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/quicksetup_plug_firmware_fail_later_unable" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_body_regular_16dp"/>
+            <ImageView android:id="@+id/image_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:src="@mipmap/complete_plug_update_eu"/>
+        </LinearLayout>
+        <RelativeLayout android:gravity="center_horizontal" android:paddingTop="24dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <Button android:id="@+id/btn_done" android:layout_marginBottom="5dp" android:text="@string/common_done" style="@style/m6_common_blue_300_button"/>
+                <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_skip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/common_skip" style="@style/common_text_purple_regular_16dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

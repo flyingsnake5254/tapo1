@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/layout_lighting_effect_preset_0" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="8dp">
+    <HorizontalScrollView android:layout_gravity="center_horizontal" android:scrollbars="none" android:fadingEdge="horizontal" android:fadingEdgeLength="200dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:requiresFadingEdge="horizontal">
+        <RelativeLayout android:id="@+id/rl_content" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.tplink.iot.devices.lightstrip.widget.AutoLightFeaturePointView android:layout_gravity="center_vertical" android:id="@+id/auto_view" android:visibility="gone" android:layout_width="42dp" android:layout_height="42dp" android:layout_margin="8dp" app:gap_width="2dp" app:halo_width="2dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@+id/rv_presets" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@+id/auto_view" android:layout_alignParentEnd="true" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </RelativeLayout>
+    </HorizontalScrollView>
+</FrameLayout>

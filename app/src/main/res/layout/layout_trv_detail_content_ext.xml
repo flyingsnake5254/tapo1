@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/layout_trv_detail_content_ext_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingTop="44dp" android:paddingBottom="32dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textColor="@color/color_666666" android:id="@+id/tv_trv_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:drawablePadding="4dp" style="@style/common_text_main_dark_bold_18dp"/>
+        <TextView android:textColor="@color/color_666666" android:id="@+id/tv_trv_state_sub_title" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" style="@style/common_text_main_dark_regular_14dp"/>
+        <com.tplink.iot.widget.trv.TemperatureSlider android:id="@+id/temperature_slider" android:layout_width="120dp" android:layout_height="0dp" android:layout_marginTop="10dp" android:layout_marginBottom="20dp" android:layout_weight="1">
+            <ImageView android:layout_gravity="bottom|center_horizontal" android:id="@+id/iv_state_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:src="@mipmap/icon_heating" android:contentDescription="@null"/>
+        </com.tplink.iot.widget.trv.TemperatureSlider>
+        <TextView android:textColor="@color/color_666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trv_inside_temperature" style="@style/common_text_main_dark_regular_16dp"/>
+        <TextView android:id="@+id/tv_temperature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" style="@style/common_text_main_dark_medium_20dp"/>
+        <ImageView android:id="@+id/item_child_protection" android:tag="binding_1" android:background="?attr/actionBarItemBackground" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:src="@mipmap/icon_child_protection" android:contentDescription="@null"/>
+    </LinearLayout>
+    <com.tplink.iot.widget.viewgroup.ToastTipBarView android:id="@+id/toast_tip_bar" android:background="#b3000000" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</FrameLayout>

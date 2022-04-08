@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/common_toolbar"/>
+        <TextView android:textSize="@dimen/text_size_14" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/notification_time_interval_send" android:fontFamily="sans-serif-medium" android:paddingStart="20dp" android:paddingEnd="20dp" style="@style/common_divider_text_view"/>
+        <RelativeLayout android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="70dp">
+            <TextView android:textSize="17sp" android:textColor="@color/common_iot_main_blue" android:gravity="center" android:id="@+id/start_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerVertical="true" android:fontFamily="sans-serif-medium" android:layout_marginStart="16dp"/>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/enter" android:layout_centerInParent="true"/>
+            <TextView android:textSize="17sp" android:textColor="@color/common_iot_main_blue" android:gravity="center" android:id="@+id/end_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerVertical="true" android:fontFamily="sans-serif-medium" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            <TextView android:textSize="12sp" android:textColor="@color/tomato" android:id="@+id/item_schedule_next_day_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mode_edit_next_day" android:layout_alignParentBottom="true" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <View android:background="@color/common_iot_divider" android:layout_width="match_parent" android:layout_height="@dimen/common_divide_line_height"/>
+        <TextView android:textSize="@dimen/text_size_14" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/repeat_every" android:fontFamily="sans-serif-medium" android:paddingStart="20dp" android:paddingEnd="20dp" style="@style/common_divider_text_view"/>
+        <View android:background="@color/common_iot_divider" android:layout_width="match_parent" android:layout_height="@dimen/common_divide_line_height"/>
+        <com.tplink.iot.widget.WeekdayPickerView android:id="@+id/weekday_picker_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <View android:background="@color/common_iot_divider" android:layout_width="match_parent" android:layout_height="@dimen/common_divide_line_height"/>
+    </LinearLayout>
+    <Button android:layout_gravity="bottom|center_horizontal" android:id="@+id/save_btn" android:layout_marginTop="56dp" android:layout_marginBottom="24dp" android:text="@string/common_save" android:layout_alignParentBottom="true" style="@style/iot_common_flat_blue_button"/>
+</RelativeLayout>

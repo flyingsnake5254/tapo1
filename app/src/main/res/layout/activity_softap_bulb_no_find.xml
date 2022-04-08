@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/common_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_close" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/close"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qs_unable_to_find_smart_device" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+                <ViewStub android:id="@+id/softap_no_find_tips_container" android:visibility="visible" android:layout="@layout/layout_softap_pairing_failed_tips_bulb" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true" layout="@layout/layout_quicksetup_common_bottom_button_contact"/>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

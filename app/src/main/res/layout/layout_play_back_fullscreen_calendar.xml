@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/layout_play_back_fullscreen_calendar_0" android:background="@color/common_gray_black_color_transparent_80" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="40dp">
+        <TextView android:textColor="@color/pure_white" android:id="@+id/date_cur_date" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_white_regular_text_14dp"/>
+        <ImageView android:id="@+id/date_move_backward" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_lastday" android:layout_centerVertical="true" android:layout_toStartOf="@+id/date_cur_date"/>
+        <ImageView android:id="@+id/date_move_forward" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@+id/date_cur_date"/>
+        <TextView android:textSize="14sp" android:textColor="@color/pure_white" android:id="@+id/date_today" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/play_back_today" android:layout_centerVertical="true" android:fontFamily="sans-serif-medium" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="1px"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.tplink.iot.view.ipcamera.widget.calendar.WeekdayView android:id="@+id/widget_scroll_calendar_weekday" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="4dp" app:WeedayColor="@color/playback_time_axis_minor_calibration" app:WeekendColor="@color/playback_time_axis_minor_calibration" style="@style/WeekdayView"/>
+        <com.tplink.iot.view.ipcamera.widget.calendar.scrollCalendar.ScrollCalendar android:id="@+id/scroll_calendar" android:tag="binding_5" android:layout_width="match_parent" android:layout_height="wrap_content" app:sDayColor="@color/pure_white" app:sInvalidDayColor="@color/white_transparent_40" app:sOnlyMarkClick="true" app:sWeedayColor="@color/white_transparent_60" app:sWeekendColor="@color/white_transparent_60"/>
+    </LinearLayout>
+</LinearLayout>

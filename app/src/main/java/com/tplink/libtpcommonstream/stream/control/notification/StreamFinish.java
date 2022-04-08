@@ -1,0 +1,33 @@
+package com.tplink.libtpcommonstream.stream.control.notification;
+
+import com.google.gson.q.c;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/* loaded from: classes3.dex */
+public class StreamFinish {
+    @c("reason")
+    private String reason;
+
+    @Retention(RetentionPolicy.SOURCE)
+    /* loaded from: classes3.dex */
+    public @interface StreamFinishReason {
+        public static final String CHANNEL_INVALID = "channel_invalid";
+        public static final String CHANNEL_OFFLINE = "channel_offline";
+        public static final String FINISH = "finish";
+        public static final String INTERNAL_ERROR = "internal_error";
+        public static final String INTERRUPT = "interrupt";
+        public static final String MEDIA_ENCRYPT_CHANGED = "media_encrypt_changed";
+        public static final String PASSWORD_CHANGED = "password_changed";
+        public static final String PERMISSION_DENY = "permission_deny";
+        public static final String SHARE_FINISH = "share_finish";
+    }
+
+    public String getReason() {
+        return this.reason;
+    }
+
+    public void setReason(String str) {
+        this.reason = str;
+    }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_base_iot_device_info_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/item_switch_button" android:visibility="gone" android:layout_width="180dp" android:layout_height="180dp" android:scaleType="centerCrop" android:contentDescription="@null"/>
+            <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_timezone" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_set_title_hint="@string/timezone"/>
+            <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_wifi_network" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_set_title_hint="@string/wifi_network"/>
+            <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_model" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_set_title_hint="@string/setting_model"/>
+            <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_ip_address" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_set_title_hint="@string/setting_ip_address"/>
+            <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_mac_address" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_set_title_hint="@string/setting_mac_address"/>
+            <View android:id="@+id/divide_line" style="@style/common_divider_block_8dp"/>
+            <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_hardware" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_set_title_hint="@string/hardware_version"/>
+            <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_fw_version" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_set_title_hint="@string/setting_firmware_version"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

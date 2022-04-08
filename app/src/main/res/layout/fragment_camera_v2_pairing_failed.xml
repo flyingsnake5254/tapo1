@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/fragment_camera_v2_pairing_failed_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:elevation="0dp" app:navigationIcon="@mipmap/close" app:popupTheme="@style/TP.Theme.PopupOverlay" app:titleTextColor="@color/common_iot_dark_black" style="@style/toolbar_style"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qs_pairing_failed" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_ble_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pairing_failed"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/camera_onboarding_try_tips2" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_main_dark_regular_14dp"/>
+                <com.tplink.iot.widget.PointTextView android:id="@+id/point_view1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:text_content="@string/camera_onboarding_pair_failed_hint1"/>
+                <com.tplink.iot.widget.PointTextView android:id="@+id/point_view2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:text_content="@string/camera_onboarding_pair_failed_hint2_v2"/>
+                <com.tplink.iot.widget.PointTextView android:id="@+id/point_view3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:text_content="@string/camera_onboarding_pair_failed_hint3_v2"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:paddingTop="24dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <Button android:id="@+id/btn_bottom" android:tag="binding_1" android:text="@string/try_again" style="@style/m6_common_blue_300_button"/>
+                    <TextView android:textColorHighlight="@color/transparent" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/tv_contact_us" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_secondary_regular_14dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

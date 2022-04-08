@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="14dp" android:paddingBottom="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20dp" android:paddingEnd="16dp">
+        <ImageView android:id="@+id/device_avatar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/iot_plug_48" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_alignParentStart="true"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="8dp" android:layout_toStartOf="@+id/iv_update_hint" android:layout_toEndOf="@+id/device_avatar">
+            <TextView android:id="@+id/device_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/common_text_main_dark_regular_16dp"/>
+            <TextView android:id="@+id/device_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" style="@style/common_text_secondary_regular_14dp"/>
+            <TextView android:id="@+id/device_load_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:drawablePadding="8dp" style="@style/common_text_secondary_regular_12dp"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/iv_update_hint" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_update_hint" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_marginStart="6dp" android:layout_toStartOf="@+id/iv_arrow"/>
+        <ImageView android:id="@+id/iv_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/arrow_more" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_marginStart="6dp" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View style="@style/common_divider_1dp_margin_start_20dp"/>
+</LinearLayout>

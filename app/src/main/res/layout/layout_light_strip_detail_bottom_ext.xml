@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/layout_light_strip_detail_bottom_ext_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.tplink.iot.widget.viewgroup.MultiFeaturesGridView android:id="@+id/multi_features_grid" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.tplink.iot.widget.businessview.ThingNextEventView android:id="@+id/thing_next_event_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View style="@style/common_divider_block_8dp"/>
+    <com.tplink.iot.widget.businessview.ThingUsageView android:id="@+id/thing_usage_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:isRuntimeType="false"/>
+</LinearLayout>

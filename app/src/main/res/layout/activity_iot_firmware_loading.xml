@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.tplink.libtpcontrols.tppulltorefresh.TPCircleProgressBar android:id="@+id/circle_progress_bar" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginTop="@dimen/common_loading_view_margin_top"/>
+    <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/fw_checking" android:lineSpacingExtra="4dp" android:layout_marginStart="48dp" android:layout_marginEnd="48dp" style="@style/common_text_main_dark_regular_14dp"/>
+</LinearLayout>

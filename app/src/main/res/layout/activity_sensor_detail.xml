@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_sensor_detail_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@mipmap/plug_detail_bg_on" android:scaleType="fitXY" android:contentDescription="@null" android:alpha="1"/>
+    <include android:id="@+id/sensor_detail_content" layout="@layout/activity_sensor_detail_content"/>
+    <com.yinglan.scrolllayout.ScrollLayout android:id="@+id/scroll_down_layout" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="match_parent" app:exitOffset="0dp" app:isSupportExit="false" app:maxOffset="50dp" app:minOffset="80dp" app:mode="0x0">
+        <include android:id="@+id/sensor_detail_bottom" layout="@layout/activity_sensor_detail_bottom"/>
+    </com.yinglan.scrolllayout.ScrollLayout>
+</FrameLayout>

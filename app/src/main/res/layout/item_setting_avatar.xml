@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center" android:id="@+id/iv_selected_flag" android:visibility="gone" android:layout_width="70dp" android:layout_height="70dp" android:src="@drawable/bg_circle_selected_avatar" android:contentDescription="@null"/>
+    <ImageView android:layout_gravity="center" android:id="@+id/iv_avatar" android:layout_width="70dp" android:layout_height="70dp" android:src="@mipmap/iot_plug_70" android:contentDescription="@null"/>
+</FrameLayout>

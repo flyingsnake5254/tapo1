@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/layout_switch_detail_bottom_ext_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_rules" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_schedule" android:tag="binding_1" android:paddingTop="4dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@mipmap/plug_ic_schedule" android:layout_weight="1"/>
+        <ImageView android:id="@+id/iv_away" android:tag="binding_2" android:paddingTop="4dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@mipmap/plug_ic_away" android:layout_weight="1"/>
+        <ImageView android:id="@+id/iv_timer" android:tag="binding_3" android:paddingTop="4dp" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@mipmap/plug_ic_timer" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_rules2" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_schedule" android:tag="binding_4" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/plug_schedule" android:maxLines="2" android:layout_weight="1" style="@style/common_text_main_dark_regular_16dp"/>
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_away" android:tag="binding_5" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/plug_mode_away" android:maxLines="2" android:layout_weight="1" style="@style/common_text_main_dark_regular_16dp"/>
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_timer" android:tag="binding_6" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/plug_timer" android:maxLines="2" android:layout_weight="1" style="@style/common_text_main_dark_regular_16dp"/>
+    </LinearLayout>
+    <com.tplink.iot.widget.businessview.ThingNextEventView android:id="@+id/thing_next_event_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View style="@style/common_divider_block_8dp"/>
+    <com.tplink.iot.widget.businessview.ThingUsageView android:id="@+id/thing_usage_view" android:paddingTop="10dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:isRuntimeType="true"/>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:id="@+id/rl_smart_action_item" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/smart_action_padding_left" android:paddingEnd="@dimen/smart_list_padding_end">
+    <ImageView android:id="@+id/iv_smart_action_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="36dp" android:maxHeight="36dp" android:layout_centerInParent="true" android:layout_alignParentStart="true"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/rl_item_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="76dp" android:layout_marginStart="46dp" android:layout_marginEnd="80dp">
+        <View android:layout_width="match_parent" android:layout_height="12dp"/>
+        <com.tplink.iot.widget.EllipsizeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_smart_action_name" android:layout_width="wrap_content" android:layout_height="match_parent" android:lines="1" style="@style/common_text_main_dark_regular_16dp"/>
+            <TextView android:textSize="@dimen/m6_text_size_10dp" android:textColor="@color/white" android:ellipsize="none" android:gravity="center" android:id="@+id/iv_new_smart_info" android:background="@drawable/bg_small_round_rectange_yellow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_page_device_new" android:paddingStart="4dp" android:paddingEnd="4dp" android:layout_marginStart="5dp"/>
+        </com.tplink.iot.widget.EllipsizeLayout>
+        <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_smart_action_description" android:layout_width="match_parent" android:layout_height="0dp" android:lines="1" android:layout_weight="1" style="@style/common_text_secondary_regular_14dp"/>
+        <View android:layout_width="match_parent" android:layout_height="12dp"/>
+    </LinearLayout>
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_alignParentEnd="true">
+        <Button android:ellipsize="end" android:id="@+id/btn_smart_action_button" android:layout_width="74dp" android:layout_height="32dp" android:text="@string/smart_action_run" android:maxLines="1" style="@style/iot_smart_action_run_button_borderless"/>
+        <FrameLayout android:id="@+id/view_loading" android:background="#99ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginEnd="24dp">
+            <ImageView android:id="@+id/iv_shortcut_result" android:layout_width="20dp" android:layout_height="20dp" android:src="@mipmap/icon_shortcut_success"/>
+            <ImageView android:id="@+id/iv_shortcut_loading" android:layout_width="20dp" android:layout_height="20dp" android:src="@mipmap/icon_shortcut_loading"/>
+        </FrameLayout>
+    </FrameLayout>
+    <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_smart_action" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true" android:layout_alignParentEnd="true" app:switchMinWidth="@dimen/switch_compat_width" style="@style/custom_switch_compat"/>
+    <ImageView android:id="@+id/iv_smart_action_sort" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/smart_shortcut_sort" android:layout_centerInParent="true" android:layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textColor="@drawable/text_color_selector_blue_gray" android:id="@+id/textView" android:background="@drawable/shape_tag_item_bg" android:paddingLeft="10dp" android:paddingTop="4dp" android:paddingRight="10dp" android:paddingBottom="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>

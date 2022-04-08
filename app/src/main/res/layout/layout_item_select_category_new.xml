@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/white" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/image_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/plug_select_eu" android:scaleType="fitXY" android:layout_centerHorizontal="true"/>
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_coming" android:background="@drawable/shape_rect_yellow" android:paddingTop="2dp" android:paddingBottom="2dp" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="6dp" android:text="@string/quicksetup_add_device_coming" android:singleLine="true" android:layout_alignBottom="@+id/image_device" android:layout_centerHorizontal="true" android:paddingStart="5dp" android:paddingEnd="5dp" style="@style/common_text_white_medium_14dp"/>
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:maxWidth="130dp" android:minLines="2" android:layout_below="@+id/image_device" android:layout_centerHorizontal="true" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" style="@style/common_text_main_dark_medium_14dp"/>
+    </RelativeLayout>
+</RelativeLayout>

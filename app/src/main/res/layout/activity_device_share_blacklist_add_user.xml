@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <View style="@style/common_divider_1dp"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/share_device_blacklist_enter_receive_from_v2" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_regular_14dp"/>
+            <com.tplink.iot.widget.DrawableEditText android:id="@+id/edit_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:maxLength="64" android:inputType="textEmailAddress" android:imeOptions="actionDone" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_record" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                <TextView android:text="@string/share_device_blacklist_recent_inviter" style="@style/common_divider_text_view"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <Button android:id="@+id/btn_bottom" android:layout_marginTop="24dp" android:layout_marginBottom="16dp" android:text="@string/common_add" style="@style/m6_common_blue_300_button"/>
+    <TextView android:gravity="center_horizontal" android:id="@+id/tv_bottom_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="@string/what_is_tp_link_id" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_purple_regular_16dp"/>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_light_strip_placement_guide_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_back" android:background="?attr/actionBarItemBackground" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/ic_grey_back" android:contentDescription="@null"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" android:layout_weight="8">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/light_strip_placement_guide" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+            <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:paddingTop="8dp" android:paddingBottom="36dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/tv_note" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/light_strip_placement_guide_note_not_l930_V2" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_regular_16dp"/>
+                    <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:number="1"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="@string/light_strip_placement_guide_step1" style="@style/common_text_main_dark_regular_14dp"/>
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/light_strip_placement_guide_1" android:adjustViewBounds="true" android:contentDescription="@null" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                    <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:number="2"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="@string/light_strip_placement_guide_step2" style="@style/common_text_main_dark_regular_14dp"/>
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/light_strip_placement_guide_2" android:adjustViewBounds="true" android:contentDescription="@null" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                    <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:number="3"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="@string/light_strip_placement_guide_step3" style="@style/common_text_main_dark_regular_14dp"/>
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/light_strip_placement_guide_3" android:adjustViewBounds="true" android:contentDescription="@null" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                    <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:number="4"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="@string/light_strip_placement_guide_step4" style="@style/common_text_main_dark_regular_14dp"/>
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/light_strip_placement_guide_4" android:adjustViewBounds="true" android:contentDescription="@null" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                    <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:number="5"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="@string/light_strip_placement_guide_step5" style="@style/common_text_main_dark_regular_14dp"/>
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/light_strip_placement_guide_5" android:adjustViewBounds="true" android:contentDescription="@null" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                    <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:number="6"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="@string/light_strip_placement_guide_step6" style="@style/common_text_main_dark_regular_14dp"/>
+                    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/light_strip_placement_guide_6" android:adjustViewBounds="true" android:contentDescription="@null" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <Button android:id="@+id/btn_done" android:visibility="gone" android:layout_marginTop="16dp" android:layout_marginBottom="29dp" android:text="@string/common_next" style="@style/m6_common_blue_300_button"/>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/fragment_camera_auto_update_hint_0" android:background="@color/white" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <RelativeLayout android:paddingTop="@dimen/quick_setup_close_new_vi_width" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_info" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_plug_firmware_title" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_main_dark_medium_20dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/firmware_auto_update_guide" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_secondary_regular_16dp"/>
+            <RelativeLayout android:id="@+id/item_reboot_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/firmware_auto_update_time" android:layout_centerVertical="true" android:layout_marginStart="@dimen/device_setting_common_margin_start" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/auto_update_time" android:layout_alignParentStart="true" style="@style/common_text_main_dark_regular_16dp"/>
+                <TextView android:id="@+id/auto_update_time" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3:00AM - 5:00AM" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true" style="@style/common_text_blue_medium_18dp"/>
+            </RelativeLayout>
+            <TextView android:background="@color/white" android:paddingTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/firmware_auto_update_select_time_hint" android:paddingStart="@dimen/device_setting_common_margin_start" android:paddingEnd="@dimen/device_setting_common_margin_start" style="@style/common_text_annotation_regular_14dp"/>
+            <TextView android:background="@color/white" android:paddingTop="10dp" android:paddingBottom="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/firmware_auto_update_note" android:paddingStart="@dimen/device_setting_common_margin_start" android:paddingEnd="@dimen/device_setting_common_margin_start" style="@style/common_text_annotation_regular_14dp"/>
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:layout_below="@+id/ll_info" android:layout_alignParentBottom="true">
+            <Button android:id="@+id/btn_got_it" android:tag="binding_2" android:layout_marginBottom="24dp" android:text="@string/action_got_it" android:layout_alignParentBottom="true" style="@style/m6_common_blue_300_button"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

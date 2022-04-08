@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/device_list_item" android:layout_width="match_parent" android:layout_height="76dp">
+    <ImageView android:id="@+id/img_icon" android:layout_width="48dp" android:layout_height="48dp" android:layout_centerVertical="true" android:layout_marginStart="20dp"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_marginStart="10dp" android:layout_toStartOf="@+id/tv_person" android:layout_toEndOf="@+id/img_icon">
+        <TextView android:ellipsize="end" android:id="@+id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2dp" android:singleLine="true" style="@style/common_text_main_dark_regular_16dp"/>
+        <TextView android:ellipsize="end" android:id="@+id/tv_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:singleLine="true" style="@style/common_text_secondary_regular_14dp"/>
+    </LinearLayout>
+    <TextView android:ellipsize="end" android:id="@+id/tv_person" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="3dp" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/img_more" style="@style/common_text_secondary_regular_14dp"/>
+    <ImageView android:id="@+id/img_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/more" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+    <View android:layout_alignParentBottom="true" android:layout_marginStart="20dp" style="@style/m6_common_divider"/>
+</RelativeLayout>

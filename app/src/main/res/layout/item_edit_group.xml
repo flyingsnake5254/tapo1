@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tplink.iot.widget.RippleCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/cv_home_item_card" android:layout_width="match_parent" android:layout_height="102dp" android:layout_marginTop="5dp" android:layout_marginBottom="7dp" android:layout_marginStart="5dp" android:layout_marginEnd="5dp" app:cardCornerRadius="6dp" app:cardElevation="2dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="15sp" android:textColor="@color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_device_name" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1" android:paddingStart="12dp" android:paddingEnd="4dp" style="@style/BaseTextAppearance_Medium"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_home_location_on" android:ellipsize="end" android:id="@+id/tv_home_location" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1" android:paddingEnd="12dp" android:layout_marginStart="12dp" style="@style/BaseTextAppearance_Regular"/>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="10dp" android:paddingEnd="6dp">
+            <ImageView android:id="@+id/iv_home_plug_icon" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginTop="14dp" app:srcCompat="@mipmap/icon_device_plug"/>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true">
+                <com.tplink.libtpcontrols.materialnormalcompat.checkbox.TPCheckboxCompat android:id="@+id/cb_home_item" android:background="@color/transparent" android:padding="10dp" android:layout_width="44dp" android:layout_height="44dp" android:button="@color/transparent" android:layout_centerInParent="true" android:drawableStart="@drawable/selector_home_long_click_off"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</com.tplink.iot.widget.RippleCardView>

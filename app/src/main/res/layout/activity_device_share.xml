@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/common_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_title_left" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:id="@+id/tv_title_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_device_share_device_my" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_medium_14dp"/>
+            <View android:layout_gravity="center_vertical" android:id="@+id/line_left" android:background="@color/common_iot_main_blue" android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="8dp" android:layout_marginStart="50dp" android:layout_marginEnd="50dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_title_right" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <TextView android:id="@+id/tv_title_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share_device_share_device_others" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_medium_14dp"/>
+            <View android:layout_gravity="center_vertical" android:id="@+id/line_right" android:background="@color/common_iot_main_blue" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="8dp" android:layout_marginStart="50dp" android:layout_marginEnd="50dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/m6_common_divider"/>
+    <androidx.core.widget.NestedScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:fadeScrollbars="false">
+        <FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include android:id="@+id/ll_owner" layout="@layout/layout_device_share_owner_devices"/>
+            <include android:id="@+id/ll_user" android:visibility="gone" layout="@layout/layout_device_share_user_devices"/>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

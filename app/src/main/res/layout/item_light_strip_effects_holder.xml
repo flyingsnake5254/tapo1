@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="8dp">
+        <com.tplink.iot.devices.lightstrip.widget.SelectableColorPointView android:layout_gravity="center" android:id="@+id/selectable_color_point" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:gap_width="3dp" app:halo_width="3dp"/>
+        <com.tplink.iot.devices.lightstrip.widget.ColorPaintingRingView android:layout_gravity="center" android:id="@+id/color_painting_ring" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.tplink.iot.devices.lightstrip.widget.ColorEffectPlateView android:layout_gravity="center" android:id="@+id/color_effect_plate" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.tplink.iot.devices.lightstrip.widget.CircleEffectImageView android:layout_gravity="center" android:id="@+id/circle_effect_image" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxWidth="84dp"/>
+        <com.tplink.iot.devices.lightstrip.widget.DashCircleAddView android:layout_gravity="center" android:id="@+id/dash_circle_add" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <TextView android:gravity="center_horizontal" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" style="@style/common_text_secondary_regular_12dp"/>
+</LinearLayout>

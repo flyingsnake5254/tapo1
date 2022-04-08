@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/bottom_sheet_rootview" android:background="#4d212121" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView android:id="@+id/bottom_sheet_container" android:background="@android:color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:cardElevation="25dp" app:cardMaxElevation="30dp" app:cardPreventCornerOverlap="false" app:cardUseCompatPadding="false"/>
+</RelativeLayout>

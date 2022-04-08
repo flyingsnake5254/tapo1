@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:contentDescription="@null" android:alpha="1"/>
+    <include layout="@layout/activity_plug_detail_new_content"/>
+    <com.yinglan.scrolllayout.ScrollLayout android:id="@+id/scroll_down_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:exitOffset="0dp" app:isSupportExit="false" app:maxOffset="80dp" app:minOffset="80dp" app:mode="0x0">
+        <include layout="@layout/activity_plug_detail_new_bottom"/>
+    </com.yinglan.scrolllayout.ScrollLayout>
+</FrameLayout>

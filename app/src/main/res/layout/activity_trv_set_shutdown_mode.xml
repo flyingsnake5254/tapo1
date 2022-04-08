@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_trv_set_shutdown_mode_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <RelativeLayout android:id="@+id/rl_switch" android:layout_width="match_parent" android:layout_height="56dp">
+        <TextView android:ellipsize="end" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/trv_shutdown_mode_title" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="20dp" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/switch_button" style="@style/common_text_main_dark_regular_16dp"/>
+        <com.tplink.libtpcontrols.materialnormalcompat.swicth.TPSwitchCompat android:id="@+id/switch_button" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:switchMinWidth="@dimen/switch_compat_width" style="@style/custom_switch_compat"/>
+        <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+    </RelativeLayout>
+    <TextView android:id="@+id/tv_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/trv_shutdown_mode_hint" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+    <RadioGroup android:orientation="vertical" android:id="@+id/rg_shutdown_mode" android:paddingBottom="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:checkedButton="@+id/rb_full_closed">
+        <TextView android:background="@color/standard_background" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/trv_thimble_state_banner" android:paddingStart="20dp" android:paddingEnd="20dp" style="@style/common_text_secondary_medium_16dp"/>
+        <com.tplink.libtpcontrols.materialnormalcompat.radio.TPRadioButton android:id="@+id/rb_full_closed" android:text="@string/trv_shutdown_mode_valve_full_closed" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+        <com.tplink.libtpcontrols.materialnormalcompat.radio.TPRadioButton android:id="@+id/rb_full_open" android:text="@string/trv_shutdown_mode_valve_full_open" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/trv_shutdown_mode_thimble_close_hint" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/trv_shutdown_mode_thimble_open_hint" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+    </RadioGroup>
+</LinearLayout>

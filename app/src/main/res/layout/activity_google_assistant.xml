@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/layout_authorized" android:visibility="gone" layout="@layout/activity_google_assistant_linked"/>
+            <include android:id="@+id/layout_unauthorized" android:visibility="gone" layout="@layout/activity_google_assistant_unlinked"/>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

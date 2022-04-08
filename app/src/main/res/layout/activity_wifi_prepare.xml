@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/common_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_back" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/back"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:fadeScrollbars="false">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_grant_permission_title" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_wifi" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/tv_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/quicksetup_grant_permission_wifi" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_regular_14dp"/>
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="64dp">
+                        <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_wifi_on" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/fl_wifi_state" android:layout_alignParentStart="true" style="@style/common_text_main_dark_regular_16dp"/>
+                        <FrameLayout android:id="@+id/fl_wifi_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true">
+                            <com.tplink.libtpcontrols.tppulltorefresh.TPCircleProgressBar android:layout_gravity="center" android:id="@+id/progress" android:visibility="invisible" android:layout_width="20dp" android:layout_height="20dp"/>
+                            <ImageView android:layout_gravity="center" android:id="@+id/img_wifi_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/switch_off"/>
+                        </FrameLayout>
+                    </RelativeLayout>
+                    <View android:layout_marginStart="16dp" style="@style/m6_common_divider"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_android_6" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/quicksetup_grant_permission_location" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_regular_14dp"/>
+                    <RelativeLayout android:id="@+id/rl_location_access" android:layout_width="match_parent" android:layout_height="64dp">
+                        <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_no_location_permission" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/img_location_state" android:layout_alignParentStart="true" style="@style/common_text_main_dark_regular_16dp"/>
+                        <ImageView android:id="@+id/img_location_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/switch_off" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+                        <View android:layout_alignParentBottom="true" android:layout_marginStart="16dp" style="@style/m6_common_divider"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/location_permission" android:layout_width="match_parent" android:layout_height="64dp">
+                        <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_location_permission" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/img_permission_state" android:layout_alignParentStart="true" style="@style/common_text_main_dark_regular_16dp"/>
+                        <ImageView android:id="@+id/img_permission_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/switch_off" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+                        <View android:layout_alignParentBottom="true" android:layout_marginStart="16dp" style="@style/m6_common_divider"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:paddingTop="24dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <TextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_grant_permission_disable" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_regular_14dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

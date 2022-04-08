@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center_horizontal" android:background="@mipmap/ic_wss_linked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="66dp" android:contentDescription="@null"/>
+    <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="34dp" android:text="@string/wss_alexa_account_linked" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_main_dark_medium_20dp"/>
+    <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/wss_alexa_account_linked_hint" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_body_regular_14dp"/>
+</LinearLayout>

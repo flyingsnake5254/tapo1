@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/rl_dialog" android:background="@drawable/shape_circle" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="240dp" android:layout_height="wrap_content" android:baselineAligned="false" android:minHeight="130dp" android:layout_centerHorizontal="true">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_marginEnd="12dp">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/common_dialog_view_width" android:layout_height="@dimen/common_dialog_view_width" android:src="@drawable/loading_view_dialog_circle"/>
+            <com.tplink.libtpcontrols.TPLoadingSuccessView android:layout_gravity="center" android:layout_width="@dimen/common_dialog_view_inner_width" android:layout_height="@dimen/common_dialog_view_inner_width" app:success_color="@color/common_white"/>
+        </FrameLayout>
+        <TextView android:textSize="14sp" android:textColor="@color/common_white" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@+id/message" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    </LinearLayout>
+</RelativeLayout>

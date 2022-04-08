@@ -1,0 +1,303 @@
+{
+    "type": "PULSE",
+    "expansionStrategy": "STRETCH",
+    "meta": {
+        "alias": "Sunset",
+        "tags": [],
+        "imageUrl": "https://s3.amazonaws.com/assets-staging.tplinkra.com/lighting-effects/vFPCxBlhMvkbKteoRKrmekCzHKjeotLK.png"
+    },
+    "colorRegistry": [
+        {
+            "id": "color1",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 100
+            },
+            "s": {
+                "absolute": 0
+            }
+        },
+        {
+            "id": "color2",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 100
+            },
+            "s": {
+                "absolute": 20
+            }
+        },
+        {
+            "id": "color3",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 99
+            },
+            "s": {
+                "absolute": 50
+            }
+        },
+        {
+            "id": "color4",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 98
+            },
+            "s": {
+                "absolute": 60
+            }
+        },
+        {
+            "id": "color5",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 97
+            },
+            "s": {
+                "absolute": 70
+            }
+        },
+        {
+            "id": "color6",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 95
+            },
+            "s": {
+                "absolute": 75
+            }
+        },
+        {
+            "id": "color7",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 93
+            },
+            "s": {
+                "absolute": 80
+            }
+        },
+        {
+            "id": "color8",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 90
+            },
+            "s": {
+                "absolute": 90
+            }
+        },
+        {
+            "id": "color9",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 85
+            },
+            "s": {
+                "absolute": 95
+            }
+        },
+        {
+            "id": "color10",
+            "h": {
+                "absolute": 30
+            },
+            "b": {
+                "absolute": 80
+            },
+            "s": {
+                "absolute": 100
+            }
+        }
+        ,
+        {
+            "id": "color11",
+            "h": {
+                "absolute": 20
+            },
+            "b": {
+                "absolute": 70
+            },
+            "s": {
+                "absolute": 100
+            }
+        },
+        {
+            "id": "color12",
+            "h": {
+                "absolute": 20
+            },
+            "b": {
+                "absolute": 60
+            },
+            "s": {
+                "absolute": 100
+            }
+        },
+        {
+            "id": "color13",
+            "h": {
+                "absolute": 15
+            },
+            "b": {
+                "absolute": 50
+            },
+            "s": {
+                "absolute": 100
+            }
+        },
+        {
+            "id": "color14",
+            "h": {
+                "absolute": 10
+            },
+            "b": {
+                "absolute": 40
+            },
+            "s": {
+                "absolute": 100
+            }
+        },
+        {
+            "id": "color15",
+            "h": {
+                "absolute": 0
+            },
+            "b": {
+                "absolute": 30
+            },
+            "s": {
+                "absolute": 100
+            }
+        },
+        {
+            "id": "color16",
+            "h": {
+                "absolute": 0
+            },
+            "b": {
+                "absolute": 0
+            },
+            "s": {
+                "absolute": 100
+            }
+        }
+      ],
+    "settings": {
+        "colorSequence": {
+            "seq": [
+                {
+                    "id": "color1"
+            },
+                {
+                    "id": "color2"
+            },
+                {
+                    "id": "color3"
+            },
+                {
+                    "id": "color4"
+            },
+                {
+                    "id": "color5"
+            },
+                {
+                    "id": "color6"
+            },
+                {
+                    "id": "color7"
+            },
+                {
+                    "id": "color8"
+            },
+                {
+                    "id": "color9"
+            },
+                {
+                    "id": "color10"
+            },
+                {
+                    "id": "color11"
+            },
+                {
+                    "id": "color12"
+            },
+                {
+                    "id": "color13"
+            },
+                {
+                    "id": "color14"
+            },
+                {
+                    "id": "color15"
+            },
+                {
+                    "id": "color16"
+            }
+          ]
+        },
+        "delay": {
+            "absolute": 600
+        },
+        "direction": "FORWARD",
+        "repeat": "1",
+        "spread": 1,
+        "transition": {
+            "absolute": 60000
+        }
+    },
+    "segments": [
+        {
+            "start": 0,
+            "end": 0
+        }
+      ],
+    "customization": {
+        "colors": {
+            "absolute": 3
+        },
+        "initialValues": {
+            "colors": [
+                {
+                    "h": 0,
+                    "s": 100
+                },
+                {
+                    "h": 30,
+                    "s": 95
+                },
+                {
+                    "h": 30,
+                    "s": 0
+                }
+            ],
+            "speed": {
+                "value": 100
+            },
+            "version": 1
+        }
+    },
+    "version": 2,
+    "updatedOn": 1623313154456,
+    "createdOn": 1568597670841,
+    "id": "TapoStrip_0Nkw0JGEvFAKj13fEf75Fq",
+    "active": 1
+}

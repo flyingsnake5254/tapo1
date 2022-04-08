@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:height="6dp">
+            <corners android:radius="5dp"/>
+            <solid android:color="#ffe6e6e6"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:height="6dp">
+                <corners android:topLeftRadius="5dp" android:bottomLeftRadius="5dp"/>
+                <solid android:color="@color/common_iot_main_blue"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

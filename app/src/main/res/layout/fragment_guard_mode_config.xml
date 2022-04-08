@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/fragment_guard_mode_config_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:id="@+id/tv_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="16dp" android:text="@string/guard_mode_home_desc" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+    <View style="@style/common_divider_1dp"/>
+    <RelativeLayout android:id="@+id/config_trigger_devices" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="56dp">
+        <TextView android:text="@string/gm_config_trigger_devices" android:layout_toStartOf="@+id/tv_trigger_devices" style="@style/GuardModeItemTitleText"/>
+        <TextView android:id="@+id/tv_trigger_devices" android:layout_toStartOf="@+id/arrow_share" style="@style/GuardModeItemInfoText"/>
+        <ImageView android:id="@+id/arrow_share" android:contentDescription="@null" style="@style/GuardModeItemArrow"/>
+        <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+    </RelativeLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="16dp" android:text="@string/gm_config_trigger_devices_hint" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+    <View android:background="@color/internal_grey" android:layout_width="match_parent" android:layout_height="9dp"/>
+    <RelativeLayout android:id="@+id/config_alarm_type" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="56dp">
+        <TextView android:text="@string/camera_alarm_sound" android:layout_toStartOf="@+id/tv_alarm_type" style="@style/GuardModeItemTitleText"/>
+        <TextView android:id="@+id/tv_alarm_type" android:layout_toStartOf="@+id/arrow_alarm_type" style="@style/GuardModeItemInfoText"/>
+        <ImageView android:id="@+id/arrow_alarm_type" android:contentDescription="@null" style="@style/GuardModeItemArrow"/>
+        <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/config_alarm_volume" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="56dp">
+        <TextView android:text="@string/gm_config_alarm_volume" android:layout_toStartOf="@+id/tv_alarm_volume" style="@style/GuardModeItemTitleText"/>
+        <TextView android:id="@+id/tv_alarm_volume" android:layout_toStartOf="@+id/arrow_alarm_volume" style="@style/GuardModeItemInfoText"/>
+        <ImageView android:id="@+id/arrow_alarm_volume" android:contentDescription="@null" style="@style/GuardModeItemArrow"/>
+        <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/config_alarm_time" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="56dp">
+        <TextView android:text="@string/gm_config_alarm_time" android:layout_toStartOf="@+id/tv_alarm_time" style="@style/GuardModeItemTitleText"/>
+        <TextView android:id="@+id/tv_alarm_time" android:layout_toStartOf="@+id/arrow_alarm_time" style="@style/GuardModeItemInfoText"/>
+        <ImageView android:id="@+id/arrow_alarm_time" android:contentDescription="@null" style="@style/GuardModeItemArrow"/>
+        <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+    </RelativeLayout>
+</LinearLayout>

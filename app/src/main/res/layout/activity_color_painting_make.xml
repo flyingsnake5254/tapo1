@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_color_painting_make_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_effect_name" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_right_arrow_visible="true" app:item_set_title_hint="@string/light_strip_effect_name"/>
+            <TextView android:text="@string/light_strip_color_painting" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="@string/light_strip_color_painting_hint" style="@style/common_text_secondary_regular_16dp"/>
+            <androidx.cardview.widget.CardView android:id="@+id/cv_color_chip" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_marginStart="16dp" app:cardBackgroundColor="@color/white" app:cardCornerRadius="20dp" app:cardElevation="4dp" app:contentPadding="4dp">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_color_point" android:tag="binding_3" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/bg_round_corner_32" android:contentDescription="@string/color"/>
+                    <TextView android:textSize="16sp" android:layout_gravity="center_vertical" android:id="@+id/tv_color" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/color" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <com.tplink.iot.devices.lightstrip.widget.ColorPaintingSegmentView android:id="@+id/color_painting_segment" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" app:cps_blockHeight="30dp" app:cps_cols="10" app:cps_gapX="2dp" app:cps_gapY="28dp" app:cps_rows="5"/>
+            <TextView android:text="@string/brightness" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+            <com.tplink.iot.widget.BrightnessSeekBar android:id="@+id/brightness_seek_bar" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+            <FrameLayout android:paddingTop="32dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <Button android:layout_gravity="bottom|center_horizontal" android:id="@+id/btn_save" android:tag="binding_5" android:text="@string/common_save" style="@style/iot_common_flat_blue_button"/>
+                <Button android:layout_gravity="bottom|center_horizontal" android:id="@+id/btn_delete" android:tag="binding_6" android:visibility="gone" android:text="@string/delete" style="@style/iot_common_flat_white_button_with_red_stroke"/>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

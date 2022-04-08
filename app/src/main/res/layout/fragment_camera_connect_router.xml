@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/fragment_camera_connect_router_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:elevation="0dp" app:navigationIcon="@drawable/common_back_selector" app:popupTheme="@style/TP.Theme.PopupOverlay" app:titleTextColor="@color/common_iot_dark_black" style="@style/toolbar_style"/>
+    <ScrollView android:background="@color/common_white" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_below="@+id/toolbar">
+        <RelativeLayout android:orientation="vertical" android:id="@+id/layout_bulb_install" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/onboarding_new_ipc_power_up_and_check_led" android:layout_centerHorizontal="true" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+            <TextView android:id="@+id/hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/camera_onboarding_wired_connect_router_check_status_desc" android:layout_below="@+id/title" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_secondary_regular_16dp"/>
+            <TextView android:id="@+id/same_router_tips" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/camera_onboarding_connect_router_tips" android:layout_below="@+id/hint" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_secondary_regular_16dp"/>
+            <ImageView android:id="@+id/connect_router_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:src="@drawable/c310_connect_router" android:layout_below="@+id/same_router_tips" android:layout_centerHorizontal="true" android:contentDescription="@null"/>
+            <RelativeLayout android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/connect_router_iv">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <com.tplink.libtpcontrols.tprefreshablebutton.TPRefreshableButton android:id="@+id/quicksetup_introduce_commmon_next" android:tag="binding_1" android:layout_marginBottom="5dp" android:text="@string/camera_onboarding_led_already_amber" style="@style/iot_common_flat_blue_refreshable_button"/>
+                    <TextView android:gravity="center_horizontal" android:id="@+id/tv_bottom_tip" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="@string/camera_onboarding_led_not_solid_amber" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" style="@style/common_text_purple_regular_16dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

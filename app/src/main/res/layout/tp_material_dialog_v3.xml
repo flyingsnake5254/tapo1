@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/dialog_card" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="30dp" android:layout_marginStart="@dimen/tp_material_dialog_margin" android:layout_marginEnd="@dimen/tp_material_dialog_margin" app:cardCornerRadius="3dp" app:cardElevation="10dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="8dp" android:layout_marginStart="12dp" android:layout_marginEnd="12dp">
+        <ScrollView android:id="@+id/sv_content" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_weight="1" android:fadeScrollbars="false">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20sp" android:textColor="@color/common_tplink_dark_gray" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15dp" android:text="" android:layout_marginStart="12dp" android:layout_marginEnd="12dp" style="@style/common_dark_gray_medium_text_20dp"/>
+                <TextView android:textSize="16sp" android:id="@+id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="" android:layout_marginStart="12dp" android:layout_marginEnd="12dp" style="@style/common_light_gray_regular_text_16dp"/>
+                <FrameLayout android:id="@+id/dialog_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0">
+            <com.andexert.library.RippleView android:id="@+id/btn_positive_ripple" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" style="@style/default_ripple_efect">
+                <Button android:textSize="14sp" android:textColor="@color/common_tplink_teal_selector" android:id="@+id/btn_positive" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="140dp" android:text="OK" android:textAllCaps="true" android:fontFamily="sans-serif-medium" android:paddingStart="6dp" android:paddingEnd="6dp" android:layout_marginStart="8dp" android:layout_marginEnd="-4dp" style="@style/Widget.AppCompat.Button.Small"/>
+            </com.andexert.library.RippleView>
+            <com.andexert.library.RippleView android:id="@+id/btn_negative_ripple" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignTop="@+id/btn_positive_ripple" android:layout_toStartOf="@+id/btn_positive_ripple" style="@style/default_ripple_efect">
+                <Button android:textSize="14sp" android:textColor="@color/common_tplink_teal_selector" android:id="@+id/btn_negative" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="140dp" android:text="Cancel" android:textAllCaps="true" android:fontFamily="sans-serif-medium" android:paddingStart="6dp" android:paddingEnd="6dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" style="@style/Widget.AppCompat.Button.Small"/>
+            </com.andexert.library.RippleView>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

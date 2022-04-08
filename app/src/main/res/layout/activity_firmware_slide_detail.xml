@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/common_iot_orange" android:background="#20ffaa00" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/firmware_update_not_power_off_and_restart" android:paddingStart="20dp" android:paddingEnd="20dp"/>
+            <LinearLayout android:orientation="vertical" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/iv_iot_series_avatar" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginTop="10dp" android:src="@mipmap/iot_plug_48" android:contentDescription="@null" android:layout_marginStart="24dp"/>
+                <TextView android:ellipsize="end" android:id="@+id/tv_iot_series_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/firmware_smart_plug" android:lines="1" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_main_dark_medium_16dp"/>
+                <TextView android:textColor="@color/color_cc333333" android:id="@+id/tv_iot_series_update_instr" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/firmware_series_update_text_format" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_main_dark_regular_14dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_new_version_info" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View style="@style/common_divider_block_8dp"/>
+                <TextView android:id="@+id/tv_new_version" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fw_new_firmware_version_with_version" android:paddingStart="24dp" android:paddingEnd="24dp" style="@style/common_text_main_dark_regular_14dp"/>
+                <TextView android:textColor="@color/common_iot_light_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/fw_what_new" android:paddingStart="24dp" android:paddingEnd="24dp" style="@style/common_text_secondary_regular_14dp"/>
+                <TextView android:textSize="@dimen/m6_text_size_14dp" android:textColor="@color/common_iot_dark_black" android:id="@+id/tv_what_new" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:lineSpacingExtra="12dp" android:paddingStart="24dp" android:paddingEnd="24dp"/>
+            </LinearLayout>
+            <com.tplink.iot.widget.FirmwareDetailLayout android:id="@+id/fdl_battery_disallow" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <com.tplink.iot.widget.FirmwareDetailLayout android:id="@+id/fdl_failed" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <com.tplink.iot.widget.FirmwareDetailLayout android:id="@+id/fdl_transfer_failed" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <com.tplink.iot.widget.FirmwareDetailLayout android:id="@+id/fdl_success" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.tplink.iot.widget.ProgressBarButton android:textSize="@dimen/m6_text_size_18dp" android:layout_gravity="bottom|center_horizontal" android:id="@+id/btn_bottom_update" android:layout_width="300dp" android:layout_height="42dp" android:layout_marginTop="10dp" android:layout_marginBottom="24dp" android:text="@string/fw_update_now" app:pbb_button_text_color="@color/common_white" app:pbb_install_text_color="@color/common_white" app:pbb_progress_text_color="@color/common_iot_main_blue" app:pbb_type="1" app:pbb_waiting_text_color="@color/white" style="@style/m6_common_blue_300_button"/>
+</LinearLayout>

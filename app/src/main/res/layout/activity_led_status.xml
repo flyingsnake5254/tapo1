@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <View style="@style/common_divider_1dp"/>
+    <RadioGroup android:orientation="vertical" android:id="@+id/rg_led_rule" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.tplink.libtpcontrols.materialnormalcompat.radio.TPRadioButton android:id="@+id/turn_on_rb" android:checked="true" android:text="@string/setting_auto" style="@style/common_text_main_dark_regular_16dp.common_line_radio_button"/>
+        <View style="@style/common_divider_1dp_margin_start_20dp"/>
+        <com.tplink.libtpcontrols.materialnormalcompat.radio.TPRadioButton android:id="@+id/turn_off_rb" android:text="@string/status_off" style="@style/common_text_main_dark_regular_16dp.common_line_radio_button"/>
+        <View style="@style/common_divider_1dp_margin_start_20dp"/>
+        <com.tplink.libtpcontrols.materialnormalcompat.radio.TPRadioButton android:id="@+id/rb_night_mode" android:text="@string/led_night_mode" style="@style/common_text_main_dark_regular_16dp.common_line_radio_button"/>
+        <View style="@style/common_divider_1dp_margin_start_20dp"/>
+    </RadioGroup>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_schedule" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_night_mode_schedule" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_right_arrow_visible="true" app:item_set_title_hint="@string/led_off_time"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/led_night_mode_explain" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+    </LinearLayout>
+</LinearLayout>

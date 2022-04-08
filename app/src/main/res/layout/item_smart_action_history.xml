@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:focusable="false" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/rl_history_action_item" android:layout_width="match_parent" android:layout_height="60dp" android:paddingStart="@dimen/smart_action_padding_left" android:paddingEnd="@dimen/smart_list_padding_end">
+        <TextView android:textSize="15sp" android:textColor="@color/color_646567" android:id="@+id/tv_action_time" android:paddingTop="19dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginEnd="16dp"/>
+        <ImageView android:id="@+id/iv_action_warning" android:visibility="gone" android:layout_width="16dp" android:layout_height="match_parent" android:src="@mipmap/smart_warning_icon" android:layout_marginEnd="8dp" android:layout_toEndOf="@+id/tv_action_time"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@+id/tv_smart_log_name_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1" android:layout_alignBaseline="@+id/tv_action_time" android:drawableEnd="@mipmap/arrow_down_gray" android:layout_toEndOf="@+id/iv_action_warning"/>
+        <View android:layout_alignBottom="@+id/tv_action_time" style="@style/m6_common_divider"/>
+    </RelativeLayout>
+    <TextView android:id="@+id/tv_smart_log_group_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="40dp" android:paddingStart="@dimen/smart_action_padding_left" android:paddingEnd="@dimen/smart_list_padding_end" style="@style/common_divider_text_view"/>
+</FrameLayout>

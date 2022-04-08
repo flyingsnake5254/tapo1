@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_trv_set_frost_protection_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_setting_info" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_bottom_divider_visible="true" app:item_right_arrow_visible="true"/>
+    <TextView android:id="@+id/tv_tip1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/trv_frost_protection_hint_intro" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+    <TextView android:id="@+id/tv_tip2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/trv_frost_protection_hint_note" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+</LinearLayout>

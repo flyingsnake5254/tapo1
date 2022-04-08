@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <bitmap android:src="@mipmap/ic_ok_white" android:tint="@color/common_iot_main_blue"/>
+    </item>
+    <item>
+        <bitmap android:src="@mipmap/ic_ok_white" android:alpha="0"/>
+    </item>
+</selector>

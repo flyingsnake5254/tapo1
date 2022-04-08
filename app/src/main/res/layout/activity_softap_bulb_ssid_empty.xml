@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qs_connect_device_network" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_main_dark_medium_20dp"/>
+                <TextView android:id="@+id/tv_device_network_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/qs_connect_device_network_content_common" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_secondary_regular_16dp"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_device_ssid_connect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:src="@mipmap/bulb_ssid_connect" android:contentDescription="@null"/>
+            </LinearLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:paddingTop="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+                <FrameLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="16dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <ImageView android:layout_gravity="center" android:id="@+id/iv_device_loading" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:src="@mipmap/icon_home_loading" android:layout_marginEnd="6dp"/>
+                    <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_bottom_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="280dp" android:text="@string/quicksetup_already_connected" style="@style/common_text_purple_regular_16dp"/>
+                </FrameLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60dp" android:src="@mipmap/ga_link_success"/>
+        <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/google_assistant_linked_success_title" style="@style/common_text_main_dark_medium_20dp"/>
+        <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/google_assistant_linked_instr" style="@style/common_text_body_regular_14dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="@string/google_assistant_linked_function_following" style="@style/common_text_annotation_regular_14dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/google_assistant_linked_test1" style="@style/common_text_main_dark_regular_14dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/google_assistant_linked_test2" style="@style/common_text_main_dark_regular_14dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/google_assistant_linked_test3" style="@style/common_text_main_dark_regular_14dp"/>
+    </LinearLayout>
+    <RelativeLayout android:paddingTop="24dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/color_EB4954" android:id="@+id/btn_unbind" android:visibility="visible" android:text="@string/action_unlink" android:layout_alignParentBottom="true" style="@style/iot_common_flat_white_button_with_red_stroke"/>
+    </RelativeLayout>
+</RelativeLayout>

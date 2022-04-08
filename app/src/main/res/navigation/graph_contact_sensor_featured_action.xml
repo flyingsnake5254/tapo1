@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/graph_contact_sensor_featured_action" app:startDestination="@+id/contactSensorFeaturedActionChooseFragment">
+    <fragment android:label="ContactSensorFeaturedActionChooseFragment" android:name="com.tplink.iot.devices.featuredactions.view.ContactSensorFeaturedActionChooseFragment" android:id="@+id/contactSensorFeaturedActionChooseFragment">
+        <action android:id="@+id/action_contactSensorFeaturedActionChooseFragment_to_contactSensorFABuildSmartAlarmFragment" app:destination="@+id/contactSensorFABuildSmartAlarmFragment" app:enterAnim="@anim/push_in_from_right" app:exitAnim="@anim/push_out_to_left" app:popEnterAnim="@anim/push_in_from_left" app:popExitAnim="@anim/push_out_to_right"/>
+        <action android:id="@+id/action_contactSensorFeaturedActionChooseFragment_to_contactSensorFALightWayWhenArrivingHomeFragment" app:destination="@+id/contactSensorFALightWayWhenArrivingHomeFragment" app:enterAnim="@anim/push_in_from_right" app:exitAnim="@anim/push_out_to_left" app:popEnterAnim="@anim/push_in_from_left" app:popExitAnim="@anim/push_out_to_right"/>
+        <action android:id="@+id/action_contactSensorFeaturedActionChooseFragment_to_contactSensorFASecureDoorOrWindowFragment" app:destination="@+id/contactSensorFASecureDoorOrWindowFragment" app:enterAnim="@anim/push_in_from_right" app:exitAnim="@anim/push_out_to_left" app:popEnterAnim="@anim/push_in_from_left" app:popExitAnim="@anim/push_out_to_right"/>
+    </fragment>
+    <fragment android:label="ContactSensorFABuildSmartAlarmFragment" android:name="com.tplink.iot.devices.featuredactions.view.ContactSensorFABuildSmartAlarmFragment" android:id="@+id/contactSensorFABuildSmartAlarmFragment"/>
+    <fragment android:label="ContactSensorFALightWayWhenArrivingHomeFragment" android:name="com.tplink.iot.devices.featuredactions.view.ContactSensorFALightWayWhenArrivingHomeFragment" android:id="@+id/contactSensorFALightWayWhenArrivingHomeFragment"/>
+    <fragment android:label="ContactSensorFASecureDoorOrWindowFragment" android:name="com.tplink.iot.devices.featuredactions.view.ContactSensorFASecureDoorOrWindowFragment" android:id="@+id/contactSensorFASecureDoorOrWindowFragment"/>
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_centerVertical="true" android:layout_marginStart="24dp">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.tplink.iot.widget.colorbulb.SmallBulbTintView android:id="@+id/iv_color_bulb" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <com.tplink.iot.devices.lightstrip.widget.LightStripTintView android:id="@+id/iv_light_strip_tint" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <ImageView android:id="@+id/iv_device_image" android:visibility="gone" android:layout_width="36dp" android:layout_height="36dp" android:src="@mipmap/iot_plug_36"/>
+        </FrameLayout>
+        <TextView android:textSize="13sp" android:gravity="center" android:id="@+id/tv_status_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_on" android:textAllCaps="true" style="@style/common_text_blue_medium_14dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/rl_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/switch_button" android:layout_toEndOf="@+id/ll_status">
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/common_text_main_dark_medium_16dp"/>
+        <TextView android:id="@+id/tv_sunrise_sunset_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" style="@style/common_dark_gray_regular_text_14dp"/>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:ellipsize="end" android:id="@+id/tv_day_tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/plug_schedule_one_time" android:singleLine="true" style="@style/common_light_gray_regular_text_14dp"/>
+            <com.tplink.iot.widget.WeekdayView android:id="@+id/weekday_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </FrameLayout>
+    </LinearLayout>
+    <com.tplink.libtpcontrols.materialnormalcompat.swicth.TPSwitchCompat android:id="@+id/switch_button" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:switchMinWidth="@dimen/switch_compat_width" style="@style/custom_switch_compat"/>
+    <ImageView android:id="@+id/iv_delete_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_home_loading" android:layout_centerVertical="true" android:layout_marginEnd="24dp" android:layout_alignParentEnd="true"/>
+    <View android:id="@+id/view_cover" android:background="#4dffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <View android:id="@+id/divider_line" android:layout_alignParentBottom="true" android:layout_marginStart="24dp" style="@style/common_divider_1px"/>
+</RelativeLayout>

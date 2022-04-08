@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/common_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_ble_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/wifi_wrong"/>
+    <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/quicksetup_plug_name_device_connect" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_18dp"/>
+    <TextView android:id="@+id/tv_ssid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="10dp" android:text="@string/quicksetup_plug_connect_ap_wifi" android:lineSpacingExtra="4dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_main_dark_regular_16dp"/>
+</LinearLayout>

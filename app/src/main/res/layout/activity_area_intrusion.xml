@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/mtb" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" app:layout_constraintTop_toTopOf="0" app:navigationIcon="@mipmap/back">
+        <TextView android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/setting_area_intrusion" android:singleLine="true" android:layout_alignParentStart="true" style="@style/ActivityTitleText"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_video_tampering" android:background="@color/pure_white" android:paddingLeft="@dimen/content_margin" android:paddingRight="@dimen/content_margin" android:layout_width="match_parent" android:layout_height="56dp" app:layout_constraintTop_toBottomOf="@+id/mtb">
+        <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/setting_area_intrusion" android:layout_weight="1" style="@style/common_dark_gray_regular_text_16dp"/>
+        <CheckBox android:id="@+id/video_intrusion_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:button="@drawable/switch_selector"/>
+    </LinearLayout>
+    <TextView android:id="@+id/divider" android:background="@color/color_F5F5F5" android:layout_width="match_parent" android:layout_height="8dp" app:layout_constraintTop_toBottomOf="@+id/ll_video_tampering"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/layout_area_intrusion" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/divider">
+        <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/color_999999" android:id="@+id/setting_area_title_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:text="@string/setting_set_areas_tip" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:layout_constraintTop_toTopOf="0"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/setting_md_region_setting_entrance_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/setting_area_title_tv">
+            <FrameLayout android:id="@+id/setting_area_container" android:layout_width="match_parent" android:layout_height="199dp">
+                <ImageView android:id="@+id/setting_cover_iv" android:background="#4a4a4a" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY"/>
+                <TextView android:textSize="@dimen/text_size_14" android:textColor="@color/pure_white" android:gravity="center" android:id="@+id/no_preview_note" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/no_preview_image_note"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_region_edit" android:background="@color/pure_white" android:paddingLeft="@dimen/content_margin" android:paddingRight="0dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="51dp" app:layout_constraintTop_toBottomOf="@+id/setting_md_region_setting_entrance_layout">
+            <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/setting_set_areas" android:layout_weight="1"/>
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableEnd="@mipmap/more" android:layout_marginEnd="12dp"/>
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/divider2" android:background="@color/color_F5F5F5" android:layout_width="match_parent" android:layout_height="8dp" app:layout_constraintTop_toBottomOf="@+id/ll_region_edit"/>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_schedule" android:background="@color/pure_white" android:paddingLeft="@dimen/content_margin" android:paddingRight="0dp" android:layout_width="match_parent" android:layout_height="51dp" app:layout_constraintTop_toBottomOf="@+id/divider2">
+            <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/plug_schedule" android:layout_weight="1"/>
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableEnd="@mipmap/more" android:layout_marginEnd="12dp"/>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

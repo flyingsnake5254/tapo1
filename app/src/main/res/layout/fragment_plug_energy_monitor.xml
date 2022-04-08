@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/fragment_plug_energy_monitor_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <TextView android:id="@+id/pem_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="当日用电量"/>
+        <TextView android:id="@+id/pem_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="9.6kW•h"/>
+        <TextView android:id="@+id/pem_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Dec 15, 2020"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/pem_chart" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp"/>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/fragment_light_strip_light_effects_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/tv_colors" android:text="@string/colors" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_color_presets" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="5"/>
+        <TextView android:id="@+id/tv_color_painting" android:text="@string/light_strip_color_painting" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_color_painting" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="3"/>
+        <TextView android:text="@string/light_strip_customized_effects" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_customized_effects" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="3"/>
+        <TextView android:text="@string/light_strip_predefined_effects" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_predefined_effects" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="3"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

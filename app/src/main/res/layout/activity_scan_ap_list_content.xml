@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/back"/>
+        <TextView android:gravity="center" android:id="@+id/tv_rescan_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="rescan" android:layout_centerVertical="true" android:layout_marginEnd="18dp" android:layout_alignParentEnd="true" style="@style/common_dark_gray_medium_text_18dp"/>
+    </RelativeLayout>
+    <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Choose a network" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_light_gray_regular_text_20dp"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2.4G" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_light_gray_regular_text_20dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/ssid_recycle_view_24g" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+            <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="5G" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_light_gray_regular_text_20dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/ssid_recycle_view_5g" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <View android:layout_width="match_parent" style="@style/common_divider_1dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:text="@string/bulb_default_states_instr" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_16dp"/>
+    <RadioGroup android:orientation="vertical" android:id="@+id/rg_state" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RadioButton android:id="@+id/rb_state_last" android:background="@color/transparent" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/last_on_state" android:drawableEnd="@drawable/common_rb_bg" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/common_text_main_dark_regular_16dp"/>
+        <View style="@style/common_divider_1dp_margin_start_20dp"/>
+        <RadioButton android:id="@+id/rb_state_custom" android:background="@color/transparent" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/common_custom" android:drawableEnd="@drawable/common_rb_bg" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/common_text_main_dark_regular_16dp"/>
+        <View style="@style/common_divider_1dp_margin_start_20dp"/>
+    </RadioGroup>
+    <com.tplink.iot.widget.BulbBrightnessView android:id="@+id/brightness_setting_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

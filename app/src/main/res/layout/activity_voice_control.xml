@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/common_gray_black_color_transparent_50" android:padding="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/voice_control_tips_v2" style="@style/common_text_main_dark_regular_16dp"/>
+            <TextView android:textSize="16sp" android:textColor="#333333" android:gravity="center_vertical" android:id="@+id/tv_amazon" android:layout_width="match_parent" android:layout_height="76dp" android:text="@string/amazon_alexa" android:drawablePadding="12dp" android:drawableStart="@mipmap/alexa_assistant" android:drawableEnd="@mipmap/plug_arrow_right" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/BaseTextAppearance_Regular"/>
+            <View style="@style/m6_common_divider"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_alice" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16sp" android:textColor="#333333" android:gravity="center_vertical" android:id="@+id/tv_alice" android:layout_width="match_parent" android:layout_height="76dp" android:text="@string/yandex_alice" android:drawablePadding="12dp" android:drawableStart="@mipmap/alice_assistant" android:drawableEnd="@mipmap/plug_arrow_right" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/BaseTextAppearance_Regular"/>
+                <View style="@style/m6_common_divider"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_mail_ru" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16sp" android:textColor="#333333" android:gravity="center_vertical" android:id="@+id/tv_mail_ru" android:layout_width="match_parent" android:layout_height="76dp" android:text="@string/mail_ru" android:drawablePadding="12dp" android:drawableStart="@mipmap/mail_ru" android:drawableEnd="@mipmap/plug_arrow_right" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/BaseTextAppearance_Regular"/>
+                <View style="@style/m6_common_divider"/>
+            </LinearLayout>
+            <TextView android:textSize="16sp" android:textColor="#333333" android:gravity="center_vertical" android:id="@+id/tv_google" android:layout_width="match_parent" android:layout_height="76dp" android:text="@string/google_assistant" android:drawablePadding="12dp" android:drawableStart="@mipmap/google_assistant" android:drawableEnd="@mipmap/plug_arrow_right" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/BaseTextAppearance_Regular"/>
+            <View style="@style/m6_common_divider"/>
+            <TextView android:textSize="16sp" android:textColor="#333333" android:gravity="center_vertical" android:id="@+id/tv_smart_things" android:visibility="gone" android:layout_width="match_parent" android:layout_height="76dp" android:text="@string/samsung_smart_things" android:drawablePadding="12dp" android:drawableStart="@mipmap/smart_things" android:drawableEnd="@mipmap/plug_arrow_right" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/BaseTextAppearance_Regular"/>
+            <View android:visibility="gone" style="@style/m6_common_divider"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

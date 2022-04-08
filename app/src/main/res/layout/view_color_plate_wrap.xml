@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20dp" android:paddingEnd="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/color" android:layout_centerVertical="true" style="@style/common_text_secondary_regular_14dp"/>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_color_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" style="@style/common_text_main_dark_medium_14dp"/>
+    </RelativeLayout>
+    <com.tplink.iot.widget.colorbulb.TPCircleColorView android:layout_gravity="center" android:id="@+id/color_picker_view" android:layout_width="240dp" android:layout_height="240dp" android:layout_marginTop="20dp"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="24dp">
+        <HorizontalScrollView android:layout_gravity="center" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="20dp">
+            <com.tplink.iot.widget.colorbulb.ColorListView android:orientation="horizontal" android:id="@+id/color_list_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </HorizontalScrollView>
+    </FrameLayout>
+</LinearLayout>

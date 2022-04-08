@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/item_avatar" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/item_icon_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/setting_device_icon" android:layout_marginStart="20dp" android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/common_text_main_dark_regular_16dp"/>
+                    <ImageView android:id="@+id/plug_avatar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:src="@mipmap/iot_bulb_48" android:contentDescription="@null" android:layout_marginStart="20dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/item_icon_hint"/>
+                    <ImageView android:id="@+id/right_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/arrow_more" android:layout_centerInParent="true" android:contentDescription="@null" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <View android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/plug_avatar" style="@style/common_divider_1dp_margin_start_20dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_name" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_right_arrow_visible="true" app:item_set_title_hint="@string/setting_device_name"/>
+                <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_location" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_right_arrow_visible="true" app:item_set_title_hint="@string/setting_location"/>
+                <View android:background="@color/internal_grey" android:layout_width="match_parent" android:layout_height="12dp"/>
+                <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_default_state" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_bottom_divider_visible="true" app:item_right_arrow_visible="true" app:item_set_title_hint="@string/bulb_settings_default_state"/>
+                <RelativeLayout android:id="@+id/item_on_off_gradually" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20dp" android:paddingEnd="0dp">
+                    <LinearLayout android:orientation="vertical" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/switch_gradually">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/light_on_off_gradually" style="@style/common_text_main_dark_regular_16dp"/>
+                        <TextView android:id="@+id/item_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/light_on_off_gradually_desc" style="@style/common_text_secondary_regular_14dp"/>
+                    </LinearLayout>
+                    <com.tplink.libtpcontrols.materialnormalcompat.swicth.TPSwitchCompat android:id="@+id/switch_gradually" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:switchMinWidth="@dimen/switch_compat_width" style="@style/custom_switch_compat"/>
+                </RelativeLayout>
+                <View android:background="@color/internal_grey" android:layout_width="match_parent" android:layout_height="12dp"/>
+                <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_group" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_right_arrow_visible="true" app:item_set_title_hint="@string/groups"/>
+                <View style="@style/common_divider_1dp_margin_start_20dp"/>
+                <RelativeLayout android:id="@+id/item_device_info" android:background="?android:attr/selectableItemBackground" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/device_info" android:layout_marginStart="20dp" android:layout_toStartOf="@+id/right_arrow_device_info" style="@style/common_text_main_dark_regular_16dp"/>
+                    <ImageView android:id="@+id/right_arrow_device_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/arrow_more" android:layout_centerInParent="true" android:contentDescription="@null" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View style="@style/common_divider_1dp_margin_start_20dp"/>
+                <RelativeLayout android:id="@+id/item_firmware" android:background="?android:attr/selectableItemBackground" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="20dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_plug_firmware_title" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_regular_16dp"/>
+                        <ImageView android:layout_gravity="center" android:id="@+id/iv_fw_red_point" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/notification"/>
+                    </FrameLayout>
+                    <ImageView android:id="@+id/right_arrow_firmware" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/arrow_more" android:layout_centerInParent="true" android:contentDescription="@null" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View style="@style/common_divider_1dp_margin_start_20dp"/>
+            </LinearLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:paddingTop="24dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+                <Button android:textColor="@color/color_EB4954" android:id="@+id/btn_remove" android:layout_marginBottom="5dp" android:text="@string/common_remove" android:layout_alignParentBottom="true" style="@style/iot_common_flat_white_button_with_red_stroke"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

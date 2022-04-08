@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <TextView android:id="@+id/dialog_message_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-15dp" android:layout_marginBottom="16dp" android:text="@string/account_not_exist_tip" android:drawableTop="@mipmap/ill_email_empty" android:paddingStart="24dp" android:paddingEnd="24dp" style="@style/common_text_body_regular_16dp"/>
+</FrameLayout>

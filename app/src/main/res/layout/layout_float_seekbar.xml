@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/img_brightness_left" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/brightness_low" android:layout_marginEnd="-6dp"/>
+        <com.tplink.libtpcontrols.materialnormalcompat.seekbar.DiscreteSeekBar android:layout_gravity="center_vertical" android:id="@+id/discrete" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" style="@style/float_seekbar"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/img_brightness_right" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/brightness" android:layout_marginStart="-6dp"/>
+    </LinearLayout>
+</LinearLayout>

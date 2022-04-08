@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/activity_guard_mode_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/item_home_mode" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="56dp">
+            <TextView android:text="@string/camera_home_mode" android:layout_toStartOf="@+id/arrow_home_mode" style="@style/GuardModeItemTitleText"/>
+            <ImageView android:id="@+id/arrow_home_mode" android:contentDescription="@null" style="@style/GuardModeItemArrow"/>
+            <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/item_away_mode" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="56dp">
+            <TextView android:text="@string/camera_away_mode" android:layout_toStartOf="@+id/arrow_away_mode" style="@style/GuardModeItemTitleText"/>
+            <ImageView android:id="@+id/arrow_away_mode" android:contentDescription="@null" style="@style/GuardModeItemArrow"/>
+            <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/item_sleep_mode" android:background="?attr/selectableItemBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="56dp">
+            <TextView android:text="@string/guard_sleep_mode" android:layout_toStartOf="@+id/arrow_sleep_mode" style="@style/GuardModeItemTitleText"/>
+            <ImageView android:id="@+id/arrow_sleep_mode" android:contentDescription="@null" style="@style/GuardModeItemArrow"/>
+            <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/guard_mode_overview" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+</LinearLayout>

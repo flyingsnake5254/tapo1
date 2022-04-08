@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="@dimen/m6_text_size_16dp" android:textColor="@color/common_iot_dark_black" android:id="@+id/time_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="20dp"/>
+    <TextView android:textSize="@dimen/m6_text_size_14dp" android:textColor="@color/common_iot_light_black" android:id="@+id/content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="16dp" android:layout_marginStart="20dp"/>
+    <View style="@style/common_divider_1dp_margin_start_20dp"/>
+</LinearLayout>

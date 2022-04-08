@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_first_introduce_title" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_medium_20dp"/>
+        <TextView android:id="@+id/tv_power_up_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/quicksetup_first_introduce_content_new" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_body_regular_16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="10dp" android:text="@string/quicksetup_keep_phone_close_device" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_body_regular_16dp"/>
+        <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@+id/img_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/led_eu"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/img_led_first" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </FrameLayout>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:paddingTop="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <com.tplink.libtpcontrols.tprefreshablebutton.TPRefreshableButton android:id="@+id/quicksetup_introduce_commmon_refresh_next" android:layout_marginBottom="5dp" android:text="@string/quicksetup_first_introduce_btn_content" style="@style/iot_common_flat_blue_refreshable_button"/>
+            <TextView android:gravity="center_horizontal" android:id="@+id/tv_bottom_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="24dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" style="@style/common_text_purple_regular_16dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

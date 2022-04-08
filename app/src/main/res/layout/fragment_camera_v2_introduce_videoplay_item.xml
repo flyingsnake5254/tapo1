@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/fragment_camera_v2_introduce_videoplay_item_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:background="@color/common_white" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:overScrollMode="never">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+                <TextView android:gravity="center_horizontal" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" style="@style/common_text_main_dark_bold_18dp"/>
+                <TextView android:gravity="center" android:id="@+id/tv_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_body_regular_16dp"/>
+                <TextView android:gravity="center" android:id="@+id/tv_learn_more_url" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_purple_regular_16dp"/>
+                <ImageView android:id="@+id/image_introduce" android:layout_width="match_parent" android:layout_height="300dp" android:layout_marginTop="40dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

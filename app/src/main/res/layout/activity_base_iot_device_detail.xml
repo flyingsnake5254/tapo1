@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/fl_root" android:tag="layout/activity_base_iot_device_detail_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_bg" android:background="@mipmap/plug_detail_bg_on" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:contentDescription="@null" android:alpha="1"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:id="@+id/iv_back" android:tag="binding_1" android:background="?attr/actionBarItemBackground" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/back" android:contentDescription="@null"/>
+            <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_name" android:tag="binding_2" android:layout_width="0dp" android:layout_height="match_parent" android:singleLine="true" android:layout_weight="1" style="@style/common_text_main_dark_medium_20dp"/>
+            <TextView android:textColor="@color/white" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_music_rhythm_mode" android:visibility="gone" android:layout_width="0dp" android:layout_height="match_parent" android:singleLine="true" android:layout_weight="1" style="@style/common_text_main_dark_medium_20dp"/>
+            <FrameLayout android:id="@+id/fl_setting" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="12dp">
+                <ImageView android:id="@+id/iv_setting" android:background="?attr/actionBarItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:src="@mipmap/ic_setting_black" android:contentDescription="@null" android:layout_marginEnd="4dp"/>
+                <ImageView android:layout_gravity="end|top" android:id="@+id/iv_red_point" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/notification" android:contentDescription="@null"/>
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_location" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="6dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:drawableLeftCompat="@mipmap/ic_location_black" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/ll_toolbar" style="@style/common_text_main_dark_regular_16dp"/>
+        <FrameLayout android:id="@+id/fl_top_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/tv_location">
+            <androidx.cardview.widget.CardView android:id="@+id/card_local_only" android:tag="binding_6" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="2dp" app:cardBackgroundColor="@color/local_only_tip_bg" app:cardCornerRadius="4dp" app:cardElevation="0dp" app:layout_constraintTop_toBottomOf="@+id/tv_location">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/local_only_tip_text" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cloud_connect_local" android:paddingStart="14dp" android:paddingEnd="10dp" android:layout_toStartOf="@+id/img_more_local" style="@style/common_text_main_dark_regular_14dp"/>
+                    <ImageView android:id="@+id/img_more_local" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/more_local_only" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/card_user_device" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="2dp" app:cardBackgroundColor="@color/local_only_tip_bg" app:cardCornerRadius="4dp" app:cardElevation="0dp" app:layout_constraintTop_toBottomOf="@+id/tv_location">
+                <TextView android:textColor="@color/local_only_tip_text" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/toast_limit_permissions" android:paddingStart="14dp" android:paddingEnd="10dp" android:layout_toStartOf="@+id/img_more_local" style="@style/common_text_main_dark_regular_14dp"/>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+        <ScrollView android:id="@+id/content_scroll_view" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="8dp" android:fillViewport="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/fl_top_tip">
+            <FrameLayout android:id="@+id/fl_content_ext" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </ScrollView>
+        <com.yinglan.scrolllayout.ScrollLayout android:id="@+id/scroll_down_layout" android:tag="binding_7" android:layout_width="match_parent" android:layout_height="match_parent" app:exitOffset="0dp" app:isSupportExit="false" app:maxOffset="50dp" app:minOffset="80dp" app:mode="0x0">
+            <include android:id="@+id/detail_bottom" layout="@layout/activity_base_iot_device_detail_bottom"/>
+        </com.yinglan.scrolllayout.ScrollLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

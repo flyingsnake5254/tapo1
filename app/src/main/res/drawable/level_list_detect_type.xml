@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="2">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/playback_time_axis_detect"/>
+            <corners android:topLeftRadius="20dp" android:bottomLeftRadius="20dp"/>
+        </shape>
+    </item>
+    <item android:maxLevel="3">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/playback_time_axis_camera_tamper_detect"/>
+            <corners android:topLeftRadius="20dp" android:bottomLeftRadius="20dp"/>
+        </shape>
+    </item>
+    <item android:maxLevel="4">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/playback_time_axis_line_crossing_detect"/>
+            <corners android:topLeftRadius="20dp" android:bottomLeftRadius="20dp"/>
+        </shape>
+    </item>
+    <item android:maxLevel="5">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/playback_time_axis_area_intrusion_detect"/>
+            <corners android:topLeftRadius="20dp" android:bottomLeftRadius="20dp"/>
+        </shape>
+    </item>
+    <item android:maxLevel="6">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/playback_time_axis_person_detect"/>
+            <corners android:topLeftRadius="20dp" android:bottomLeftRadius="20dp"/>
+        </shape>
+    </item>
+    <item android:maxLevel="7">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/playback_time_axis_baby_detect"/>
+            <corners android:topLeftRadius="20dp" android:bottomLeftRadius="20dp"/>
+        </shape>
+    </item>
+</level-list>

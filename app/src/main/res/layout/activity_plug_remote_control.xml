@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/rl_pse_remote_control" android:layout_width="match_parent" android:layout_height="56dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pse_remote_control" android:layout_centerVertical="true" android:layout_marginStart="20dp" android:layout_toStartOf="@+id/switch_remote_control" style="@style/common_text_main_dark_regular_16dp"/>
+                <com.tplink.libtpcontrols.materialnormalcompat.swicth.TPSwitchCompat android:id="@+id/switch_remote_control" android:paddingTop="6dp" android:paddingBottom="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_centerVertical="true" android:paddingStart="16dp" android:paddingEnd="16dp" android:layout_alignParentEnd="true" app:switchMinWidth="@dimen/switch_compat_width" style="@style/custom_switch_compat"/>
+                <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+            </RelativeLayout>
+            <TextView android:id="@+id/item_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/pse_disable_remote_control_disable" android:layout_marginStart="20dp" android:layout_marginEnd="10dp" style="@style/common_text_secondary_regular_14dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

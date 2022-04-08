@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/play_back_date_selector_0" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.tplink.iot.view.ipcamera.widget.calendar.WeekdayView android:id="@+id/widget_scroll_calendar_weekday" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="4dp" style="@style/WeekdayView"/>
+        <com.tplink.iot.view.ipcamera.widget.calendar.scrollCalendar.ScrollCalendar android:id="@+id/scroll_calendar" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

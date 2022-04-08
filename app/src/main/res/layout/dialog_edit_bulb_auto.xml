@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/transparent" android:paddingTop="64dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/ll_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:gravity="center_vertical" android:background="@drawable/bg_top_round_corner" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_close" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/close" android:contentDescription="@null"/>
+            <ImageView android:id="@+id/iv_save" android:padding="16dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/action_ok_dark_gray" android:contentDescription="@null" android:layout_alignParentEnd="true"/>
+            <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/edit_auto_title" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/iv_save" android:layout_toEndOf="@+id/iv_close" style="@style/common_text_main_dark_medium_20dp"/>
+        </RelativeLayout>
+        <ScrollView android:id="@+id/scroll_view" android:background="@color/color_F5F5F5" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="60dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="8dp" android:layout_marginRight="20dp" android:layout_marginBottom="16dp" android:text="@string/edit_auto_tips" style="@style/common_text_secondary_regular_14dp"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_light_compensate" android:background="@color/white" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+                    <ImageView android:id="@+id/iv_light_compensate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/light_compensate"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/light_compensate" style="@style/common_text_main_dark_medium_16dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/light_compensate_desc" style="@style/common_text_secondary_regular_14dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/light_compensate_tips" style="@style/common_text_secondary_regular_14dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_light_track" android:background="@drawable/bg_item_light_auto_selected" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp">
+                    <ImageView android:id="@+id/iv_light_track" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/light_track"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="16dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/light_track" style="@style/common_text_main_dark_medium_16dp"/>
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/light_track_desc" style="@style/common_text_secondary_regular_14dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

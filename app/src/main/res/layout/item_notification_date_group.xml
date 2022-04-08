@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/common_iot_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_year" android:paddingTop="14dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <View android:id="@+id/v_divide" android:background="@color/color_home_divide" android:layout_width="3dp" android:layout_height="12dp"/>
+        <TextView android:id="@+id/tv_year" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="4dp" style="@style/common_text_main_dark_medium_14dp"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tv_group_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/common_divider_text_view"/>
+</LinearLayout>

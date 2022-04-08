@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="WheelArrayDefault">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </array>
+    <array name="WheelArrayWeek">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </array>
+    <array name="am_pm_array">
+        <item>AM</item>
+        <item>PM</item>
+    </array>
+    <array name="email">
+        <item>@gmail.com</item>
+        <item>@hotmail.com</item>
+        <item>@outlook.com</item>
+        <item>@yahoo.com</item>
+        <item>@icloud.com</item>
+    </array>
+    <array name="exo_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>@string/exo_controls_playback_speed_normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
+    <array name="exo_speed_multiplied_by_100">
+        <item>25</item>
+        <item>50</item>
+        <item>75</item>
+        <item>100</item>
+        <item>125</item>
+        <item>150</item>
+        <item>200</item>
+    </array>
+    <array name="guard_mode_alarm_time_custom_sec">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </array>
+    <array name="hour_time">
+        <item>00:00</item>
+        <item>01:00</item>
+        <item>02:00</item>
+        <item>03:00</item>
+        <item>04:00</item>
+        <item>05:00</item>
+        <item>06:00</item>
+        <item>07:00</item>
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+        <item>24:00</item>
+    </array>
+    <array name="smart_action_condition">
+        <item>@string/smart_action_when_any</item>
+        <item>@string/smart_action_when_all</item>
+    </array>
+    <array name="smart_action_condition_item">
+        <item>@string/smart_action_when_any_spinner</item>
+        <item>@string/smart_action_when_all_spinner</item>
+    </array>
+    <array name="smart_template_descriptions">
+        <item>@string/smart_template_descrip_1</item>
+        <item>@string/smart_template_descrip_2</item>
+        <item>@string/smart_template_descrip_3</item>
+        <item>@string/smart_template_descrip_4</item>
+        <item>@string/smart_template_descrip_5</item>
+    </array>
+    <array name="smart_template_names">
+        <item>@string/smart_template_name_1</item>
+        <item>@string/smart_template_name_2</item>
+        <item>@string/smart_template_name_3</item>
+        <item>@string/smart_template_name_4</item>
+        <item>@string/smart_template_name_5</item>
+    </array>
+    <array name="smart_template_titles">
+        <item>@string/smart_template_title_1</item>
+        <item>@string/smart_template_title_2</item>
+        <item>@string/smart_template_title_3</item>
+        <item>@string/smart_automation</item>
+        <item>@string/smart_automation</item>
+    </array>
+    <array name="time_axis_hour_text">
+        <item>00:</item>
+        <item>01:</item>
+        <item>02:</item>
+        <item>03:</item>
+        <item>04:</item>
+        <item>05:</item>
+        <item>06:</item>
+        <item>07:</item>
+        <item>08:</item>
+        <item>09:</item>
+        <item>10:</item>
+        <item>11:</item>
+        <item>12:</item>
+        <item>13:</item>
+        <item>14:</item>
+        <item>15:</item>
+        <item>16:</item>
+        <item>17:</item>
+        <item>18:</item>
+        <item>19:</item>
+        <item>20:</item>
+        <item>21:</item>
+        <item>22:</item>
+        <item>23:</item>
+        <item>24:</item>
+    </array>
+    <array name="time_axis_line_num">
+        <item>12</item>
+        <item>24</item>
+        <item>288</item>
+        <item>288</item>
+        <item>288</item>
+        <item>1440</item>
+        <item>1440</item>
+        <item>1440</item>
+    </array>
+    <array name="time_axis_line_num_25">
+        <item>12</item>
+        <item>24</item>
+        <item>300</item>
+        <item>300</item>
+        <item>300</item>
+        <item>1500</item>
+        <item>1500</item>
+        <item>1500</item>
+        <item>3001</item>
+    </array>
+    <array name="time_axis_ratio">
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+        <item>24</item>
+        <item>32</item>
+        <item>64</item>
+    </array>
+    <array name="time_axis_text_num">
+        <item>7</item>
+        <item>13</item>
+        <item>25</item>
+        <item>49</item>
+        <item>97</item>
+        <item>145</item>
+        <item>289</item>
+        <item>289</item>
+    </array>
+    <array name="time_axis_text_num_25">
+        <item>7</item>
+        <item>13</item>
+        <item>26</item>
+        <item>51</item>
+        <item>101</item>
+        <item>151</item>
+        <item>301</item>
+        <item>301</item>
+        <item>1501</item>
+    </array>
+    <array name="time_axis_vertical_line_height_land">
+        <item>4</item>
+        <item>4</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+    </array>
+    <array name="time_axis_vertical_line_height_port">
+        <item>12</item>
+        <item>12</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+        <item>6</item>
+    </array>
+    <array name="week_day">
+        <item>S</item>
+        <item>M</item>
+        <item>T</item>
+        <item>W</item>
+        <item>T</item>
+        <item>F</item>
+        <item>S</item>
+    </array>
+    <array name="weekday_array">
+        <item>@string/week_sun</item>
+        <item>@string/week_mon</item>
+        <item>@string/week_tue</item>
+        <item>@string/week_wed</item>
+        <item>@string/week_thu</item>
+        <item>@string/week_fri</item>
+        <item>@string/week_sat</item>
+    </array>
+</resources>

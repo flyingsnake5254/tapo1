@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/toolbar" layout="@layout/common_toolbar_with_elevation"/>
+    <com.tplink.iot.view.ipcamera.widget.tipsbar.TipsBar android:id="@+id/tips_bar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" app:tipsBarBackground="@color/multi_live_focus" app:tipsBarCloseOneTime="true"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycle_select_feedback_device_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+    <TextView android:id="@+id/btn_feedback_device" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:text="@string/common_next" android:layout_weight="0" style="@style/iot_common_flat_blue_button"/>
+</LinearLayout>

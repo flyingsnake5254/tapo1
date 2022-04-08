@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_auto_reboot_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <View style="@style/common_divider_1dp"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <FrameLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/device_setting_common_item_height">
+                    <TextView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_auto_restart" android:layout_marginStart="@dimen/device_setting_common_margin_start" style="@style/common_text_main_dark_regular_16dp"/>
+                    <CheckBox android:layout_gravity="end|center_vertical" android:id="@+id/auto_reboot_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/switch_selector" android:layout_marginEnd="@dimen/device_setting_common_margin_end"/>
+                </FrameLayout>
+                <View android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="@dimen/common_divide_line_height" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+                <TextView android:background="@color/white" android:paddingTop="10dp" android:paddingBottom="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_auto_reboot_tips" android:paddingStart="@dimen/device_setting_common_margin_start" android:paddingEnd="@dimen/device_setting_common_margin_start" style="@style/common_text_annotation_regular_14dp"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/layout_reboot_schedule" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/reboot_schedule" style="@style/common_divider_text_view"/>
+                    <RelativeLayout android:id="@+id/item_reboot_time" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/reboot_time" android:layout_centerVertical="true" android:layout_marginStart="@dimen/device_setting_common_margin_start" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/reboot_time" android:layout_alignParentStart="true" style="@style/common_text_main_dark_regular_16dp"/>
+                        <TextView android:id="@+id/reboot_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true" style="@style/common_text_blue_medium_18dp"/>
+                    </RelativeLayout>
+                    <View android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="@dimen/common_divide_line_height" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+                    <com.tplink.iot.widget.NumberPickerView android:layout_gravity="center" android:id="@+id/time_picker_view" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="match_parent" app:npv_ItemPaddingHorizontal="10dp" app:npv_ItemPaddingVertical="5dp" app:npv_RespondChangeOnDetached="false" app:npv_ShowCount="5" app:npv_TextColorHint="@color/text_item_main_title_black" app:npv_TextSizeNormal="16sp" app:npv_TextSizeSelected="20sp" app:npv_WrapSelectorWheel="true"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <com.tplink.iot.view.ipcamera.widget.CameraLoadingView android:layout_gravity="center" android:id="@+id/live_loading_view" android:tag="binding_1" android:padding="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:loading_block_height="90dp" app:loading_block_width="90dp"/>
+    </FrameLayout>
+</LinearLayout>

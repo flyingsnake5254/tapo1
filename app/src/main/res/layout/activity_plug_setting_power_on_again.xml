@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar_with_elevation"/>
+    <RadioGroup android:id="@+id/rg_state" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RadioButton android:id="@+id/rb_last_states" android:background="@color/transparent" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/last_on_state" android:drawableEnd="@drawable/common_rb_bg" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/common_text_main_dark_regular_16dp"/>
+        <RadioButton android:id="@+id/rb_always_on" android:background="@color/transparent" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/status_on" android:drawableEnd="@drawable/common_rb_bg" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/common_text_main_dark_regular_16dp"/>
+        <RadioButton android:id="@+id/rb_always_off" android:background="@color/transparent" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/status_off" android:drawableEnd="@drawable/common_rb_bg" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/common_text_main_dark_regular_16dp"/>
+    </RadioGroup>
+    <View android:layout_width="match_parent" style="@style/common_divider_1dp"/>
+    <TextView android:id="@+id/power_on_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:text="@string/power_on_last_states_tip" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="56dp">
+        <ImageView android:id="@+id/iv_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/arrow_right_jump" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginBottom="14dp" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="8dp" android:layout_toStartOf="@+id/iv_arrow">
+            <TextView android:ellipsize="end" android:id="@+id/tv_device_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/smart_camera" android:singleLine="true" style="@style/common_text_main_dark_medium_14dp"/>
+            <TextView android:ellipsize="end" android:id="@+id/tv_device_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/common_text_secondary_regular_12dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/common_iot_divider" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="16dp"/>
+</LinearLayout>

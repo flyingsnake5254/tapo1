@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/fragment_firmware_update_new_ipc_0" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_back" android:tag="binding_1" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/back" android:contentDescription="@string/navigation_empty"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/common_iot_orange" android:background="#20ffaa00" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/firmware_update_not_power_off_and_restart" android:paddingStart="20dp" android:paddingEnd="20dp"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="8dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+                <TextView android:gravity="center" android:id="@+id/fw_update_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/firmware_update_title" style="@style/common_text_main_dark_medium_20dp"/>
+                <TextView android:gravity="center" android:id="@+id/fw_update_tips" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="20dp" android:text="@string/firmware_update_tip" android:maxLines="10" android:lineSpacingExtra="4sp" android:layout_marginStart="6dp" android:layout_marginEnd="6dp" style="@style/common_text_secondary_regular_14dp"/>
+                <View style="@style/common_divider_1dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <TextView android:id="@+id/device_name" android:tag="binding_2" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:lineSpacingExtra="4sp" style="@style/common_text_main_dark_regular_14dp"/>
+                <TextView android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/device_setting_common_margin" android:text="@string/device_setting_location" style="@style/common_text_secondary_regular_14dp"/>
+                <TextView android:tag="binding_3" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" style="@style/common_text_main_dark_regular_14dp"/>
+                <TextView android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/firmware_new_version" style="@style/common_text_secondary_regular_14dp"/>
+                <TextView android:tag="binding_4" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" style="@style/common_text_main_dark_regular_14dp"/>
+                <TextView android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/firmware_tips" style="@style/common_text_secondary_regular_14dp"/>
+                <TextView android:tag="binding_5" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:lineSpacingExtra="14sp" style="@style/common_text_main_dark_regular_14dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:tag="binding_6" android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="@dimen/common_divide_line_height"/>
+        <RelativeLayout android:gravity="center_vertical" android:id="@+id/item_auto_update" android:tag="binding_7" android:background="@drawable/clickable_item_background" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+            <TextView android:textColor="@color/color_333333" android:id="@+id/auto_reboot_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/firmware_auto_update" android:layout_centerVertical="true" android:layout_marginStart="@dimen/device_setting_common_margin_start" android:layout_toStartOf="@+id/auto_update_status" android:layout_alignParentStart="true" style="@style/ItemHeaderText"/>
+            <TextView android:textColor="@color/color_999999" android:id="@+id/auto_update_status" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="10dp" android:layout_toStartOf="@+id/icon_arrow" style="@style/ItemTailText"/>
+            <ImageView android:id="@+id/icon_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/more" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_marginEnd="@dimen/device_setting_common_margin_end" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp">
+            <FrameLayout android:layout_gravity="bottom|center_horizontal" android:tag="binding_9" android:layout_width="312dp" android:layout_height="40dp">
+                <com.tplink.iot.widget.gradientLoading.GradientLoadingView android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <TextView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/firmware_upgrading" android:textAllCaps="true" style="@style/common_text_white_medium_18dp"/>
+            </FrameLayout>
+            <Button android:textSize="@dimen/m6_text_size_18dp" android:gravity="center" android:id="@+id/btn_firmware_update" android:tag="binding_10" android:layout_width="312dp" android:layout_height="40dp" android:text="@string/update" style="@style/iot_smart_action_run_button"/>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/main_home_tab_selector" android:enabled="true" android:id="@+id/tab_home" android:title="@string/main_home" app:showAsAction="always"/>
+    <item android:icon="@drawable/main_smart_tab_selector" android:enabled="true" android:id="@+id/tab_smart" android:title="@string/main_smart" app:showAsAction="always"/>
+    <item android:icon="@drawable/main_me_tab_selector" android:enabled="true" android:id="@+id/tab_me" android:title="@string/main_me" app:showAsAction="always"/>
+</menu>

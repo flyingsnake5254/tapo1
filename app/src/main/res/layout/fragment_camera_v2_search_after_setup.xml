@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/fragment_camera_v2_search_after_setup_0" android:background="@color/quicksetup_bg_blue" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-40dp">
+            <ImageView android:id="@+id/image_star" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/bg" android:layout_centerInParent="true"/>
+            <com.tplink.libtpcontrols.TPRippleBackground android:id="@+id/qs_m5_ripple_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" app:rb_color="#aaffffff" app:rb_duration="2000" app:rb_radius="30dp" app:rb_rippleAmount="1" app:rb_scale="4">
+                <ImageView android:id="@+id/qs_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="70dp" android:layout_marginBottom="70dp" android:src="@drawable/camera_c200_animate" android:adjustViewBounds="true" android:layout_centerInParent="true"/>
+            </com.tplink.libtpcontrols.TPRippleBackground>
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:id="@+id/img_close" android:tag="binding_1" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/close"/>
+    <TextView android:gravity="center" android:id="@+id/qs_tv_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/quick_setup_search_device_status_bottom" android:text="@string/qs_pairing_device" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_marginStart="30dp" android:layout_marginEnd="30dp" style="@style/common_text_white_regular_16dp"/>
+</RelativeLayout>

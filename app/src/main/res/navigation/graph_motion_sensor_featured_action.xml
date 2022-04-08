@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/graph_motion_sensor_featured_action" app:startDestination="@+id/motionSensorFeaturedActionChooseFragment">
+    <fragment android:label="MotionSensorFeaturedActionChooseFragment" android:name="com.tplink.iot.devices.featuredactions.view.MotionSensorFeaturedActionChooseFragment" android:id="@+id/motionSensorFeaturedActionChooseFragment">
+        <action android:id="@+id/action_motionSensorFeaturedActionChooseFragment_to_motionSensorFASetNightLightFragment" app:destination="@+id/motionSensorFASetNightLightFragment" app:enterAnim="@anim/push_in_from_right" app:exitAnim="@anim/push_out_to_left" app:popEnterAnim="@anim/push_in_from_left" app:popExitAnim="@anim/push_out_to_right"/>
+        <action android:id="@+id/action_motionSensorFeaturedActionChooseFragment_to_motionSensorFABuildSmartAlarmFragment" app:destination="@+id/motionSensorFABuildSmartAlarmFragment" app:enterAnim="@anim/push_in_from_right" app:exitAnim="@anim/push_out_to_left" app:popEnterAnim="@anim/push_in_from_left" app:popExitAnim="@anim/push_out_to_right"/>
+        <action android:id="@+id/action_motionSensorFeaturedActionChooseFragment_to_motionSensorFASetAutomaticLightingFragment" app:destination="@+id/motionSensorFASetAutomaticLightingFragment" app:enterAnim="@anim/push_in_from_right" app:exitAnim="@anim/push_out_to_left" app:popEnterAnim="@anim/push_in_from_left" app:popExitAnim="@anim/push_out_to_right"/>
+    </fragment>
+    <fragment android:label="MotionSensorFASetNightLightFragment" android:name="com.tplink.iot.devices.featuredactions.view.MotionSensorFASetNightLightFragment" android:id="@+id/motionSensorFASetNightLightFragment"/>
+    <fragment android:label="MotionSensorFABuildSmartAlarmFragment" android:name="com.tplink.iot.devices.featuredactions.view.MotionSensorFABuildSmartAlarmFragment" android:id="@+id/motionSensorFABuildSmartAlarmFragment"/>
+    <fragment android:label="MotionSensorFASetAutomaticLightingFragment" android:name="com.tplink.iot.devices.featuredactions.view.MotionSensorFASetAutomaticLightingFragment" android:id="@+id/motionSensorFASetAutomaticLightingFragment"/>
+</navigation>

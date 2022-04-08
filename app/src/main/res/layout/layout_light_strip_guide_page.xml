@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/layout_light_strip_guide_page_0" android:background="#800e1017" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="150dp" android:layout_marginStart="100dp">
+        <RelativeLayout android:id="@+id/rl_wave" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.tplink.iot.widget.WaveView android:id="@+id/wave_view" android:layout_width="82dp" android:layout_height="82dp" android:layout_centerInParent="true"/>
+            <com.tplink.iot.devices.lightstrip.widget.SelectableColorPointView android:id="@+id/selectable_color_point" android:visibility="gone" android:layout_width="42dp" android:layout_height="42dp" android:layout_centerInParent="true" app:gap_width="2dp" app:halo_width="2dp"/>
+            <com.tplink.iot.devices.lightstrip.widget.ColorPaintingRingView android:id="@+id/color_painting_ring" android:visibility="gone" android:layout_width="42dp" android:layout_height="42dp" android:layout_centerInParent="true" app:gap_width="2dp" app:halo_width="2dp" app:ring_width="6dp"/>
+            <com.tplink.iot.devices.lightstrip.widget.ColorEffectPlateView android:id="@+id/color_effect_plate" android:visibility="gone" android:layout_width="42dp" android:layout_height="42dp" android:layout_centerInParent="true" app:gap_width="2dp" app:halo_width="2dp"/>
+            <com.tplink.iot.devices.lightstrip.widget.CircleEffectImageView android:id="@+id/circle_effect_image" android:visibility="gone" android:layout_width="42dp" android:layout_height="42dp" android:layout_centerInParent="true" app:gap_width="2dp" app:halo_width="2dp"/>
+        </RelativeLayout>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_triangle" android:layout_below="@+id/rl_wave" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/rl_top" android:paddingStart="30dp" android:paddingEnd="30dp">
+        <TextView android:gravity="center_horizontal" android:id="@+id/tv_guide_tips" android:background="@drawable/round_white_bg" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/detail_page_guide_preset_tips1" android:paddingStart="20dp" android:paddingEnd="20dp" style="@style/common_text_main_dark_regular_14dp"/>
+    </LinearLayout>
+    <TextView android:textSize="15sp" android:ellipsize="end" android:id="@+id/btn_skip" android:background="@drawable/common_button_white_stroke" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="64dp" android:text="@string/common_next" android:lines="1" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:textAllCaps="true" android:paddingStart="36dp" android:paddingEnd="36dp" android:layout_marginStart="30dp" android:layout_marginEnd="30dp" style="@style/common_text_white_regular_14dp"/>
+</RelativeLayout>

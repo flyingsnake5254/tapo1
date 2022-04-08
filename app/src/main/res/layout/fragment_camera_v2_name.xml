@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/fragment_camera_v2_name_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:elevation="0dp" app:navigationIcon="@mipmap/close" app:popupTheme="@style/TP.Theme.PopupOverlay" app:titleTextColor="@color/common_iot_dark_black" style="@style/toolbar_style"/>
+    <ScrollView android:background="@color/common_white" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:fadeScrollbars="false">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/rl_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_plug_name_device" android:layout_centerHorizontal="true" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" style="@style/common_text_main_dark_medium_20dp"/>
+                <TextView android:id="@+id/tv_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/quicksetup_device_name" android:layout_below="@+id/tv_title" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+                <com.tplink.iot.widget.DrawableEditText android:id="@+id/draw_edit_name" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:maxLength="64" android:layout_below="@+id/tv_tip" android:imeOptions="actionDone" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"/>
+            </RelativeLayout>
+            <RelativeLayout android:paddingTop="24dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/rl_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <Button android:id="@+id/btn_bottom" android:tag="binding_2" android:layout_marginBottom="5dp" android:text="@string/common_next" style="@style/m6_common_blue_300_button"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
