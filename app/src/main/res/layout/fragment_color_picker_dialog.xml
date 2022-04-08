@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/fragment_color_picker_dialog_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_close" android:background="?attr/actionBarItemBackground" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/home_close" android:contentDescription="@null"/>
+        <ImageView android:layout_gravity="end" android:id="@+id/iv_save" android:background="?attr/actionBarItemBackground" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/action_ok_dark_gray" android:contentDescription="@null" android:layout_marginEnd="0dp" app:tint="@color/common_iot_main_blue"/>
+    </FrameLayout>
+    <com.tplink.iot.widget.colorbulb.ColorPlateWrapView android:id="@+id/color_plate_wrap_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_brightness" android:paddingBottom="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:text="@string/brightness" style="@style/common_divider_text_view"/>
+        <com.tplink.iot.widget.BrightnessSeekBar android:id="@+id/brightness_seek_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+    </LinearLayout>
+</LinearLayout>

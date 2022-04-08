@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:background="@mipmap/bulb_bg_on" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.tplink.iot.widget.colorbulb.light.LightBgAnimView android:id="@+id/color_bulb_bg_anim_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <include layout="@layout/activity_color_bulb_detail_content"/>
+    <com.yinglan.scrolllayout.ScrollLayout android:id="@+id/scroll_down_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:exitOffset="0dp" app:isSupportExit="false" app:maxOffset="80dp" app:minOffset="80dp" app:mode="0x0">
+        <include layout="@layout/activity_color_bulb_detail_bottom"/>
+    </com.yinglan.scrolllayout.ScrollLayout>
+</FrameLayout>

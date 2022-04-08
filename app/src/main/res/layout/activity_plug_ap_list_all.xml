@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/content_img_close" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/close"/>
+        <TextView android:gravity="center" android:id="@+id/tv_rescan_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_list_rescan" android:layout_centerVertical="true" android:textAllCaps="true" android:layout_marginEnd="18dp" android:layout_alignParentEnd="true" style="@style/common_text_main_dark_medium_16dp"/>
+    </RelativeLayout>
+    <FrameLayout android:orientation="vertical" android:background="@color/common_white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@+id/view_content" layout="@layout/activity_plug_ap_list_content"/>
+        <include android:id="@+id/view_empty" android:visibility="gone" layout="@layout/activity_plug_ap_list_empty"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" app:cardBackgroundColor="@color/white" app:cardElevation="5dp" app:contentPaddingBottom="16dp" app:contentPaddingLeft="10dp" app:contentPaddingRight="10dp" app:contentPaddingTop="16dp">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/device_avatar" android:layout_width="48dp" android:layout_height="48dp" android:src="@mipmap/iot_plug_48" android:layout_centerVertical="true" android:contentDescription="@null"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:layout_toStartOf="@+id/iv_right_arrow" android:layout_toEndOf="@+id/device_avatar">
+            <TextView android:ellipsize="end" android:id="@+id/tv_device_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/common_text_main_dark_medium_16dp"/>
+            <TextView android:ellipsize="end" android:id="@+id/tv_location" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:singleLine="true" style="@style/common_text_secondary_regular_14dp"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_marginStart="0dp" android:layout_marginEnd="4dp">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_next_event_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_away_small_gray" android:contentDescription="@null"/>
+                    <com.tplink.iot.widget.colorbulb.NextEventBulbTintView android:layout_gravity="center_vertical" android:id="@+id/next_event_bulb_tint_view" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_lighting_effect" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:src="@mipmap/icon_lighting_effect_scene" android:layout_marginEnd="5dp"/>
+                </LinearLayout>
+                <TextView android:id="@+id/tv_next_event" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:drawablePadding="10dp" style="@style/common_text_main_dark_regular_14dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/iv_right_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/gray_arrow_right" android:layout_centerVertical="true" android:contentDescription="@null" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

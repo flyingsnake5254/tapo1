@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/layout_light_strip_settings_feature_ext_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_default_state" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_bottom_divider_visible="true" app:item_right_arrow_visible="true" app:item_set_title_hint="@string/bulb_settings_default_state"/>
+    <RelativeLayout android:id="@+id/item_on_off_gradually" android:tag="binding_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="20dp" android:paddingEnd="0dp">
+        <LinearLayout android:orientation="vertical" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/switch_gradually">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/light_on_off_gradually" style="@style/common_text_main_dark_regular_16dp"/>
+            <TextView android:id="@+id/item_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/light_strip_on_off_gradually_desc" style="@style/common_text_secondary_regular_14dp"/>
+        </LinearLayout>
+        <com.tplink.libtpcontrols.materialnormalcompat.swicth.TPSwitchCompat android:id="@+id/switch_gradually" android:tag="binding_3" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:switchMinWidth="@dimen/switch_compat_width" style="@style/custom_switch_compat"/>
+    </RelativeLayout>
+    <View style="@style/common_divider_1dp_margin_start_20dp"/>
+    <com.tplink.iot.widget.viewgroup.ItemInfoLayout android:id="@+id/item_strip_length" android:tag="binding_4" android:layout_width="match_parent" android:layout_height="wrap_content" app:title="@string/light_strip_length"/>
+</LinearLayout>

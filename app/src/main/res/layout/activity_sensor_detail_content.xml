@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_sensor_detail_content_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_base_info" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+            <ImageView android:id="@+id/iv_back" android:tag="binding_1" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/back" android:contentDescription="@null"/>
+            <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_name" android:tag="binding_2" android:layout_width="0dp" android:layout_height="match_parent" android:singleLine="true" android:layout_weight="1" style="@style/common_text_main_dark_medium_20dp"/>
+            <FrameLayout android:id="@+id/fl_setting" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="12dp">
+                <ImageView android:id="@+id/iv_setting" android:background="?attr/actionBarItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:src="@mipmap/ic_setting_black" android:contentDescription="@null" android:layout_marginEnd="4dp"/>
+                <ImageView android:layout_gravity="end|top" android:id="@+id/iv_red_point" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/notification" android:contentDescription="@null"/>
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_location" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawableLeft="@mipmap/ic_location_black" android:drawablePadding="6dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_main_dark_regular_16dp"/>
+        <FrameLayout android:id="@+id/fl_top_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_below="@+id/toolbar">
+            <androidx.cardview.widget.CardView android:id="@+id/card_local_only" android:tag="binding_6" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="2dp" app:cardBackgroundColor="@color/local_only_tip_bg" app:cardCornerRadius="4dp" app:cardElevation="0dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/local_only_tip_text" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cloud_connect_local" android:paddingStart="14dp" android:paddingEnd="10dp" style="@style/common_text_main_dark_regular_14dp"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/card_user_device" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="2dp" app:cardBackgroundColor="@color/local_only_tip_bg" app:cardCornerRadius="4dp" app:cardElevation="0dp">
+                <TextView android:textColor="@color/local_only_tip_text" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/toast_limit_permissions" android:paddingStart="14dp" android:paddingEnd="10dp" android:layout_toStartOf="@+id/img_more_local" style="@style/common_text_main_dark_regular_14dp"/>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="100dp" android:layout_below="@+id/ll_base_info" android:layout_alignParentBottom="true">
+        <RelativeLayout android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+            <ImageView android:id="@+id/iv_switch" android:tag="binding_7" android:layout_width="120dp" android:layout_height="120dp" android:layout_marginTop="20dp" android:layout_centerHorizontal="true"/>
+            <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_sensor_tip" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_below="@+id/iv_switch" android:layout_centerHorizontal="true" style="@style/common_text_main_dark_bold_18dp"/>
+            <TextView android:gravity="center_horizontal" android:id="@+id/tv_low_power_tip" android:tag="binding_9" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/switch_how_to_replace_battery" android:layout_below="@+id/tv_sensor_tip" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" style="@style/common_text_purple_regular_14dp"/>
+        </RelativeLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:layout_gravity="center" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sensor_no_trigger_logs" style="@style/common_text_main_dark_medium_14dp"/>
+            <com.tplink.iot.widget.refreshlayout.TPSmartRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="8dp">
+                <androidx.core.widget.NestedScrollView android:fadingEdgeLength="48dp" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:requiresFadingEdge="vertical">
+                    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@+id/rv_trigger_logs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="48dp" android:layout_marginEnd="48dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                </androidx.core.widget.NestedScrollView>
+            </com.tplink.iot.widget.refreshlayout.TPSmartRefreshLayout>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

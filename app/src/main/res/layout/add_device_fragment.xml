@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/toolbar" layout="@layout/common_toolbar_with_elevation"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycle_add_device_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+    <com.tplink.libtpcontrols.tprefreshablebutton.TPRefreshableButton android:id="@+id/btn_add_device" android:layout_marginTop="10dp" android:layout_marginBottom="15dp" android:text="@string/add_devices_to_room" android:layout_weight="0" style="@style/iot_common_flat_blue_refreshable_button"/>
+    <TextView android:gravity="center" android:id="@+id/tv_no_device_added" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/not_add_device_remind" style="@style/common_dark_gray_regular_text_16dp"/>
+</LinearLayout>

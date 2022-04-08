@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="220dp">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.tplink.iot.widget.NumberPickerView android:id="@+id/hour_picker" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_toStartOf="@+id/tv_space_divider" app:npv_ItemPaddingHorizontal="16dp" app:npv_ItemPaddingVertical="5dp" app:npv_RespondChangeOnDetached="false" app:npv_ShowCount="5" app:npv_TextSizeNormal="20sp" app:npv_TextSizeSelected="24sp" app:npv_WrapSelectorWheel="false"/>
+            <TextView android:layout_gravity="center_vertical" android:id="@+id/tv_picker_first" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/plug_time_unit_hrs" android:layout_marginStart="-16dp" style="@style/common_text_blue_regular_14dp"/>
+            <TextView android:textSize="22sp" android:textStyle="bold" android:textColor="@color/common_colorAccent" android:layout_gravity="center_vertical" android:id="@+id/tv_space_divider" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/m6_automation_add_new_task_action_duration_space"/>
+            <com.tplink.iot.widget.NumberPickerView android:id="@+id/min_picker" android:layout_width="wrap_content" android:layout_height="match_parent" app:npv_ItemPaddingHorizontal="16dp" app:npv_ItemPaddingVertical="5dp" app:npv_RespondChangeOnDetached="false" app:npv_ShowCount="5" app:npv_TextSizeNormal="20sp" app:npv_TextSizeSelected="24sp" app:npv_WrapSelectorWheel="false"/>
+            <TextView android:layout_gravity="center_vertical" android:id="@+id/tv_picker_second" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/plug_time_unit_min" android:layout_marginStart="-16dp" style="@style/common_text_blue_regular_14dp"/>
+            <com.tplink.iot.widget.NumberPickerView android:id="@+id/offset_picker" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginStart="16dp" android:layout_marginEnd="0dp" app:npv_ItemPaddingHorizontal="5dp" app:npv_ItemPaddingVertical="5dp" app:npv_RespondChangeOnDetached="false" app:npv_ShowCount="5" app:npv_TextColorHint="@color/text_item_main_title_black" app:npv_TextSizeNormal="20sp" app:npv_TextSizeSelected="24sp" app:npv_WrapSelectorWheel="true"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <View android:background="@color/common_iot_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="88dp" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+            <View android:background="@color/common_iot_divider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="44dp" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

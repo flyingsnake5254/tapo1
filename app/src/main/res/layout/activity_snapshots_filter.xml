@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/snapshot_filter_header" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:paddingStart="16dp" android:paddingEnd="16dp" app:layout_constraintTop_toTopOf="0">
+        <TextView android:textSize="@dimen/text_size_20" android:textColor="@color/color_333333" android:gravity="center" android:id="@+id/tv_back" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/memory_filter" android:drawablePadding="16dp" android:layout_alignParentStart="true" app:drawableStartCompat="@mipmap/back"/>
+        <TextView android:textSize="@dimen/text_size_16" android:textColor="@color/color_333333" android:gravity="center" android:id="@+id/tv_apply" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/memory_filter_apply" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <ScrollView android:background="@color/blacklist_background" android:layout_width="match_parent" android:layout_height="0dp" android:fillViewport="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/snapshot_filter_header">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/rl_motion" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/play_back_motion_detection" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <CheckBox android:id="@+id/cb_motion" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/rl_baby_cry" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/camera_baby_crying" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <RadioButton android:id="@+id/cb_baby_cry" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/rl_human_move" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/tapo_care_person_detection" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <CheckBox android:id="@+id/cb_human_move" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/rl_area_intrusion" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/setting_area_intrusion" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <RadioButton android:id="@+id/cb_area_intrusion" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/rl_line_crossing" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/setting_line_crossing" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <RadioButton android:id="@+id/cb_line_crossing" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/rl_camera_tamper" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/setting_video_tampering" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <RadioButton android:id="@+id/cb_camera_tamper" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

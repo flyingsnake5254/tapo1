@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/rl_smart_settings" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/iv_item_trigger_icon" android:layout_width="36dp" android:layout_height="36dp" android:src="@mipmap/icon_device_plug" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerInParent="true" android:layout_marginStart="20dp" android:layout_alignParentStart="true"/>
+    <ImageView android:id="@+id/iv_item_right_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/text_clear" android:layout_centerInParent="true" android:layout_marginEnd="20dp" android:layout_alignParentEnd="true"/>
+    <FrameLayout android:id="@+id/fl_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="76dp" android:layout_marginStart="66dp" android:layout_marginEnd="56dp">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@+id/ll_item_text" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <View android:layout_width="match_parent" android:layout_height="6dp"/>
+            <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/item_title_hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" android:text="@string/smart_action_trigger_time" android:lines="1" style="@style/common_text_main_dark_regular_16dp"/>
+            <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/item_time_and_offset" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="2" android:drawablePadding="8dp" style="@style/common_text_secondary_regular_14dp"/>
+            <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/item_time_schedule" android:layout_width="match_parent" android:layout_height="wrap_content" android:lines="1" style="@style/common_text_secondary_regular_14dp"/>
+            <View android:layout_width="match_parent" android:layout_height="6dp"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:layout_gravity="center" android:id="@+id/item_with_one_tap" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/smart_action_with_tap" android:lines="1" style="@style/common_text_main_dark_regular_16dp"/>
+    </FrameLayout>
+    <View android:id="@+id/bottom_divider" android:layout_below="@+id/fl_item" style="@style/common_divider_1dp_margin_start_20dp"/>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/transparent" android:layout_width="240dp" android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:id="@+id/tv_environment_title" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/common_text_blue_regular_14dp"/>
+                <ImageView android:id="@+id/img_close" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_page_close_gray" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View style="@style/common_divider_1dp"/>
+            <TextView android:gravity="center" android:id="@+id/dist" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DIST" style="@style/common_dark_gray_medium_text_16dp"/>
+            <View style="@style/common_divider_1dp"/>
+            <TextView android:gravity="center" android:id="@+id/uat" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="UAT" style="@style/common_dark_gray_medium_text_16dp"/>
+            <View style="@style/common_divider_1dp"/>
+            <TextView android:gravity="center" android:id="@+id/uat2" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="UAT2" style="@style/common_dark_gray_medium_text_16dp"/>
+            <View style="@style/common_divider_1dp"/>
+            <TextView android:gravity="center" android:id="@+id/uat3" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="UAT3" style="@style/common_dark_gray_medium_text_16dp"/>
+            <View style="@style/common_divider_1dp"/>
+            <TextView android:gravity="center" android:id="@+id/dev" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DEV" style="@style/common_dark_gray_medium_text_16dp"/>
+            <View style="@style/common_divider_1dp"/>
+            <TextView android:gravity="center" android:id="@+id/staging" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="STAGING" style="@style/common_dark_gray_medium_text_16dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

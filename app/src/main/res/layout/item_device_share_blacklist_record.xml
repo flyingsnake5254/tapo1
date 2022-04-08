@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="76dp">
+    <com.tplink.libtpcontrols.TPCircleMaskView android:id="@+id/img_icon" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerCrop" android:layout_centerVertical="true" android:layout_marginStart="20dp" app:srcCompat="@mipmap/default_profile"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="12dp" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/iv_delete" android:layout_toEndOf="@+id/img_icon">
+        <TextView android:ellipsize="end" android:id="@+id/tv_nickname" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/common_text_main_dark_regular_16dp"/>
+        <TextView android:ellipsize="end" android:id="@+id/tv_email" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/common_text_secondary_regular_14dp"/>
+    </LinearLayout>
+    <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <View style="@style/common_divider_1dp"/>
+    <com.tplink.iot.widget.ItemSunriseSunsetSetting android:id="@+id/item_sunrise" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_title="@string/sunrise" app:item_type="0"/>
+    <com.tplink.iot.widget.ItemSunriseSunsetSetting android:id="@+id/item_sunset" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_title="@string/sunset" app:item_type="0"/>
+    <com.tplink.iot.widget.ItemSunriseSunsetSetting android:id="@+id/item_custom" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_title="@string/common_custom_time" app:item_type="1"/>
+    <com.tplink.iot.widget.InnerTimePicker android:id="@+id/inner_time_select_view" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

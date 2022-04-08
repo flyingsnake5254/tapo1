@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/item_camera_preview_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.percentlayout.widget.PercentFrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" app:layout_constrainedHeight="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <com.tplink.iot.widget.RoundImageView android:id="@+id/defaultBgImageView" android:tag="binding_1" android:background="@drawable/bg_camera_preview_item" android:layout_width="0dp" android:layout_height="0dp" android:src="@mipmap/camera_preview_default_cover" android:scaleType="centerInside" app:layout_aspectRatio="177.9999%" app:layout_widthPercent="100%"/>
+        <com.tplink.iot.widget.camerapreview.PreviewDisplayView android:tag="binding_2" android:layout_width="0dp" android:layout_height="0dp" app:layout_aspectRatio="177.9999%" app:layout_widthPercent="100%"/>
+    </androidx.percentlayout.widget.PercentFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

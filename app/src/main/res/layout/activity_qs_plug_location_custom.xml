@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/common_white" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:fadeScrollbars="false">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/img_back" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/back"/>
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/custom_location" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_medium_20dp"/>
+            <com.tplink.iot.widget.DrawableEditText android:id="@+id/draw_edit_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:maxLength="64" android:imeOptions="actionDone" android:layout_marginStart="20dp" android:layout_marginEnd="20dp"/>
+        </LinearLayout>
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true" layout="@layout/layout_quicksetup_common_bottom_button"/>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minWidth="280dp">
+    <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:id="@+id/time_picker_star_or_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="10dp"/>
+    <View android:background="@color/divider_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
+    <com.tplink.iot.widget.CustomTimePicker android:layout_gravity="center_horizontal" android:id="@+id/time_picker_tp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View android:background="@color/divider_gray" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="10dp"/>
+    <LinearLayout android:layout_gravity="end|center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="50dp">
+        <TextView android:textSize="14sp" android:gravity="center_vertical" android:id="@+id/time_picker_cancel" android:background="?android:attr/selectableItemBackground" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/action_cancel" android:textAllCaps="true" style="@style/TPDialogNegativeButton"/>
+        <TextView android:textSize="14sp" android:textColor="@color/mode_text_blue" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/time_picker_confirm" android:background="?android:attr/selectableItemBackground" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/action_confirm" android:textAllCaps="true" android:paddingStart="20dp" android:paddingEnd="10dp"/>
+    </LinearLayout>
+</LinearLayout>

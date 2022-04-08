@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/fragment_light_strip_schedule_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:text="@string/common_turn_device" style="@style/common_divider_text_view"/>
+    <RadioGroup android:orientation="vertical" android:id="@+id/rg_turn_radio" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RadioButton android:id="@+id/turn_on_rb" android:checked="true" android:text="@string/common_on" style="@style/common_text_main_dark_regular_16dp.common_line_radio_button"/>
+        <View style="@style/common_divider_1dp_margin_start_20dp"/>
+        <RadioButton android:id="@+id/turn_off_rb" android:text="@string/common_off" style="@style/common_text_main_dark_regular_16dp.common_line_radio_button"/>
+        <View style="@style/common_divider_1dp_margin_start_20dp"/>
+    </RadioGroup>
+    <FrameLayout android:id="@+id/fl_desire" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.tplink.iot.devices.lightstrip.widget.LightingEffectPresetStatusView android:id="@+id/effect_pick_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>

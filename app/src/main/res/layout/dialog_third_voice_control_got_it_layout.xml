@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:background="@drawable/bg_top_round_corner" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="50dp" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_title" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/img_close" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/close" android:contentDescription="@null"/>
+            <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" style="@style/common_text_main_dark_medium_20dp"/>
+        </LinearLayout>
+        <TextView android:textColor="@color/common_gray_black_color_transparent_50" android:id="@+id/tv_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/work_with_third_party_guide_tips" android:layout_below="@+id/ll_title" android:paddingStart="20dp" android:paddingEnd="20dp" style="@style/common_text_main_dark_regular_16dp"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:src="@mipmap/third_party_services" android:layout_below="@+id/tv_hint" android:layout_centerHorizontal="true"/>
+        <TextView android:enabled="true" android:id="@+id/btn_bottom" android:layout_marginTop="24dp" android:layout_marginBottom="24dp" android:text="@string/action_got_it" android:layout_alignParentBottom="true" style="@style/iot_common_flat_blue_button"/>
+    </RelativeLayout>
+</RelativeLayout>

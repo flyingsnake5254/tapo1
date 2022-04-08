@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_light_strip_soft_ap_reset_hint_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/light_strip_obd_not_orange_and_green" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_medium_20dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/quicksetup_no_find_m5_do_following" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_regular_14dp"/>
+            <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/light_strip_reset_if_lights_are_off"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/light_strip_reset_ensure_parts_connected" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_regular_14dp"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_connect_part" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:src="@mipmap/light_strip_connect_parts" android:contentDescription="@null"/>
+            <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/light_strip_reset_if_lights_not_orange_and_green"/>
+            <TextView android:id="@+id/tv_reset_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/light_strip_obd_reset_hint_l900" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_regular_14dp"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_reset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:src="@drawable/reset_light_strip" android:contentDescription="@null"/>
+            <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center_horizontal" android:id="@+id/lottie_animation_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:adjustViewBounds="true" app:lottie_autoPlay="false" app:lottie_loop="true"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

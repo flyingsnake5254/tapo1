@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.andexert.library.RippleView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="30dp" android:paddingEnd="30dp" style="@style/default_ripple_efect">
+    <TextView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/license_item_title" android:layout_width="match_parent" android:layout_height="60dp" style="@style/common_dark_gray_medium_text_18dp"/>
+</com.andexert.library.RippleView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/iv_empty_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/no_cloud_videos" android:layout_centerHorizontal="true"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/no_videos" android:layout_below="@+id/iv_empty_view" android:layout_centerHorizontal="true" style="@style/common_dark_gray_regular_text_14dp"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

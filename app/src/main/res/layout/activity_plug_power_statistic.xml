@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_plug_power_statistic_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <com.google.android.material.tabs.TabLayout android:layout_gravity="center_horizontal" android:id="@+id/pem_tab_layout" android:background="@drawable/bg_energy_monitor_tablayout" android:layout_width="wrap_content" android:layout_height="36dp" app:tabBackground="@drawable/bg_energy_monitor_tabitem" app:tabIndicator="@null" app:tabMode="0" app:tabPaddingEnd="16dp" app:tabPaddingStart="16dp" app:tabRippleColor="@null" app:tabSelectedTextColor="#fff" app:tabTextAppearance="@style/TabItemTextStyle" app:tabTextColor="#999">
+        <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/past_hours24"/>
+        <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/past_days7"/>
+    </com.google.android.material.tabs.TabLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/pem_chart_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView android:id="@+id/pem_marker_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:cardBackgroundColor="#fff" app:cardCornerRadius="8dp" app:cardElevation="0dp">
+            <LinearLayout android:orientation="vertical" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="16sp" android:textColor="@color/common_iot_dark_black" android:id="@+id/tv_power" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--"/>
+                <TextView android:textSize="14sp" android:textColor="@color/common_iot_light_black" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="--"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="48dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.tplink.iot.view.iotplug.energymonitor.chart.PowerLineChart android:id="@+id/pem_line_chart" android:background="@color/white" android:layout_width="match_parent" android:layout_height="400dp"/>
+            </FrameLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

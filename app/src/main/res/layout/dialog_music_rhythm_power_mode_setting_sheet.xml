@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/dialog_music_rhythm_power_mode_setting_sheet_0" android:background="@drawable/music_rhythm_sheet_dialog_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_close" android:background="?attr/actionBarItemBackground" android:padding="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/nav_black_back" android:contentDescription="@null"/>
+        <TextView android:layout_gravity="center" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_rhythm_power_mode_dialog_title" style="@style/common_text_main_dark_bold_18dp"/>
+        <TextView android:layout_gravity="end|center_vertical" android:id="@+id/tv_save" android:padding="6dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_done" style="@style/common_text_main_dark_bold_18dp"/>
+    </FrameLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/music_rhythm_power_mode_create_pulse" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="@string/music_rhythm_power_mode_set_start_sentence" style="@style/common_text_secondary_regular_16dp"/>
+            <SeekBar android:id="@+id/music_rhythm_powermode_seekbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxHeight="4dp" android:progress="0" android:progressDrawable="@drawable/music_rhythm_seekbar_progress_background" android:minHeight="4dp" android:thumb="@drawable/icon_slider"/>
+            <TextView android:text="@string/music_rhythm_sensitivity_level" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/sensitivity_recycleView" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

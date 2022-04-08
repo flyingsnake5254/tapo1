@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.tplink.iot.widget.colorbulb.TitleSelectorView android:id="@+id/title_selector_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.tplink.iot.widget.colorbulb.ColorTempWrapView android:id="@+id/color_temperature_wrap_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <com.tplink.iot.widget.colorbulb.ColorPlateWrapView android:id="@+id/color_plate_wrap_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_brightness" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View style="@style/common_divider_block_8dp"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:paddingStart="20dp" android:paddingEnd="24dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/brightness" android:layout_centerVertical="true" style="@style/common_text_secondary_regular_16dp"/>
+            <TextView android:id="@+id/tv_brightness" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" style="@style/common_text_main_dark_regular_16dp"/>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatSeekBar android:id="@+id/seek_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="50dp" android:progress="50" android:thumb="@mipmap/bulb_seekbar_thumb" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/seekBar_bulb_brightness"/>
+    </LinearLayout>
+</LinearLayout>

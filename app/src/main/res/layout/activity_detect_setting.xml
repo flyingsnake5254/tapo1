@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_detect_setting_0" android:background="@color/color_F5F5F5" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/mtb" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" app:navigationIcon="@mipmap/back">
+        <TextView android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/setting_detection_and_alerts" android:singleLine="true" android:layout_alignParentStart="true" style="@style/ActivityTitleText"/>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/mtb">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_motion" android:tag="binding_1" android:background="@color/pure_white" android:paddingLeft="@dimen/content_margin" android:paddingRight="0dp" android:layout_width="match_parent" android:layout_height="51dp">
+                <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/mode_motion_detection" android:layout_weight="1"/>
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="14sp" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableEnd="@mipmap/more" android:layout_marginEnd="12dp"/>
+                </FrameLayout>
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/ai_detection" android:tag="binding_3" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="51dp">
+                <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/ai_detection_title" android:layout_weight="1" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+                <TextView android:textSize="14sp" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableEnd="@mipmap/more" android:layout_marginEnd="@dimen/device_setting_common_margin_end"/>
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:tag="binding_5" android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_line_crossing" android:tag="binding_6" android:background="@color/pure_white" android:paddingLeft="@dimen/content_margin" android:paddingRight="0dp" android:layout_width="match_parent" android:layout_height="51dp">
+                <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/setting_line_crossing" android:layout_weight="1"/>
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="14sp" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableEnd="@mipmap/more" android:layout_marginEnd="12dp"/>
+                </FrameLayout>
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:tag="binding_8" android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_intrusion" android:tag="binding_9" android:background="@color/pure_white" android:paddingLeft="@dimen/content_margin" android:paddingRight="0dp" android:layout_width="match_parent" android:layout_height="51dp">
+                <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/setting_area_intrusion" android:layout_weight="1"/>
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="14sp" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableEnd="@mipmap/more" android:layout_marginEnd="12dp"/>
+                </FrameLayout>
+            </LinearLayout>
+            <View android:layout_gravity="bottom" android:tag="binding_11" android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_tamper" android:tag="binding_12" android:background="@color/pure_white" android:paddingLeft="@dimen/content_margin" android:paddingRight="0dp" android:layout_width="match_parent" android:layout_height="51dp">
+                <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/setting_video_tampering" android:layout_weight="1"/>
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="14sp" android:tag="binding_13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableEnd="@mipmap/more" android:layout_marginEnd="12dp"/>
+                </FrameLayout>
+            </LinearLayout>
+            <View android:background="@color/color_F5F5F5" android:layout_width="match_parent" android:layout_height="8dp"/>
+            <LinearLayout android:gravity="center_vertical" android:id="@+id/notification_setting" android:tag="binding_14" android:background="@color/pure_white" android:paddingLeft="@dimen/content_margin" android:paddingRight="0dp" android:layout_width="match_parent" android:layout_height="51dp">
+                <TextView android:textSize="16sp" android:textColor="@color/color_333333" android:tag="binding_15" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/notification_switch" android:tag="binding_16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/switch_selector" android:layout_marginEnd="@dimen/content_margin"/>
+                    <ImageView android:tag="binding_17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/more" android:layout_marginEnd="12dp"/>
+                </FrameLayout>
+            </LinearLayout>
+            <View android:tag="binding_18" android:background="@color/color_F5F5F5" android:layout_width="match_parent" android:layout_height="8dp"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/alarm_setting" android:tag="binding_19" android:background="@drawable/clickable_item_background" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/main_info">
+                <TextView android:textColor="@color/color_333333" android:id="@+id/alert_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/device_setting_item_title_margin_top" android:text="@string/camera_alarm_new" android:layout_marginStart="@dimen/device_setting_common_margin_start" style="@style/ItemHeaderText"/>
+                <TextView android:textColor="@color/color_999999" android:id="@+id/alert_content" android:tag="binding_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/device_setting_item_content_margin_top" android:layout_marginBottom="@dimen/device_setting_item_content_margin_bottom" android:layout_below="@+id/alert_title" android:layout_marginStart="@dimen/device_setting_common_margin_start" style="@style/ItemTailText"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/more" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/device_setting_common_margin_end" android:layout_alignParentEnd="true"/>
+                <View android:layout_gravity="bottom" android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="1px" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+            </RelativeLayout>
+            <TextView android:textColor="@color/color_999999" android:background="@color/white" android:paddingTop="8dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/camera_alarm_desc" android:paddingStart="20dp" android:paddingEnd="20dp"/>
+            <View android:tag="binding_21" android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/target_track" android:tag="binding_22" android:background="@drawable/clickable_item_background" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/color_333333" android:id="@+id/target_track_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/device_setting_item_title_margin_top" android:text="@string/target_track_title" android:layout_marginStart="@dimen/device_setting_common_margin_start" style="@style/ItemHeaderText"/>
+                <TextView android:textColor="@color/color_999999" android:id="@+id/target_track_content" android:tag="binding_23" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/device_setting_item_content_margin_top" android:layout_marginBottom="@dimen/device_setting_item_content_margin_bottom" android:layout_below="@+id/target_track_title" android:layout_marginStart="@dimen/device_setting_common_margin_start" style="@style/ItemTailText"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/more" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/device_setting_common_margin_end" android:layout_alignParentEnd="true"/>
+                <View android:layout_gravity="bottom" android:background="@color/common_background_separator_color" android:layout_width="match_parent" android:layout_height="1px" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+            </RelativeLayout>
+            <TextView android:textSize="14sp" android:textColor="@color/color_999999" android:tag="binding_24" android:background="@color/white" android:paddingTop="8dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/target_track_introduction" android:paddingStart="20dp" android:paddingEnd="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <com.tplink.iot.view.ipcamera.widget.CameraLoadingView android:layout_gravity="center" android:id="@+id/live_loading_view" android:tag="binding_25" android:padding="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:loading_block_height="90dp" app:loading_block_width="90dp"/>
+</RelativeLayout>

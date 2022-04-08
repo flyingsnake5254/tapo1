@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/common_colorPrimary" android:paddingTop="15dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="15dp" android:paddingEnd="15dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="@dimen/automation_week_day_width" android:layout_weight="1">
+            <TextView android:id="@+id/tv_week1" android:text="@string/week_abbreviation_sunday" style="@style/automation_week_day"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="@dimen/automation_week_day_width" android:layout_weight="1">
+            <TextView android:id="@+id/tv_week2" android:text="@string/week_abbreviation_monday" style="@style/automation_week_day"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="@dimen/automation_week_day_width" android:layout_weight="1">
+            <TextView android:id="@+id/tv_week3" android:text="@string/week_abbreviation_tuesday" style="@style/automation_week_day"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="@dimen/automation_week_day_width" android:layout_weight="1">
+            <TextView android:id="@+id/tv_week4" android:text="@string/week_abbreviation_wednesday" style="@style/automation_week_day"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="@dimen/automation_week_day_width" android:layout_weight="1">
+            <TextView android:id="@+id/tv_week5" android:text="@string/week_abbreviation_thursday" style="@style/automation_week_day"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="@dimen/automation_week_day_width" android:layout_weight="1">
+            <TextView android:id="@+id/tv_week6" android:text="@string/week_abbreviation_friday" style="@style/automation_week_day"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="@dimen/automation_week_day_width" android:layout_weight="1">
+            <TextView android:id="@+id/tv_week7" android:text="@string/week_abbreviation_saturday" style="@style/automation_week_day"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/tv_description" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+</LinearLayout>

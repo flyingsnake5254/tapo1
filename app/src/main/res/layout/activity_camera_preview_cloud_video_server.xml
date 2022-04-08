@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:id="@+id/ll_cloud_video_server" android:tag="layout/activity_camera_preview_cloud_video_server_0" android:background="@drawable/cloud_storage_server" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2">
+        <TextView android:id="@+id/tv_cloud_service_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/cloud_storage_services_title" android:layout_marginStart="12dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_medium_16dp"/>
+        <TextView android:id="@+id/tv_cloud_service_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/cloud_storage_services_conotent" android:layout_marginStart="12dp" android:layout_marginEnd="10dp" style="@style/common_text_secondary_medium_12dp"/>
+        <TextView android:id="@+id/tv_cloud_service_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="16dp" android:text="@string/more" android:includeFontPadding="false" android:drawablePadding="2dp" android:drawableEnd="@mipmap/more_blue" android:layout_marginStart="12dp" android:layout_marginEnd="16dp" style="@style/common_text_blue_regular_14dp"/>
+    </LinearLayout>
+    <FrameLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <View android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <ImageView android:layout_gravity="end" android:id="@+id/iv_cloud_service_close" android:padding="8dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/close_gray"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/dialog_music_rhythm_color_picker_sheet_0" android:background="@drawable/music_rhythm_sheet_dialog_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/tv_close" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_cancel" style="@style/common_text_blue_medium_18dp"/>
+        <TextView android:textColor="@color/common_blue_button_bg_disable" android:layout_gravity="end" android:id="@+id/tv_save" android:padding="16dp" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/common_done" style="@style/common_text_blue_medium_18dp"/>
+    </FrameLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:padding="21dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_rhythm_single_color_switch" style="@style/common_text_main_dark_medium_16dp"/>
+        <CheckBox android:layout_gravity="end|center_vertical" android:id="@+id/iv_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/switch_selector" android:layout_marginEnd="16dp"/>
+    </FrameLayout>
+    <View android:background="#dbdbdb" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginStart="24dp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/music_rhythm_single_color_sentence" android:paddingStart="20dp" android:paddingEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+    <com.tplink.iot.widget.colorbulb.TPCircleColorView android:layout_gravity="center_horizontal" android:id="@+id/color_picker_view" android:visibility="gone" android:layout_width="220dp" android:layout_height="220dp" android:layout_marginTop="10dp" android:layout_marginBottom="16dp"/>
+    <FrameLayout android:layout_gravity="center" android:id="@+id/color_picker_view_disable" android:padding="10dp" android:visibility="visible" android:layout_width="220dp" android:layout_height="220dp" android:layout_marginTop="10dp" android:layout_marginBottom="16dp">
+        <ImageView android:background="@drawable/colorpicker_disable" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

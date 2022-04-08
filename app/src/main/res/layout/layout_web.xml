@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_dialog_title" android:background="@drawable/shape_round" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="40dp">
+        <TextView android:textSize="18sp" android:textColor="#000" android:id="@+id/tv_dialog_back" android:background="@mipmap/back" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+        <TextView android:textSize="20sp" android:textColor="#000" android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/tv_dialog_title" android:layout_width="0dp" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1"/>
+        <TextView android:textSize="18sp" android:textColor="#000" android:id="@+id/tv_dialog_close" android:background="@mipmap/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+    </LinearLayout>
+    <ProgressBar android:id="@+id/pb" android:layout_width="match_parent" android:layout_height="4dp" android:max="100" android:indeterminateOnly="false" android:progressDrawable="@drawable/webview_progress_bar" style="?android:attr/progressBarStyleHorizontal"/>
+    <WebView android:id="@+id/wv" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_network_error" android:background="#fff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/error"/>
+    </LinearLayout>
+</LinearLayout>

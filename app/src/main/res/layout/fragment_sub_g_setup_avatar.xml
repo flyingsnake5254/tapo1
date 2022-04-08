@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/fragment_sub_g_setup_avatar_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_back" android:tag="binding_1" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/back"/>
+    <TextView android:gravity="center" android:id="@+id/tv_select" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/quicksetup_device_select_icon" android:layout_below="@+id/img_back" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_main_dark_medium_20dp"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_bottom" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <View android:layout_marginBottom="24dp" style="@style/common_divider_1dp"/>
+        <com.tplink.libtpcontrols.tprefreshablebutton.TPRefreshableButton android:id="@+id/btn_bottom" android:tag="binding_2" android:text="@string/common_next" style="@style/iot_common_flat_blue_refreshable_button"/>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_continue" android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/common_skip" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_purple_regular_16dp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/icon_list" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_above="@+id/ll_bottom" android:layout_below="@+id/tv_select" android:layout_marginStart="2dp" android:layout_marginEnd="2dp"/>
+    <View android:id="@+id/mask_view" android:tag="binding_4" android:background="@color/transparent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</RelativeLayout>

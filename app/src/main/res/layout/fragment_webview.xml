@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:visibility="gone" layout="@layout/common_toolbar_with_elevation"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ProgressBar android:id="@+id/web_progressbar" android:layout_width="match_parent" android:layout_height="3dp" android:max="100" android:indeterminateOnly="false" android:progressDrawable="@drawable/webview_progress_bar" style="?android:attr/progressBarStyleHorizontal"/>
+            <WebView android:id="@+id/lwa_webview" android:visibility="visible" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/web_refresh_layout" android:background="?attr/selectableItemBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/webview_load_failed_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="42dp" android:layout_marginStart="35dp" android:layout_marginEnd="35dp">
+                <ImageView android:id="@+id/webview_flash_iv" android:layout_width="60dp" android:layout_height="60dp" android:src="@mipmap/ic_web_flash"/>
+                <TextView android:textSize="@dimen/text_size_48px" android:textColor="@color/common_tplink_light_gray" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="@string/feed_back_load_error_hint"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

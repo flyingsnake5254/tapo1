@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="56dp">
+    <TextView android:id="@+id/tv_title" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/GuardModeItemTitleText"/>
+    <ImageView android:id="@+id/iv_check" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/menu_item_icon_action_ok_selector" android:contentDescription="@null" android:layout_marginEnd="20dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0" app:tint="@color/common_iot_main_blue"/>
+    <View app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" style="@style/common_divider_1dp_margin_start_20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

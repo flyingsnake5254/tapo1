@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/common_white" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:fadeScrollbars="false">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/rl_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/img_close" android:padding="@dimen/quick_setup_close_new_vi_padding" android:visibility="invisible" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/close"/>
+            <TextView android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_plug_name_device" android:layout_below="@+id/img_close" android:layout_centerHorizontal="true" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" style="@style/common_text_main_dark_medium_20dp"/>
+            <TextView android:id="@+id/tv_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/quicksetup_device_name" android:layout_below="@+id/tv_title" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+            <com.tplink.iot.widget.DrawableEditText android:id="@+id/draw_edit_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:maxLength="64" android:layout_below="@+id/tv_tip" android:imeOptions="actionDone" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:text="@string/smart_bulb"/>
+        </RelativeLayout>
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/rl_content" android:layout_alignParentBottom="true" layout="@layout/layout_quicksetup_common_bottom_button"/>
+    </RelativeLayout>
+</ScrollView>

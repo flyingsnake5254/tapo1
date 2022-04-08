@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:id="@+id/qs_control_bar_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/quick_setup_introduce_bottom_height" android:paddingStart="24dp" android:paddingEnd="24dp">
+    <TextView android:gravity="center_horizontal" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:maxLines="2" style="@style/common_dark_gray_medium_text_20dp"/>
+    <TextView android:id="@+id/tv_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:minLines="2" android:layout_below="@+id/tv_title" style="@style/common_dark_gray_regular_text_16dp"/>
+    <RelativeLayout android:id="@+id/rl_btn" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_above="@+id/tv_bottom_tip">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/quicksetup_introduce_commmon_next" android:layout_marginBottom="10dp" android:text="@string/common_next" style="@style/m6_common_blue_300_button"/>
+            <com.tplink.libtpcontrols.tprefreshablebutton.TPRefreshableButton android:id="@+id/quicksetup_introduce_commmon_refresh_next" android:layout_marginBottom="10dp" android:text="@string/common_next" style="@style/iot_common_flat_blue_refreshable_button"/>
+        </FrameLayout>
+    </RelativeLayout>
+    <TextView android:gravity="center_horizontal" android:id="@+id/tv_bottom_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="@dimen/quick_setup_introduce_tip_bottom_height" android:layout_alignParentBottom="true" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" style="@style/common_text_purple_regular_16dp"/>
+</RelativeLayout>

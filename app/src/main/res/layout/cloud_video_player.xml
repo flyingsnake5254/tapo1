@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/root_view" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/rl_video_play_top_control" android:background="@color/common_iot_dark_black" android:layout_width="match_parent" android:layout_height="56dp">
+            <ImageView android:id="@+id/iv_top_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_white_back" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_alignParentStart="true"/>
+            <ImageView android:id="@+id/iv_top_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/close_grey_24" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <FrameLayout android:id="@+id/video_play_layout" android:layout_width="match_parent" android:layout_height="200dp" android:layout_below="@+id/rl_video_play_top_control">
+            <com.google.android.exoplayer2.ui.PlayerView android:id="@+id/cloud_video_view" android:layout_width="match_parent" android:layout_height="match_parent" app:controller_layout_id="@layout/exo_playback_control_view_cloud_video" app:resize_mode="0" app:surface_type="2"/>
+            <com.airbnb.lottie.LottieAnimationView android:enabled="false" android:layout_gravity="center" android:id="@+id/cloud_video_lottie_animation_view" android:background="@null" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="50dp" android:layout_height="50dp" app:lottie_autoPlay="true" app:lottie_fileName="video_loading.json" app:lottie_loop="true"/>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/ll_cloud_video_tap_refresh" android:background="@color/color_bg_dark" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_gravity="center" android:id="@+id/iv_tap_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_refresh"/>
+                <TextView android:textSize="14sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_tap_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="8dp" android:text="@string/live_display_error_hint" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            </LinearLayout>
+        </FrameLayout>
+        <RelativeLayout android:layout_gravity="end" android:id="@+id/ll_capture_land" android:background="@color/color_cc333333" android:visibility="gone" android:layout_width="40dp" android:layout_height="50dp" android:layout_centerVertical="true" android:layout_marginEnd="30dp" android:layout_alignParentEnd="true">
+            <ImageView android:id="@+id/iv_capture_land" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tool_pic" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_select_cloud_video" android:background="#cc333333" android:visibility="gone" android:clickable="true" android:layout_width="0dp" android:layout_height="0dp" android:layout_alignTop="@+id/video_play_layout" android:layout_alignParentTop="true" android:layout_alignParentEnd="true">
+            <RelativeLayout android:background="#4d000000" android:layout_width="wrap_content" android:layout_height="56dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cloud_video" android:layout_centerInParent="true" style="@style/common_text_white_regular_14dp"/>
+                <ImageView android:id="@+id/iv_close_select_cloud_video" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_more_white" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <com.tplink.iot.widget.refreshlayout.TPSmartRefreshLayout android:id="@+id/cloud_video_refresh_container_land" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycle_cloud_video_list_land" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:layout_marginEnd="6dp"/>
+            </com.tplink.iot.widget.refreshlayout.TPSmartRefreshLayout>
+        </LinearLayout>
+        <View android:id="@+id/view_empty_play_view" android:background="@color/transparent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toStartOf="@+id/ll_select_cloud_video" android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_bottom_tool_buttons" android:background="@color/common_iot_dark_black" android:layout_width="match_parent" android:layout_height="40dp">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_capture" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tool_pic" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_mute" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tool_sound" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_download" android:paddingTop="5dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tool_download" android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

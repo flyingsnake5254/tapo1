@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <View style="@style/m6_common_divider"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RadioGroup android:orientation="vertical" android:id="@+id/rg_turn_radio" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/turn_on_rb" android:layout_height="44dp" android:checked="true" android:text="@string/smart_action_device_turn_on" style="@style/common_text_main_dark_regular_16dp_radio_button_check_no_divider"/>
+            <View android:id="@+id/divider_line_turn_on" style="@style/common_divider_1dp_margin_start_20dp"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/divider_turn_on" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/smart_action_turn_on_hint_v2" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+                <View style="@style/common_divider_1dp_margin_start_20dp"/>
+            </LinearLayout>
+            <RadioButton android:id="@+id/turn_off_rb" android:text="@string/smart_action_device_turn_off" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+            <RadioButton android:id="@+id/turn_reverse_rb" android:visibility="gone" android:layout_height="44dp" android:text="@string/smart_action_device_turn_on_off" style="@style/common_text_main_dark_regular_16dp_radio_button_check_no_divider"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/divider_turn_reverse" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/smart_action_device_turn_on_off_hint" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_14dp"/>
+                <View style="@style/common_divider_1dp_margin_start_20dp"/>
+            </LinearLayout>
+            <View android:id="@+id/divider_on" android:background="@color/common_iot_bg" android:visibility="visible" android:layout_width="match_parent" android:layout_height="16dp"/>
+            <RadioButton android:id="@+id/rb_set_lighting" android:text="@string/set_lighting" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+            <FrameLayout android:background="@color/standard_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.tplink.iot.widget.BulbBrightnessView android:id="@+id/set_lighting_bulb_brightness_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.tplink.iot.widget.colorbulb.SmartColorBulbPresetStatusView android:id="@+id/set_lighting_color_bulb_preset_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.tplink.iot.devices.lightstrip.widget.LightingEffectPresetStatusView android:id="@+id/set_lighting_effect_preset_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <RadioButton android:id="@+id/turn_custom_on_duration_rb" android:text="@string/smart_action_on_duration" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+            <com.tplink.iot.widget.time.TimeMinSecSelectView android:id="@+id/time_min_sec_select" android:background="@color/standard_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <FrameLayout android:background="@color/standard_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.tplink.iot.widget.BulbBrightnessView android:id="@+id/on_duration_bulb_brightness_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.tplink.iot.widget.colorbulb.SmartColorBulbPresetStatusView android:id="@+id/on_duration_color_bulb_preset_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.tplink.iot.devices.lightstrip.widget.LightingEffectPresetStatusView android:id="@+id/on_duration_effect_preset_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <View android:id="@+id/divider_brightness" android:background="@color/common_iot_bg" android:visibility="visible" android:layout_width="match_parent" android:layout_height="16dp"/>
+            <RadioButton android:id="@+id/rb_increase_brightness" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+            <RadioButton android:id="@+id/rb_decrease_brightness" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+            <View android:id="@+id/divider_color_temp" android:background="@color/common_iot_bg" android:visibility="visible" android:layout_width="match_parent" android:layout_height="16dp"/>
+            <RadioButton android:id="@+id/rb_increase_color_temp" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+            <RadioButton android:id="@+id/rb_decrease_color_temp" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+            <View android:id="@+id/divider_random_color" android:background="@color/common_iot_bg" android:visibility="visible" android:layout_width="match_parent" android:layout_height="16dp"/>
+            <RadioButton android:id="@+id/rb_random_color" android:text="@string/smart_action_random_color" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+        </RadioGroup>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

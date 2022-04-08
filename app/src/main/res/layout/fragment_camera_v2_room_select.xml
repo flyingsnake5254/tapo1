@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/fragment_camera_v2_room_select_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:elevation="0dp" app:navigationIcon="@drawable/common_back_selector" app:popupTheme="@style/TP.Theme.PopupOverlay" app:titleTextColor="@color/common_iot_dark_black" style="@style/toolbar_style"/>
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:gravity="center" android:id="@+id/location_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/quicksetup_plug_name_device_place" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_medium_20dp"/>
+        <RelativeLayout android:id="@+id/bottom_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="24dp" android:layout_alignParentBottom="true">
+            <Button android:id="@+id/next_btn" android:tag="binding_1" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/common_next" style="@style/m6_common_blue_300_button"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:scrollbarStyle="outsideOverlay" android:id="@+id/device_place_list" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/m6_text_size_16dp" android:layout_above="@+id/bottom_layout" android:layout_below="@+id/location_title"/>
+    </RelativeLayout>
+</LinearLayout>

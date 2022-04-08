@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/layout_activity_music_phone_rhythm" android:background="@mipmap/music_rhythm_main_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:keepScreenOn="true">
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/music_rhythm_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:layout_alignParentTop="true" android:paddingEnd="6dp">
+        <ImageView android:id="@+id/music_rhythm_iv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/nav_white_back" android:layout_centerVertical="true" android:paddingStart="6dp"/>
+        <TextView android:ellipsize="end" android:id="@+id/music_rhythm_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/music_rhythm" android:singleLine="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:layout_marginStart="84dp" style="@style/common_text_white_medium_18dp"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="31dp" android:layout_below="@+id/music_rhythm_toolbar">
+        <LinearLayout android:gravity="center" android:id="@+id/single_color_mode_parent" android:background="@drawable/music_rhythm_main_table_button_background" android:layout_width="54dp" android:layout_height="54dp">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:background="@drawable/music_rhythm_main_table_button_grey_stroke_background" android:layout_width="26dp" android:layout_height="26dp"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/single_color_mode" android:layout_width="36dp" android:layout_height="36dp" android:src="@mipmap/color_36"/>
+            </FrameLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/percent_light_strength_control" android:background="@drawable/music_rhythm_main_table_button_background" android:padding="9dp" android:layout_width="54dp" android:layout_height="54dp" android:src="@mipmap/brightness_36" android:layout_marginStart="30dp" android:layout_toEndOf="@+id/single_color_mode_parent"/>
+        <LinearLayout android:background="@drawable/music_rhythm_main_table_grey_button_background" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="30dp" android:layout_toEndOf="@+id/percent_light_strength_control">
+            <ImageView android:id="@+id/music_rhythm_phone_receive" android:background="@drawable/music_rhythm_main_table_button_background" android:padding="9dp" android:layout_width="54dp" android:layout_height="54dp" android:src="@mipmap/recording_pre_36"/>
+            <ImageView android:id="@+id/music_rhythm_spotify_receive" android:background="@color/transparent" android:padding="9dp" android:layout_width="54dp" android:layout_height="54dp" android:src="@mipmap/spotify_36"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="300dp" android:layout_centerInParent="true">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/music_rhythm_recycleview" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="24dp" android:layout_marginBottom="20dp" android:layout_above="@+id/select_icon_view" android:paddingStart="24dp" android:paddingEnd="24dp">
+        <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_mode_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@style/common_text_white_medium_16dp"/>
+        <ImageView android:id="@+id/mode_show_edit_dialog" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/icon_white_edit_pen"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/select_icon_view" android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginBottom="40dp" android:layout_above="@+id/music_rhythm_ll_play"/>
+    <LinearLayout android:gravity="center" android:id="@+id/music_rhythm_ll_play" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginBottom="50dp" android:layout_alignParentBottom="true">
+        <ImageView android:id="@+id/music_rhythm_iv_play" android:layout_width="60dp" android:layout_height="60dp" android:src="@mipmap/icon_start"/>
+    </LinearLayout>
+</RelativeLayout>

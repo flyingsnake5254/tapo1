@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/activity_trv_set_temperature_unit_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <RadioGroup android:orientation="vertical" android:id="@+id/rg_temp_unit" android:layout_width="match_parent" android:layout_height="wrap_content" android:checkedButton="@+id/rb_celsius">
+        <TextView android:background="@color/standard_background" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/trv_temperature_unit_banner" android:paddingStart="20dp" android:paddingEnd="20dp" style="@style/common_text_secondary_medium_16dp"/>
+        <com.tplink.libtpcontrols.materialnormalcompat.radio.TPRadioButton android:id="@+id/rb_celsius" android:text="℃" android:paddingStart="24dp" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+        <com.tplink.libtpcontrols.materialnormalcompat.radio.TPRadioButton android:id="@+id/rb_fahrenheit" android:text="℉" android:paddingStart="24dp" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+    </RadioGroup>
+</LinearLayout>

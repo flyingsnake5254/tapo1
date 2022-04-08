@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/color_temperature" android:layout_centerVertical="true" style="@style/common_text_secondary_regular_14dp"/>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_color_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" style="@style/common_text_main_dark_medium_14dp"/>
+    </RelativeLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+        <com.tplink.iot.widget.TextMarkLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.tplink.iot.widget.colorbulb.ColorTemperatureView android:layout_gravity="center" android:id="@+id/color_temperature_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginRight="30dp"/>
+    </FrameLayout>
+</LinearLayout>

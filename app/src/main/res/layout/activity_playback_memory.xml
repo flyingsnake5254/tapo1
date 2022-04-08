@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/playback_memory_header" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <ImageView android:id="@+id/playback_memory_back" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentStart="true" app:srcCompat="@mipmap/back"/>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toStartOf="@+id/playback_memory_filter_action" android:layout_toEndOf="@+id/playback_memory_back">
+            <com.google.android.material.tabs.TabLayout android:id="@+id/playback_memory_tab" android:layout_width="match_parent" android:layout_height="match_parent" app:tabGravity="0" app:tabIndicatorColor="@color/common_iot_main_blue" app:tabMode="1" app:tabSelectedTextColor="@color/common_iot_main_blue" app:tabTextAppearance="@style/common_text_secondary_medium_14dp"/>
+            <TextView android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/memories_edit_title" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:text="" android:singleLine="true" android:paddingStart="10dp" android:paddingEnd="10dp" style="@style/common_text_main_dark_medium_20dp"/>
+        </FrameLayout>
+        <ImageView android:id="@+id/playback_memory_filter_action" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/playback_memory_edit_action" app:srcCompat="@mipmap/memory_filter"/>
+        <ImageView android:id="@+id/playback_memory_edit_action" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_alignParentEnd="true" app:srcCompat="@mipmap/memory_edit"/>
+    </RelativeLayout>
+    <com.tplink.iot.view.ipcamera.play.EasyViewPager android:id="@+id/playback_memory_content" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

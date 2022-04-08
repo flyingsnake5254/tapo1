@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yinglan.scrolllayout.content.ContentScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/scroll_view" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:fadeScrollbars="false">
+    <LinearLayout android:orientation="vertical" android:paddingBottom="60dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center" android:id="@+id/iv_pull_up_down" android:background="@mipmap/bg_detail_arrow" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/ic_pull_up" android:contentDescription="@null"/>
+        <TextView android:ellipsize="end" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/devices_of_group" android:singleLine="true" android:paddingStart="20dp" android:paddingEnd="16dp" style="@style/common_text_main_dark_regular_14dp"/>
+        <FrameLayout android:orientation="vertical" android:id="@+id/ll_rules" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingBottom="50dp" android:layout_width="match_parent" android:layout_height="match_parent">
+            <View style="@style/common_divider_block_8dp"/>
+            <RelativeLayout android:id="@+id/item_group_settings" android:layout_width="match_parent" android:layout_height="56dp">
+                <TextView android:ellipsize="end" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/group_settings" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="20dp" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/tv_person" style="@style/common_text_main_dark_regular_16dp"/>
+                <TextView android:ellipsize="end" android:id="@+id/tv_person" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:drawablePadding="3dp" android:layout_centerVertical="true" android:layout_marginEnd="6dp" android:layout_toStartOf="@+id/arrow_share" style="@style/common_text_secondary_regular_14dp"/>
+                <ImageView android:id="@+id/arrow_share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/arrow_more" android:layout_centerInParent="true" android:contentDescription="@null" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+                <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+            </RelativeLayout>
+            <View style="@style/common_divider_block_8dp"/>
+            <RelativeLayout android:id="@+id/rl_common_device" android:layout_width="match_parent" android:layout_height="56dp">
+                <TextView android:ellipsize="end" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/common_favorite_low_case" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="20dp" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/switch_button" style="@style/common_text_main_dark_regular_16dp"/>
+                <com.tplink.libtpcontrols.materialnormalcompat.swicth.TPSwitchCompat android:id="@+id/switch_button" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:switchMinWidth="@dimen/switch_compat_width" style="@style/custom_switch_compat"/>
+                <View android:layout_alignParentBottom="true" style="@style/common_divider_1dp_margin_start_20dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.yinglan.scrolllayout.content.ContentScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/common_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_back" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/back"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cloud_connect_local_why" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/quicksetup_no_find_m5_do_following" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_regular_14dp"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/cloud_connect_router_internet"/>
+                <com.tplink.iot.widget.PointTextView android:id="@+id/tv_tip2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/offline_troubleshooting_led_off_tips1"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/cloud_connect_change_dns"/>
+            </LinearLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:paddingTop="24dp" android:paddingBottom="19dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <TextView android:id="@+id/tv_error_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_marginBottom="24dp" android:text="@string/cloud_connect_error_code" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_medium_14dp"/>
+                    <com.tplink.libtpcontrols.tprefreshablebutton.TPRefreshableButton android:id="@+id/btn_cloud_connect" android:layout_marginBottom="5dp" android:text="@string/try_again" style="@style/iot_common_flat_blue_refreshable_button"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

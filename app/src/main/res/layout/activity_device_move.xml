@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/device_move_toolbar"/>
+    <View style="@style/common_divider_1dp"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_no_room" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="80dp" android:text="@string/device_move_family_no_rooms" style="@style/common_text_annotation_regular_16dp"/>
+        <com.tplink.libtpcontrols.DropDownView android:id="@+id/drop_down_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="8dp" app:containerBackgroundColor="@color/white" app:overlayColor="#4c000000"/>
+    </FrameLayout>
+</LinearLayout>

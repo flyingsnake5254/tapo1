@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/layout_authorize" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_close" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/close" android:layout_alignParentEnd="true"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_below="@+id/img_close">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="24dp" android:paddingEnd="24dp">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:src="@mipmap/icon_about_us"/>
+                <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/google_auth_with_title" style="@style/common_text_main_dark_medium_20dp"/>
+                <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/google_auth_user_is" style="@style/common_text_secondary_medium_14dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/google_auth_will_be_able" style="@style/common_text_secondary_regular_14dp"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" app:text_content="@string/google_auth_able_tips1"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:text_content="@string/google_auth_able_tips2"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:text_content="@string/google_auth_able_tips3"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" app:text_content="@string/google_auth_able_tips4"/>
+                <TextView android:id="@+id/tv_google_privacy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/google_auth_privacy_policy" style="@style/common_text_main_dark_regular_14dp"/>
+                <TextView android:id="@+id/tv_unbind_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/google_auth_unlink" style="@style/common_text_main_dark_regular_14dp"/>
+            </LinearLayout>
+            <RelativeLayout android:paddingTop="24dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+                <TextView android:enabled="true" android:id="@+id/btn_agree" android:visibility="visible" android:text="@string/google_auth_agree_auth" android:layout_alignParentBottom="true" style="@style/iot_common_flat_blue_button"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

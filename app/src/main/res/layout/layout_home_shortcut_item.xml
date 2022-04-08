@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="160dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_marginEnd="16dp" app:cardCornerRadius="6dp" app:cardElevation="2dp">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:paddingTop="15dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="12dp" android:paddingEnd="12dp">
+            <ImageView android:id="@+id/img_icon" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/iot_plug_48" android:layout_centerVertical="true"/>
+            <TextView android:ellipsize="end" android:id="@+id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Leave Home" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="10dp" android:layout_toEndOf="@+id/img_icon" style="@style/common_text_main_dark_regular_14dp"/>
+        </RelativeLayout>
+        <FrameLayout android:gravity="center" android:id="@+id/view_loading" android:background="#99ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_shortcut_result" android:visibility="gone" android:layout_width="20dp" android:layout_height="20dp" android:src="@mipmap/icon_shortcut_success"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_shortcut_loading" android:layout_width="20dp" android:layout_height="20dp" android:src="@mipmap/icon_shortcut_loading"/>
+        </FrameLayout>
+        <FrameLayout android:gravity="center" android:id="@+id/view_disable" android:background="#99ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

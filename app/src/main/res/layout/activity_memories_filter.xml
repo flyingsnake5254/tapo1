@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:tag="layout/activity_memories_filter_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/toolbar" layout="@layout/common_toolbar"/>
+    <ScrollView android:background="@color/blacklist_background" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_below="@+id/toolbar">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/filter_recycle_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginBottom="6dp" android:text="@string/iot_camera" android:textAllCaps="true" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_medium_14dp"/>
+                <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/filter_recycle_view" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginBottom="6dp" android:text="@string/memory_filter_type" android:textAllCaps="true" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_medium_14dp"/>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/image_item" android:tag="binding_2" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/memory_filter_photo" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <CheckBox android:id="@+id/image_check" android:tag="binding_3" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/video_item" android:tag="binding_4" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/video" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/memory_filter_video" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <CheckBox android:id="@+id/video_check" android:tag="binding_5" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/cloud_video_item" android:tag="binding_6" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/tv_cloud_video" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/cloud_video" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <CheckBox android:id="@+id/cb_cloud_video_check" android:tag="binding_7" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginBottom="6dp" android:text="@string/memory_filter_preference" android:textAllCaps="true" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_medium_14dp"/>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/favorite_item" android:tag="binding_8" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/favorite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/memory_filter_favorite" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <RadioButton android:id="@+id/favorite_check" android:tag="binding_9" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/unfavorite_item" android:tag="binding_10" android:background="@color/pure_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/unfavorite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/memory_filter_unfavorite" android:layout_centerVertical="true" android:layout_marginStart="20dp" style="@style/common_dark_gray_regular_text_16dp"/>
+                <RadioButton android:id="@+id/unfavorite_check" android:tag="binding_11" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/common_rb_bg" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <View android:background="@color/common_divider_gray_color" android:layout_width="match_parent" android:layout_height="1px"/>
+            <View android:layout_width="1px" android:layout_height="80dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@+id/btn_bottom" android:tag="binding_12" android:layout_marginTop="24dp" android:layout_marginBottom="22dp" android:text="@string/memory_filter_apply" android:layout_alignParentBottom="true" style="@style/m6_common_blue_300_button"/>
+</RelativeLayout>

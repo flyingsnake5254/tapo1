@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_dialog_title" android:background="@drawable/bg_subscription_dialog_title" android:visibility="gone" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="40dp">
+        <ImageView android:id="@+id/iv_dialog_title" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_back_selector" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+        <TextView android:textSize="20sp" android:textColor="@color/black" android:ellipsize="end" android:gravity="center_horizontal" android:id="@+id/tv_dialog_title" android:layout_width="0dp" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1"/>
+        <TextView android:textSize="18sp" android:textColor="@color/black" android:id="@+id/tv_dialog_menu" android:background="@mipmap/close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="#ffffff" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_collapseMode="1" app:navigationIcon="@drawable/common_back_selector" app:popupTheme="@style/TP.Theme.PopupOverlay" app:titleTextColor="@color/black" style="@style/toolbar_style">
+        <TextView android:textSize="20sp" android:textColor="@color/black" android:ellipsize="end" android:id="@+id/toolbar_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_marginStart="20dp"/>
+    </androidx.appcompat.widget.Toolbar>
+    <ProgressBar android:id="@+id/pb_billing" android:layout_width="match_parent" android:layout_height="4dp" android:max="100" android:indeterminateOnly="false" android:progressDrawable="@drawable/webview_progress_bar" style="?android:attr/progressBarStyleHorizontal"/>
+    <WebView android:id="@+id/wv_billing" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_network_error" android:background="@color/white" android:paddingTop="136dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="58dp" android:paddingEnd="58dp">
+        <ImageView android:id="@+id/tv_retry" android:layout_width="60dp" android:layout_height="60dp" android:src="@mipmap/ic_web_flash"/>
+        <TextView android:textSize="@dimen/text_size_48px" android:textColor="@color/text_grey" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="@string/feed_back_load_error_hint"/>
+    </LinearLayout>
+</LinearLayout>

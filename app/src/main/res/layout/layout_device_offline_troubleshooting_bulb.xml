@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/offline_troubleshooting_bulb" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/quicksetup_no_find_m5_do_following" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_secondary_regular_14dp"/>
+    <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:text_content="@string/offline_troubleshooting_led_orange_tips1"/>
+    <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:text_content="@string/offline_troubleshooting_bulb_tips2"/>
+    <com.tplink.iot.widget.PointTextView android:id="@+id/tv_tip3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:text_content="@string/offline_troubleshooting_bulb_tips3"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp">
+        <View android:background="@drawable/sharp_circle_point_black" android:layout_width="6dp" android:layout_height="6dp" android:layout_marginTop="9dp"/>
+        <TextView android:id="@+id/tv_reconnect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reconnect_tip" android:layout_marginStart="8dp" style="@style/common_text_main_dark_regular_14dp"/>
+    </LinearLayout>
+</LinearLayout>

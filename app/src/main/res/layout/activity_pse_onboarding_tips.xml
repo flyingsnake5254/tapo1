@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/iv_close" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/close" android:contentDescription="@null"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/ll_bottom" android:layout_below="@+id/iv_close">
+        <TextView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="17dp" android:text="@string/pse_remote_control_title" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_main_dark_medium_20dp"/>
+        <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+            <TextView android:id="@+id/tv_content" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/common_text_main_dark_regular_14dp"/>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_bottom" android:paddingTop="20dp" android:paddingBottom="23dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:id="@+id/btn_agree" android:layout_marginBottom="5dp" android:text="@string/privacy_agree" style="@style/m6_common_blue_300_button"/>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/btn_disagree" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/privacy_disagree" android:textAllCaps="true" style="@style/common_text_purple_regular_16dp"/>
+    </LinearLayout>
+</RelativeLayout>

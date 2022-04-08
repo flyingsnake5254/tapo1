@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="56dp">
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/motion_detection_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true" app:switchMinWidth="@dimen/switch_compat_width" style="@style/custom_switch_compat"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_marginBottom="14dp" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="8dp" android:layout_toStartOf="@+id/motion_detection_switch" android:layout_alignParentStart="true">
+            <TextView android:ellipsize="end" android:id="@+id/tv_msg_subscribe_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mode_motion_detection" android:singleLine="true" style="@style/common_text_main_dark_regular_16dp"/>
+            <TextView android:ellipsize="end" android:id="@+id/tv_device_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mode_motion_detection" android:singleLine="true" style="@style/common_text_secondary_regular_14dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/common_iot_divider" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="16dp"/>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_soft_ap_common_guide_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_back" android:tag="binding_1" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/back" android:contentDescription="@null"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:id="@+id/tv_guide_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_first_introduce_title" android:layout_centerHorizontal="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_medium_20dp"/>
+            <TextView android:id="@+id/tv_guide_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/quicksetup_first_introduce_content_new" android:layout_below="@+id/tv_guide_title" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_body_regular_16dp"/>
+            <TextView android:id="@+id/tv_guide_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/quicksetup_keep_phone_close_device" android:layout_below="@+id/tv_guide_desc" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_regular_14dp"/>
+            <FrameLayout android:id="@+id/fl_led_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tv_guide_tips" android:layout_centerHorizontal="true">
+                <ImageView android:id="@+id/image_check_led" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:src="@mipmap/led_eu"/>
+                <com.airbnb.lottie.LottieAnimationView android:id="@+id/lottie_animation_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:adjustViewBounds="true" app:lottie_autoPlay="false" app:lottie_loop="true"/>
+            </FrameLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:paddingTop="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/fl_led_container" android:layout_alignParentBottom="true">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <com.tplink.libtpcontrols.tprefreshablebutton.TPRefreshableButton android:id="@+id/btn_refresh_next" android:tag="binding_2" android:layout_marginBottom="5dp" android:text="@string/quicksetup_first_introduce_btn_content" style="@style/iot_common_flat_blue_refreshable_button"/>
+                    <TextView android:gravity="center_horizontal" android:id="@+id/tv_bottom_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="24dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp" style="@style/common_text_purple_regular_16dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

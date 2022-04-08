@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="186" android:versionName="2.4.62" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.tplink.iot" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <queries>
+        <package android:name="com.android.settings"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.browse.MediaBrowserService"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.tplink.iot.core.AppContext" android:allowBackup="false" android:hardwareAccelerated="true" android:largeHeap="true" android:supportsRtl="false" android:resizeableActivity="false" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:allowNativeHeapPointerTagging="false">
+        <meta-data android:name="com.google.mlkit.vision.DEPENDENCIES" android:value="barcode"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_tapo_msg"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/common_iot_main_blue"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.about.LicensesActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.tplink.iot.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <service android:name="com.tplink.iot.firebase.TapoFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/AppTheme.Launcher" android:label="@string/app_name" android:name="com.tplink.iot.view.welcome.StartupActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/HomePageStyle" android:label="" android:name="com.tplink.iot.view.main.MainActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/BlankToolbar" android:label="" android:name="com.tplink.iot.view.home.DeviceOfflineTroubleshootingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/BlankToolbar" android:label="" android:name="com.tplink.iot.view.familymanager.FamilyListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/BlankToolbar" android:label="" android:name="com.tplink.iot.view.familymanager.FamilyDetailActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.familymanager.EditFamilyNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.familymanager.AddFamilyActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.familymanager.AddRoomActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.familymanager.EditRoomNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.familymanager.AddDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.familymanager.RoomDetailActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/BlankToolbar" android:label="" android:name="com.tplink.iot.view.signup.SignUpByEmailActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/BlankToolbar" android:label="" android:name="com.tplink.iot.view.signup.SignUpCheckMailboxActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/BlankToolbar" android:label="" android:name="com.tplink.iot.view.login.LoginActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:theme="@style/BlankToolbar" android:label="" android:name="com.tplink.iot.view.login.CloudRegionChooseActivity" android:screenOrientation="portrait" android:configChanges="layoutDirection|locale" android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:theme="@style/BlankToolbar" android:label="" android:name="com.tplink.iot.view.login.RetrieveAccountByEmailActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.account.AccountActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.account.AccountChangePasswordActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.account.AccountChangeNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.account.AccountPasswordVerifyActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:label="" android:name="com.tplink.iot.view.account.AccountPasswordChangedActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.voice.VoiceControlActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.about.AboutActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.about.AboutWebActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.about.CommonWebActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.cloudvideo.TapoCareWebActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.about.LicenseItemActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.about.PrivacySettingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.firmware.FirmwareSlideActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.firmware.FirmwareSlideDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.notification.NotificationActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.notification.DeviceTriggeredAllActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.notification.TriggeredDeviceTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.PlugDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.settings.PlugSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.settings.PlugSettingLocationActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.settings.PlugSettingLocationCustomActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.settings.PlugSettingPowerOnAgainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.energymonitor.PlugElectricityStatisticActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.energymonitor.PlugPowerStatisticActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotcommon.IoTSettingLocationSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotcommon.IoTSettingLocationCustomActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.settings.led.LedStatusActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.settings.led.LedScheduleActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.settings.led.LedOffsetSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.feature.SelectAwayModeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotcommon.IoTFirmwareUpdateActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.common.PlugLocationSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/QuickSetupStyle" android:label="" android:name="com.tplink.iot.view.quicksetup.common.PlugLocationCustomActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.common.PlugIconSelectActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.ConnectWiFiPairActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.common.SetupSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.firmware.QuickSetupFirmwareActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.firmware.QuickSetupFirmwareSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.firmware.QuickSetupFirmwareFailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.common.PlugAPListActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.BleAddPlugActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.LocationAllowActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.BleConnectPlugActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.BlePlugConnectAPActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/QuickSetupStyle" android:label="" android:name="com.tplink.iot.view.quicksetup.common.ApPasswordInputActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/QuickSetupStyle" android:label="" android:name="com.tplink.iot.view.quicksetup.common.PlugNickNameInputActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.BleNoFindActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.BlePlugConnectApFailedActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.common.NoFindAPActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/QuickSetupStyle" android:label="" android:name="com.tplink.iot.view.quicksetup.common.ApNamePasswordInputActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.BlePrepareActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.WifiPrepareActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.WifiSSIDPrepareActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.WifiPrepareCameraActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.common.SelectCategoryNewActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.plug.SoftApPlugGuideActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/QuickSetupStyle" android:label="" android:name="com.tplink.iot.view.deviceshare.AddShareDeviceActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.deviceshare.ShareDeviceActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.deviceshare.ShareDeviceUserListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.deviceshare.ShareDeviceUserDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.deviceshare.DeviceShareHelpActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.deviceshare.DeviceShareBlacklistActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/QuickSetupStyle" android:label="" android:name="com.tplink.iot.view.deviceshare.DeviceShareBlacklistAddUserActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.feedback.HelpAndFeedbackActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.feedback.FeedBackWebActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.feedback.DeviceTypeListActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/HorizontalSlideTheme" android:label="" android:name="com.tplink.iot.view.feedback.SelectFeedbackDeviceActivity" android:screenOrientation="portrait" android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.base.LocationPrepareActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.cloudconnect.CloudConnectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.cloudconnect.CloudConnectSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.cloudconnect.CloudConnectingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.cloudconnect.CloudConnectGetStateActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.SoftAPBulbGuideFirstActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.SoftAPBulbGuideSecondActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.SoftAPBulbSSIDListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.SoftAPBulbSSIDEmptyActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.SoftAPConnectBulbActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.BulbNoFindActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.BulbAPListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/QuickSetupStyle" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.BulbApNamePasswordInputActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:theme="@style/QuickSetupStyle" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.BulbApPasswordInputActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.BulbApNoFindAPActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.SoftAPBulbConnectAPActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.BulbPairingFailedActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.quicksetup.BulbNickNameInputActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.quicksetup.BulbLocationSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.quicksetup.BulbLocationCustomActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.quicksetup.BulbIconSelectActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.bulb.BulbDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.bulb.settings.BulbSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.bulb.settings.BulbDefaultStateActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.bulb.settings.BulbBrightnessPresetActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.feature.ScheduleListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.feature.ScheduleDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.feature.TimerActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.feature.AwayModeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.musicphonerhythm.activitys.MusicPhoneRhythmActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.home.alldevice.HomeAllDevicesActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.home.alldevice.RoomNavigationActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.home.nextevent.NextEventListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.home.message.NotificationCenterActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.cloudvideo.CloudVideoListActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.smart.actionsetup.ActionDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.smart.myactions.ActionHistoryActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.smart.template.SmartTemplateDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.smart.myactions.ShortcutResortActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.LocationSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.preview.CameraPreviewActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.CameraSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.DeviceDetailInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.AdvancedSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.StoreManageActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.ScheduleSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.PasswordSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.LightFrequencyActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.UpnpSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.AlarmSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.AlarmTypeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.AlarmSoundActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.ScheduleEditActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.preview.CameraPreviewSortActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.play.PlaybackAndMemoriesActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.memories.MemoriesActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.memories.filter.MemoriesFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.memories.MemoriesImageActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.memories.MemoriesVideoPlayActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:theme="@style/Camera.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.play.VideoPlayActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.play.SelectDeviceActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.LensMaskActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.DeviceNameEditorActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.OsdActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.TimezoneActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.detection.DetectionSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.firmware.FirmwareUpdateNewIpcActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.cloudconnect.CameraCloudConnectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.cloudconnect.CameraCloudConnectSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.home.DeviceMoveActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.colorbulb.ColorBulbDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.colorbulb.settings.ColorBulbSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.colorbulb.settings.ColorBulbDefaultStateActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.wss.WssAlexaActivity" android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="alexa-ffs.tplinknbu.com" android:pathPrefix="/v1/public/ffs/redirect/android"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.wss.WssAccountLinkWebActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.wss.WssAmazonInstrWebActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.LdcSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.DiagnoseSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.privacymask.PrivacyMaskActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.privacymask.PrivacyMaskZonesActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.targrttrack.TargetTrackActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.aidetection.AIDetectionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.preview.mode.ModeSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.preview.mode.ModeDetectSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.preview.CameraPreferenceActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.FindDeviceFailedActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.PlugIoTLocationCustomActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.PlugIoTLocationSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.WifiLocationAllowActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.onboardingv2.CameraOnBoardingV2Activity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.BulbInheritBeforeSetQsInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.bulb.quicksetup.BulbInheritAfterSetQsInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.ble.PlugInheritAfterSetQsInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.pse.PSEOnBoardingTipsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.settings.PlugRemoteControlActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/FullScreen" android:name="com.tplink.iot.view.notification.NotificationClickActivity" android:launchMode="singleInstance" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="notification.CLICK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.notification.NotificationClickLoadingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.video.VideoQualityActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:name="com.tplink.iot.view.tapocare.BillingActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:name="com.tplink.iot.view.tapocare.BillingDialogActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:name="com.tplink.iot.view.tapocare.TrialDialogActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.cloudvideo.CloudVideoDeviceListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.AutoRebootActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.RecordAudioSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.authflip.GoogleAssistantActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.authflip.AppFlipAuthActivity" android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.tplink.iot.APP_FLIP_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.VideoTamperingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.AreaIntrusionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.IntrusionScheduleSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.AreaIntrusionRegionSettingActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.LineCrossingDetectionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.LineCrossingScheduleSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.LineCrossingRegionSettingActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.me.VibrateSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.device.DeviceShowGroupListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.create.CreateGroupActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.device.DeviceAddGroupListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.info.GroupLocationSelectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.info.GroupNameActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.info.GroupAvatarActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.info.GroupLocationCustomActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.detail.GroupEditDeviceListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.detail.GroupAddDeviceListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.detail.GroupBulbSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.detail.GroupDetailColorBulbActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.MotionDetectionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.MotionRegionSettingActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.group.detail.GroupBulbBrightnessPresetActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.MsgPushActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.MsgPushCustomTimeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.sub.SubGOnBoardingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iothub.HubDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iothub.HubSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotcommon.IoTDeviceInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotcommon.IoTSettingAvatarActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotcommon.IoTSettingNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iothub.guardmode.GuardModeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iothub.guardmode.GuardModeConfigActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iothub.HubAlarmLogActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iothub.HubChildDeviceListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iothub.HubAddChildDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotsensor.SensorDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotsensor.SensorSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotsensor.SensorSetSensitivityActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotsensor.SensorFirmwareUpdateActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotsensor.SensorSetReportIntervalActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.featuredactions.view.FeaturedActionHostActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.play.SnapshotsFilterActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.colorbulb.effect.LightEffectConfigActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.colorbulb.effect.LightEffectNameEditActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.OSDTextSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/DebugMaterialTheme" android:label="" android:name="com.tplink.iot.view.iotcommon.DebugFwUpdateActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.NightVisionModeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.softap.common.SoftApResetHintActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.softap.common.SoftApCommonGuideActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.WhiteLampConfigActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devicecommon.view.IoTDeviceInfoCommonActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.switches.view.SwitchDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.switches.view.SwitchSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.switches.view.SwitchSetDelayOffActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.switches.view.SwitchSetDoubleClickActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.lightstrip.LightStripUserGuideActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.lightstrip.LightStripConnectPartsGuideActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.LightStripDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.LightStripSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.LightStripEffectsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Material.M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.LightStripSetLengthActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.LightStripSetDefaultStateActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.LightStripPlacementGuideActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.effects.ColorPaintingMakeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.effects.CustomizedEffectsMakeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.effects.EditEffectNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.LightStripSoftApResetHintActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.iotplug.update.AutoUpdateActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.ipcamera.setting.firmware.AutoUpdateSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.firmware.AutoUpdateHintActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSetFrostProtectionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSetChildProtectionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSetWindowOpenActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSetRemoveScaleActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSetShutdownModeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSetTemperatureUnitActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSetTemperatureOffsetActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSetTemperatureRangeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVSetProgressCalibrationActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVTemperatureRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.trv.view.TRVEarlyStartActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Material.M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.devices.lightstrip.view.effects.LightingEffectDebugActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/TransparentStatusBar" android:label="" android:name="com.tplink.iot.dailysummary.view.SummaryHistoryActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/TransparentStatusBar" android:label="" android:name="com.tplink.iot.dailysummary.view.DailySummaryActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:label="" android:name="com.tplink.iot.dailysummary.view.SummaryPlayActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:label="" android:name="com.tplink.iot.dailysummary.view.SummaryClipListActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.discovery.DiscoveryDeviceListActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.discovery.DiscoveryDeviceConnectActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/M6.Common.DarkMenu" android:label="" android:name="com.tplink.iot.view.quicksetup.discovery.DiscoveryDevicePairingFailedActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/DebugMaterialTheme" android:label="" android:name="com.tplink.iot.view.about.TapoDebugActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:name="com.tplink.zxing.activity.CaptureActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <service android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:name="com.tplink.libtpgoogleassistant.ui.authflip.AppFlipAuthTestActivity"/>
+        <activity android:theme="@style/EasyPermissions.Transparent" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:exported="false"/>
+        <meta-data android:name="ACCESS_KEY" android:value="5e027ff0393f44a097afe8c20f11b364"/>
+        <meta-data android:name="SECRET" android:value="8a8e631e4d4e44c999f85c6c60197925"/>
+        <meta-data android:name="ANALYTICS_URL" android:value="https://n-da.tplinkcloud.com"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:name="com.google.mlkit.common.internal.MlKitInitProvider" android:exported="false" android:authorities="com.tplink.iot.mlkitinitprovider" android:initOrder="99"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.tplink.iot.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.tplink.iot.lifecycle-process"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="3.0.3"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.android.billingclient.api.ProxyBillingActivity" android:exported="false" android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+    </application>
+</manifest>

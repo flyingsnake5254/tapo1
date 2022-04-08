@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="24dp" android:paddingEnd="24dp">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/google_assistant_link_tips" style="@style/common_text_secondary_regular_14dp"/>
+        <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:text_content="@string/drawer_voice_v2"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/google_assistant_provide" android:layout_marginStart="12dp" style="@style/common_text_main_dark_regular_14dp"/>
+    </LinearLayout>
+    <RelativeLayout android:paddingTop="24dp" android:paddingBottom="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+        <TextView android:enabled="true" android:id="@+id/btn_go_google" android:visibility="visible" android:text="@string/google_assistant_link" android:layout_alignParentBottom="true" style="@style/iot_common_flat_blue_button"/>
+    </RelativeLayout>
+</RelativeLayout>

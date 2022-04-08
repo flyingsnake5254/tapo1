@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_customized_effects_make_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_effect_name" android:tag="binding_1" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_right_arrow_visible="true" app:item_set_title_hint="@string/light_strip_effect_name"/>
+            <TextView android:text="@string/light_strip_custom_effect" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="@string/light_strip_custom_effect_hint" style="@style/common_text_secondary_regular_16dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:orientation="horizontal" android:id="@+id/rv_predefined_effects" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="8dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            <com.tplink.iot.devices.lightstrip.widget.multicolorpalette.MultiColorPaletteView android:layout_gravity="center_horizontal" android:id="@+id/multi_color_picker" android:layout_width="300dp" android:layout_height="300dp" android:layout_marginTop="8dp" app:csp_cursor_follows_touch="false"/>
+            <TextView android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@+id/tv_random_color" android:tag="binding_2" android:background="?attr/selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="@string/random_color" android:drawablePadding="8dp" app:drawableStartCompat="@mipmap/icon_random" style="@style/common_text_blue_regular_14dp"/>
+            <TextView android:visibility="gone" android:text="@string/number_of_colors" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+            <com.tplink.iot.devices.lightstrip.widget.DiscreteSeekBarTextView android:id="@+id/dtv_colors" android:paddingTop="24dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:dtv_highlightTextColor="@color/common_iot_dark_black" app:dtv_textColor="@color/common_gray_black_color_transparent_50"/>
+            <SeekBar android:id="@+id/seekBar_colors" android:paddingTop="8dp" android:paddingBottom="16dp" android:visibility="gone" android:max="3" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeekBar.Common.Yellow"/>
+            <TextView android:text="@string/animation_speed" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp">
+                <TextView android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/anim_speed_slow" style="@style/common_text_main_dark_regular_16dp"/>
+                <TextView android:textStyle="bold" android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/anim_speed_fast" style="@style/common_text_main_dark_regular_16dp"/>
+            </FrameLayout>
+            <SeekBar android:id="@+id/seekBar_anim_speed" android:paddingTop="8dp" android:paddingBottom="16dp" android:max="100" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/SeekBar.Common.Yellow"/>
+            <TextView android:text="@string/brightness" android:textAllCaps="false" style="@style/common_divider_text_view"/>
+            <com.tplink.iot.widget.BrightnessSeekBar android:id="@+id/brightness_seek_bar" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+            <FrameLayout android:paddingTop="32dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <Button android:layout_gravity="bottom|center_horizontal" android:id="@+id/btn_save" android:tag="binding_3" android:text="@string/common_save" style="@style/iot_common_flat_blue_button"/>
+                <Button android:layout_gravity="bottom|center_horizontal" android:id="@+id/btn_delete" android:tag="binding_4" android:visibility="gone" android:text="@string/delete" style="@style/iot_common_flat_white_button_with_red_stroke"/>
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

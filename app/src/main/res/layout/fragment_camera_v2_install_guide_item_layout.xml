@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_content" android:tag="layout/fragment_camera_v2_install_guide_item_layout_0" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp">
+        <View android:layout_gravity="center" android:background="@color/me_logout_divider" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/install_guide_page_no" android:background="@drawable/common_circle_blue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" style="@style/common_text_white_regular_18dp"/>
+        <TextView android:gravity="center" android:layout_gravity="center" android:id="@+id/install_guide_page_other" android:background="@color/white" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_ap_other" style="@style/common_text_blue_regular_20dp"/>
+    </FrameLayout>
+    <TextView android:gravity="start" android:layout_gravity="start" android:id="@+id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_marginStart="30dp" android:layout_marginEnd="30dp" style="@style/common_light_gray_medium_text_14dp"/>
+    <ImageView android:id="@+id/iv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp"/>
+</LinearLayout>

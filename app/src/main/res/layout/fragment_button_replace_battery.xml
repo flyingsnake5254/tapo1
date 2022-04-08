@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/fragment_button_replace_battery_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_close" android:background="?attr/actionBarItemBackground" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/close" android:contentDescription="@null"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/switch_how_to_replace_battery" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+            <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:number="1"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/button_s200b_replace_battery_guide1" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_main_dark_regular_14dp"/>
+            <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/replace_battery_remove_cover_s200b" android:contentDescription="@null"/>
+            <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:number="2"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/sensor_t100_replace_battery_guide2" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_main_dark_regular_14dp"/>
+            <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:number="3"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/sensor_t100_replace_battery_guide3" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_main_dark_regular_14dp"/>
+            <com.tplink.iot.widget.viewgroup.StepNumberView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" app:number="4"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/sensor_t100_replace_battery_guide4" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_main_dark_regular_14dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/activity_account_change_name_container" android:background="@color/common_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <com.tplink.iot.widget.DrawableEditText android:id="@+id/edit_nickname_panel_et" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:maxLength="64" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" app:hintDrawable="@mipmap/icon_edit_admin" app:hintErrorDrawable="@mipmap/icon_edit_admin_wrong" app:hintHighlightDrawable="@mipmap/icon_edit_admin" app:textPaddingLeft="8dp" app:textPaddingRight="8dp"/>
+</LinearLayout>

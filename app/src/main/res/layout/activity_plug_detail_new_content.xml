@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_base_info" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize">
+            <ImageView android:id="@+id/iv_back" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/back" android:contentDescription="@null"/>
+            <TextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_name" android:layout_width="0dp" android:layout_height="match_parent" android:singleLine="true" android:layout_weight="1" style="@style/common_text_main_dark_medium_20dp"/>
+            <FrameLayout android:id="@+id/fl_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="12dp">
+                <ImageView android:id="@+id/iv_setting" android:background="?attr/actionBarItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:src="@mipmap/ic_setting_black" android:contentDescription="@null" android:layout_marginEnd="4dp"/>
+                <ImageView android:layout_gravity="end|top" android:id="@+id/iv_red_point" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/notification" android:contentDescription="@null"/>
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/location_bedroom" android:singleLine="true" android:drawableLeft="@mipmap/ic_location_black" android:drawablePadding="6dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_main_dark_regular_16dp"/>
+        <FrameLayout android:id="@+id/fl_top_tip" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/toolbar">
+            <androidx.cardview.widget.CardView android:id="@+id/card_local_only" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="2dp" app:cardBackgroundColor="@color/local_only_tip_bg" app:cardCornerRadius="4dp" app:cardElevation="0dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/local_only_tip_text" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cloud_connect_local" android:paddingStart="14dp" android:paddingEnd="10dp" android:layout_toStartOf="@+id/img_more_local" style="@style/common_text_main_dark_regular_14dp"/>
+                    <ImageView android:id="@+id/img_more_local" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/more_local_only" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/card_user_device" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="2dp" app:cardBackgroundColor="@color/local_only_tip_bg" app:cardCornerRadius="4dp" app:cardElevation="0dp">
+                <TextView android:textColor="@color/local_only_tip_text" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/toast_limit_permissions" android:paddingStart="14dp" android:paddingEnd="10dp" android:layout_toStartOf="@+id/img_more_local" style="@style/common_text_main_dark_regular_14dp"/>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+    </LinearLayout>
+    <ScrollView android:id="@+id/content_scroll_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="100dp" android:fillViewport="true" android:layout_below="@+id/ll_base_info">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="400dp">
+                <com.tplink.iot.widget.DiffuseView android:id="@+id/diffuse_view" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true" app:diffuse_color="@color/white" app:diffuse_coreImage="@mipmap/ic_plug_big_off" app:diffuse_speed="3" app:diffuse_width="2"/>
+                <ImageView android:id="@+id/iv_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_plug_big_off" android:layout_centerInParent="true"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_tap_on" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/iv_switch" android:layout_centerHorizontal="true" android:layout_marginStart="40dp" android:layout_marginEnd="40dp">
+                    <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_on_off" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:text="@string/common_off" android:textAllCaps="true" style="@style/common_text_main_dark_bold_20dp"/>
+                    <TextView android:layout_gravity="center_horizontal" android:id="@+id/tv_on_off_remind" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/tap_turn_on"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

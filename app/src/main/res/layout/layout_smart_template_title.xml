@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="@style/common_text_secondary_regular_14dp" android:gravity="start|center_vertical" android:id="@+id/tv_smart_template_type_name" android:paddingTop="6dp" android:layout_width="wrap_content" android:layout_height="40dp" android:drawablePadding="2dp" android:paddingStart="@dimen/smart_action_padding_left" android:paddingEnd="@dimen/smart_action_padding_left"/>

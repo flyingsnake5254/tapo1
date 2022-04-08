@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/common_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_close" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/close"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_no_find_plug" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_ble_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/device_search"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_no_find_m5_do_following" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_regular_14dp"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/quicksetup_no_find_plug_power_on"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/quicksetup_no_find_plug_check_blink_color"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/quicksetup_bluetooth_fail_off_find_plug"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/quicksetup_bluetooth_fail_off_find_plug_new"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/quicksetup_no_find_plug_move_your_phone_closer"/>
+                <com.tplink.iot.widget.PointTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/quicksetup_no_find_unplug"/>
+            </LinearLayout>
+            <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true" layout="@layout/layout_quicksetup_common_bottom_button_contact"/>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

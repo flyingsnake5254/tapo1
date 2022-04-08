@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <View style="@style/common_divider_1dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.tplink.iot.widget.InnerTimeSelectView android:id="@+id/inner_time_select_view" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/layout_timer_active" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView android:textSize="16sp" android:textColor="#ffffff" android:gravity="center_vertical" android:background="#ff1bcbff" android:layout_width="match_parent" android:layout_height="40dp" android:text="@string/plug_timer_countdown_title" android:drawablePadding="8dp" android:paddingStart="20dp" android:paddingEnd="20dp" app:drawableStartCompat="@mipmap/timer_next_event" style="@style/BaseTextAppearance_Medium"/>
+                    <View android:background="@color/divider_color" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <TextView android:textSize="40sp" android:textColor="@color/common_iot_dark_black" android:gravity="center" android:id="@+id/tv_remain_time" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/common_dark_gray_medium_text_14dp"/>
+                </LinearLayout>
+            </FrameLayout>
+            <TextView android:text="@string/plug_timer_ends" style="@style/common_divider_text_view"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/rg_turn_tx" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:id="@+id/device_status_tv" android:background="@null" android:text="@string/turn_device_on" app:drawableStartCompat="@mipmap/turn_device_on" style="@style/HomeDrawerItem"/>
+                <View style="@style/common_divider_1dp_margin_start_20dp"/>
+                <TextView android:id="@+id/target_status_tv" android:background="@null" app:drawableStartCompat="@mipmap/device_light" style="@style/HomeDrawerItem"/>
+                <View android:id="@+id/brightness_divide" style="@style/common_divider_1dp_margin_start_20dp"/>
+            </LinearLayout>
+            <RadioGroup android:orientation="vertical" android:id="@+id/rg_turn_radio" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/turn_on_rb" android:background="@color/white" android:text="@string/common_on" style="@style/common_text_main_dark_regular_16dp.common_line_radio_button"/>
+                <FrameLayout android:id="@+id/fl_desire" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.tplink.iot.widget.BulbBrightnessView android:id="@+id/brightness_setting_view" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <com.tplink.iot.widget.colorbulb.ColorBulbPresetStatusView android:id="@+id/preset_picker_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp"/>
+                    <com.tplink.iot.devices.lightstrip.widget.LightingEffectPresetStatusView android:id="@+id/lighting_effect_preset_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <com.tplink.iot.widget.trv.TemperatureSeekBarLayout android:id="@+id/temperature_seekbar_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </FrameLayout>
+                <View android:id="@+id/divider_rb_on" style="@style/common_divider_1dp_margin_start_20dp"/>
+                <RadioButton android:id="@+id/turn_off_rb" android:text="@string/common_off" style="@style/common_text_main_dark_regular_16dp.common_line_radio_button"/>
+                <View android:id="@+id/divider_rb_off" style="@style/common_divider_1dp_margin_start_20dp"/>
+            </RadioGroup>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="19dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <com.tplink.libtpcontrols.tprefreshablebutton.TPRefreshableButton android:id="@+id/btn_start" android:visibility="visible" android:text="@string/start" android:layout_centerInParent="true" style="@style/iot_common_flat_blue_refreshable_button"/>
+                    <Button android:id="@+id/btn_stop" android:visibility="invisible" android:text="@string/stop" android:layout_centerInParent="true" style="@style/iot_common_flat_white_button_with_red_stroke"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

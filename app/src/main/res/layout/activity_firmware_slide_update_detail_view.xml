@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View style="@style/common_divider_block_8dp"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_update_header" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/common_iot_green" android:id="@+id/tv_update_part_header" android:paddingLeft="24dp" android:paddingTop="16dp" android:paddingRight="24dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/firmware_update_success" style="@style/common_text_secondary_regular_14dp"/>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/fw_update_fail" android:contentDescription="@null"/>
+        <TextView android:textColor="@color/common_iot_light_black" android:id="@+id/tv_updated_failed_tips" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:layout_marginRight="24dp" android:text="@string/firmware_update_fail_desc" style="@style/common_text_secondary_regular_14dp"/>
+        <View style="@style/common_divider_1dp_margin_start_20dp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

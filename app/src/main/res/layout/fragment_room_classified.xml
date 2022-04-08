@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tplink.iot.widget.springview.widget.PullToRefreshContainer xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:orientation="vertical" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view" android:paddingTop="10dp" android:paddingBottom="@dimen/home_bottom_operation_margin_bottom" android:visibility="gone" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="11dp" android:paddingEnd="11dp" android:nestedScrollingEnabled="false"/>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/layout_empty" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="90dp" android:src="@mipmap/empty" android:contentDescription="@null"/>
+                <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/no_devices_added" android:layout_marginStart="30dp" android:layout_marginEnd="30dp" style="@style/common_text_secondary_regular_14dp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.tplink.iot.widget.springview.widget.PullToRefreshContainer>

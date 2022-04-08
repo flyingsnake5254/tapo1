@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:tag="layout/activity_light_adjust_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/toolbar_height" app:navigationIcon="@mipmap/back">
+        <TextView android:textColor="@color/color_333333" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/setting_light_adjust_v2" android:layout_marginEnd="56dp" style="@style/ActivityTitleText"/>
+    </androidx.appcompat.widget.Toolbar>
+    <RadioGroup android:id="@+id/radio_group" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/toolbar_height" android:paddingStart="@dimen/device_setting_common_margin_start">
+        <RadioButton android:id="@+id/auto" android:layout_width="match_parent" android:layout_height="@dimen/device_setting_common_item_height" android:button="@drawable/radio_button_background" android:text="@string/setting_auto" android:paddingStart="10dp" style="@style/ItemHeaderText"/>
+        <View android:background="@color/divide_line_color" android:layout_width="match_parent" android:layout_height="@dimen/common_divide_line_height" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+        <RadioButton android:id="@+id/hz_50" android:layout_width="match_parent" android:layout_height="@dimen/device_setting_common_item_height" android:button="@drawable/radio_button_background" android:text="@string/setting_50hz" android:paddingStart="10dp" style="@style/ItemHeaderText"/>
+        <View android:background="@color/divide_line_color" android:layout_width="match_parent" android:layout_height="@dimen/common_divide_line_height" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+        <RadioButton android:id="@+id/hz_60" android:layout_width="match_parent" android:layout_height="@dimen/device_setting_common_item_height" android:button="@drawable/radio_button_background" android:text="@string/setting_60hz" android:paddingStart="10dp" style="@style/ItemHeaderText"/>
+        <View android:background="@color/divide_line_color" android:layout_width="match_parent" android:layout_height="@dimen/common_divide_line_height" android:layout_marginStart="@dimen/device_setting_common_margin_start"/>
+        <TextView android:textColor="@color/color_999999" android:background="@color/white" android:paddingTop="8dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/light_frequency_hint" android:paddingStart="20dp" android:paddingEnd="20dp"/>
+    </RadioGroup>
+    <com.tplink.iot.view.ipcamera.widget.CameraLoadingView android:layout_gravity="center" android:id="@+id/live_loading_view" android:tag="binding_1" android:padding="12dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" app:loading_block_height="90dp" app:loading_block_width="90dp"/>
+</FrameLayout>

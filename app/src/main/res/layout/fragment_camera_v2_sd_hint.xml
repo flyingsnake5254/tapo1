@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/fragment_camera_v2_sd_hint_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:elevation="0dp" app:popupTheme="@style/TP.Theme.PopupOverlay" app:titleTextColor="@color/common_iot_dark_black" style="@style/toolbar_style"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/camera_onboarding_sd_title" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:src="@mipmap/c200_sd"/>
+                <TextView android:textColor="@color/color_cc333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/camera_onboarding_sd_msg" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_main_dark_regular_14dp"/>
+                <com.tplink.iot.widget.PointTextView android:id="@+id/point_view1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:text_content="@string/camera_onboarding_sd_hint1"/>
+                <com.tplink.iot.widget.PointTextView android:id="@+id/point_view3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:text_content="@string/setting_sdcard_inserting_notice"/>
+                <com.tplink.iot.widget.PointTextView android:id="@+id/point_view2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" app:text_content="@string/camera_onboarding_sd_hint2"/>
+            </LinearLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:layout_below="@+id/ll_content">
+                <Button android:id="@+id/btn_bottom" android:tag="binding_1" android:layout_marginTop="16dp" android:text="@string/action_got_it" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_marginStart="40dp" android:layout_marginEnd="40dp" style="@style/m6_common_blue_300_button"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

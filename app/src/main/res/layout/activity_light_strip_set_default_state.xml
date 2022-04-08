@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:tag="layout/activity_light_strip_set_default_state_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RadioGroup android:orientation="vertical" android:id="@+id/rg_state" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/light_strip_default_states_hint" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" style="@style/common_text_secondary_regular_16dp"/>
+            <com.tplink.libtpcontrols.materialnormalcompat.radio.TPRadioButton android:id="@+id/rb_state_last" android:text="@string/last_on_state" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+            <com.tplink.libtpcontrols.materialnormalcompat.radio.TPRadioButton android:id="@+id/rb_state_custom" android:text="@string/common_custom" style="@style/common_text_main_dark_regular_16dp_radio_button_check"/>
+            <FrameLayout android:id="@+id/fragment_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </RadioGroup>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

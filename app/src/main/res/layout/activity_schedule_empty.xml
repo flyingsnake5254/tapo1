@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/view_empty" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:layout_width="148dp" android:layout_height="148dp" android:layout_marginTop="160dp" android:src="@mipmap/schedule_empty_data" android:contentDescription="@string/plug_schedule_add_tips"/>
+    <TextView android:gravity="start" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="@string/plug_schedule_add_tips" android:layout_marginStart="30dp" android:layout_marginEnd="30dp" style="@style/common_text_secondary_regular_14dp"/>
+</LinearLayout>

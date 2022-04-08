@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/top_operation" android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:textSize="@dimen/m6_text_size_14dp" android:textColor="@color/common_colorAccent" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/common_cancel" android:textAllCaps="true" android:paddingStart="20dp" android:paddingEnd="20dp" style="@style/common_text_blue_medium_16dp"/>
+        <TextView android:textSize="@dimen/m6_text_size_14dp" android:textColor="@color/common_colorAccent" android:gravity="center" android:id="@+id/tv_done" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/common_done" android:textAllCaps="true" android:paddingStart="20dp" android:paddingEnd="20dp" android:layout_alignParentEnd="true" style="@style/common_text_blue_medium_16dp"/>
+    </RelativeLayout>
+    <RelativeLayout android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.tplink.iot.widget.NumberPickerView android:id="@+id/time_picker" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" app:npv_DividerColor="@color/common_iot_divider" app:npv_DividerMarginLeft="16dp" app:npv_DividerMarginRight="16dp" app:npv_ItemPaddingHorizontal="16dp" app:npv_ItemPaddingVertical="5dp" app:npv_MarginStartOfHint="16dp" app:npv_RespondChangeOnDetached="false" app:npv_ShowCount="5" app:npv_ShowDivider="true" app:npv_TextColorHint="@color/common_iot_main_blue" app:npv_TextSizeHint="@dimen/m6_text_size_14dp" app:npv_TextSizeNormal="20sp" app:npv_TextSizeSelected="24sp" app:npv_WrapSelectorWheel="false"/>
+    </RelativeLayout>
+</LinearLayout>

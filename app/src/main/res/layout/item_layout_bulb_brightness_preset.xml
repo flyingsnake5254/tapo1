@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="24dp">
+        <TextView android:gravity="center" android:id="@+id/tv_progress" android:background="@drawable/shape_tag_item_bg" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp" android:text="80%" android:layout_centerVertical="true" style="@style/common_text_secondary_regular_14dp"/>
+        <ImageView android:id="@+id/iv_delete" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/text_clear" android:layout_centerVertical="true" android:layout_marginEnd="8dp" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatSeekBar android:id="@+id/seek_bar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="8dp" android:max="100" android:progress="100" android:progressDrawable="@drawable/seek_bar_progress_drawable" android:thumb="@drawable/seek_bar_thumb" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/seekBar_bulb_brightness"/>
+    <View style="@style/common_divider_1dp_margin_start_20dp"/>
+</LinearLayout>

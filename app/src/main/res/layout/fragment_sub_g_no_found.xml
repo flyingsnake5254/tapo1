@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/fragment_sub_g_no_found_0" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_close" android:tag="binding_1" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/close" android:contentDescription="@null"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subg_qs_connect_fail" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+                <ImageView android:layout_gravity="center_horizontal" android:id="@+id/img_ble_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/device_search"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_no_find_m5_do_following" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_regular_14dp"/>
+                    <com.tplink.iot.widget.PointTextView android:id="@+id/tv_tip1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/subg_qs_need_help_tip_battery_charged"/>
+                    <com.tplink.iot.widget.PointTextView android:id="@+id/tv_tip2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/subg_qs_no_found_move_closer_to_hub"/>
+                    <com.tplink.iot.widget.PointTextView android:id="@+id/tv_tip3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/subg_qs_no_found_ensure_hub_led_blink_blue"/>
+                    <com.tplink.iot.widget.PointTextView android:id="@+id/tv_tip4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/subg_qs_no_found_reset_and_try"/>
+                    <com.tplink.iot.widget.PointTextView android:id="@+id/tv_tip5" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:text_content="@string/subg_qs_no_found_reset_and_try"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/quicksetup_how_to_reset" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_medium_16dp"/>
+                    <TextView android:id="@+id/tv_reset_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_main_dark_regular_14dp"/>
+                    <com.tplink.iot.devicecommon.widget.VariousImageViewLayout android:layout_gravity="center_horizontal" android:id="@+id/iv_reset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_marginBottom="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:paddingTop="24dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/ll_content" android:layout_alignParentBottom="true">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <Button android:id="@+id/btn_try_again" android:tag="binding_2" android:layout_marginBottom="5dp" android:text="@string/try_again" style="@style/m6_common_blue_300_button"/>
+                    <TextView android:gravity="center_horizontal" android:id="@+id/tv_contact_us" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/quicksetup_common_contact_us_problem" android:layout_marginStart="24dp" android:layout_marginEnd="24dp" style="@style/common_text_secondary_regular_14dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

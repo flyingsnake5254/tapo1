@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/common_white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/img_back" android:padding="@dimen/quick_setup_close_new_vi_padding" android:layout_width="@dimen/quick_setup_close_new_vi_width" android:layout_height="@dimen/quick_setup_close_new_vi_width" android:src="@mipmap/back"/>
+    <ScrollView android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_grant_permission" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" style="@style/common_text_main_dark_medium_20dp"/>
+            <TextView android:id="@+id/tv_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/tapo_request_permission_once" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/common_text_secondary_regular_14dp"/>
+            <View android:layout_marginTop="15dp" android:layout_marginStart="16dp" style="@style/m6_common_divider"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_android_6" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="56dp">
+                    <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_no_location_permission" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/img_location_state" android:layout_alignParentStart="true" style="@style/common_text_main_dark_regular_16dp"/>
+                    <ImageView android:id="@+id/img_location_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/switch_off" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View android:layout_marginStart="16dp" style="@style/m6_common_divider"/>
+                <RelativeLayout android:id="@+id/location_permission" android:layout_width="match_parent" android:layout_height="56dp">
+                    <TextView android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_location_permission" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_toStartOf="@+id/tv_permission_allow" android:layout_alignParentStart="true" style="@style/common_text_main_dark_regular_16dp"/>
+                    <TextView android:id="@+id/tv_permission_allow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/quicksetup_location_permission_allow" android:layout_centerVertical="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true" style="@style/common_text_blue_regular_14dp"/>
+                    <ImageView android:id="@+id/img_permission_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/permission_ok" android:layout_centerVertical="true" android:layout_marginEnd="16dp" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View android:layout_marginStart="16dp" style="@style/m6_common_divider"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

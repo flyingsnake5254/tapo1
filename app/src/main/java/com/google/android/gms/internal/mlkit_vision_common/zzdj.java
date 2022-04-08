@@ -1,0 +1,124 @@
+package com.google.android.gms.internal.mlkit_vision_common;
+
+import java.io.IOException;
+import java.io.Serializable;
+import java.nio.charset.Charset;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.Locale;
+
+/* compiled from: com.google.mlkit:vision-common@@16.0.0 */
+/* loaded from: classes.dex */
+public abstract class zzdj implements Serializable, Iterable<Byte> {
+    public static final zzdj zza = new zzdt(zzem.zzb);
+    private static final zzdp zzb;
+    private static final Comparator<zzdj> zzd;
+    private int zzc = 0;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r0v4, types: [com.google.android.gms.internal.mlkit_vision_common.zzdn] */
+    /* JADX WARN: Type inference failed for: r0v5, types: [com.google.android.gms.internal.mlkit_vision_common.zzds] */
+    static {
+        zzb = zzdh.zza() ? new zzds(null) : new zzdn(null);
+        zzd = new zzdl();
+    }
+
+    public static zzdj zza(String str) {
+        return new zzdt(str.getBytes(zzem.zza));
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public static int zzb(byte b2) {
+        return b2 & 255;
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public static zzdr zzc(int i) {
+        return new zzdr(i, null);
+    }
+
+    public abstract boolean equals(Object obj);
+
+    public final int hashCode() {
+        int i = this.zzc;
+        if (i == 0) {
+            int zza2 = zza();
+            i = zza(zza2, 0, zza2);
+            if (i == 0) {
+                i = 1;
+            }
+            this.zzc = i;
+        }
+        return i;
+    }
+
+    @Override // java.lang.Iterable
+    public /* synthetic */ Iterator<Byte> iterator() {
+        return new zzdi(this);
+    }
+
+    public final String toString() {
+        Locale locale = Locale.ROOT;
+        Object[] objArr = new Object[3];
+        objArr[0] = Integer.toHexString(System.identityHashCode(this));
+        objArr[1] = Integer.valueOf(zza());
+        objArr[2] = zza() <= 50 ? zzgw.zza(this) : String.valueOf(zzgw.zza(zza(0, 47))).concat("...");
+        return String.format(locale, "<ByteString@%s size=%d contents=\"%s\">", objArr);
+    }
+
+    public abstract byte zza(int i);
+
+    public abstract int zza();
+
+    protected abstract int zza(int i, int i2, int i3);
+
+    public abstract zzdj zza(int i, int i2);
+
+    protected abstract String zza(Charset charset);
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public abstract void zza(zzdg zzdgVar) throws IOException;
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public abstract byte zzb(int i);
+
+    public final String zzb() {
+        return zza() == 0 ? "" : zza(zzem.zza);
+    }
+
+    public abstract boolean zzc();
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    public final int zzd() {
+        return this.zzc;
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    public static int zzb(int i, int i2, int i3) {
+        int i4 = i2 - i;
+        if ((i | i2 | i4 | (i3 - i2)) >= 0) {
+            return i4;
+        }
+        if (i < 0) {
+            StringBuilder sb = new StringBuilder(32);
+            sb.append("Beginning index: ");
+            sb.append(i);
+            sb.append(" < 0");
+            throw new IndexOutOfBoundsException(sb.toString());
+        } else if (i2 < i) {
+            StringBuilder sb2 = new StringBuilder(66);
+            sb2.append("Beginning index larger than ending index: ");
+            sb2.append(i);
+            sb2.append(", ");
+            sb2.append(i2);
+            throw new IndexOutOfBoundsException(sb2.toString());
+        } else {
+            StringBuilder sb3 = new StringBuilder(37);
+            sb3.append("End index: ");
+            sb3.append(i2);
+            sb3.append(" >= ");
+            sb3.append(i3);
+            throw new IndexOutOfBoundsException(sb3.toString());
+        }
+    }
+}

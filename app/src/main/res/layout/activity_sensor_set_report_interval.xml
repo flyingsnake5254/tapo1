@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:tag="layout/activity_sensor_set_report_interval_0" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/common_toolbar"/>
+    <com.tplink.iot.widget.ItemSettingLayout android:id="@+id/item_report_interval" android:layout_width="match_parent" android:layout_height="wrap_content" app:item_bottom_divider_visible="false" app:item_right_arrow_visible="true" app:item_set_title_hint="@string/sensor_report_interval_title"/>
+    <View style="@style/common_divider_1dp_margin_start_20dp"/>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/sensor_report_interval_desc" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintVertical_bias="0" style="@style/common_text_secondary_medium_14dp"/>
+</LinearLayout>
